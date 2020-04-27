@@ -187,3 +187,15 @@
   transform: translate(-50%, -50%);
 }
 /*End Of button animation*/
+
+/* neon button*/
+/*use 4 spans in html file
+   <body>
+        <a href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+             button
+        </a>
+    </body>*/

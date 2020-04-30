@@ -1,4 +1,0 @@
-1. button
-2. carousal
-3. flip
-4. social media

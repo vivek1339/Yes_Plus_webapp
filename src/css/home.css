@@ -202,37 +202,3 @@ nav{
   }
 }
 
-.container{
-      width: 100%;
-     
-      padding-top:2%;
-    }
-.box{
-      margin-top: 40px;
-      display: flex;
-      position: relative;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: center;
-
-    }
-    .box .panel{
-      padding: 10px 30px;
-      border-radius: 7px;
-      box-shadow: 0 0 10px black;
-
-      margin: 20px;
-      padding: 10px;
-      text-align: center;
-      height: 200px;
-      width: 320px;
-      border-radius: 5px;
-      background-color: #fff;
-    }
-    .bb{
-      box-sizing: border-box;
-      font-style: italic;
-      font-weight: bold;
-      font-family: cursive;
-     
-    }

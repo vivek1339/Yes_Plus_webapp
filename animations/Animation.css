@@ -1,18 +1,18 @@
-/*This CSS is for the login page */
-/*Put The input inside the form with class "box"*/
+/*This class is for the login page */
+/*Put The input inside the form with class "form"*/
 /*It should be like this:
-<form class="box">
+<form class="form">
       <input type="text" name="" placeholder="Username">
       <input type="password" name="" placeholder="Password">
       <input type="submit" name="" value="Login">
 </form>
 */
-.box{
+.yp_form{
   width:300px;
   padding:40px;
   background: #191919;/*Change this for changing the background color of form*/
 }
-.box input[type = "text"], .box input[type = "password"]{
+.yp_form input[type = "text"], .yp_form input[type = "password"]{
   border:0;
   background: none;
   display: block;
@@ -25,11 +25,11 @@
   border-radius: 24px;
   transition: width 0.3s;
 }
-.box input[type = "text"]:focus, .box input[type = "password"]:focus{
+.yp_form input[type = "text"]:focus, .yp_form input[type = "password"]:focus{
   width:80%; /*Change This to keep the width of streching less*/
   border-color: #2ecc71;
 }
-.box input[type = "submit"]{
+.yp_form input[type = "submit"]{
   border:0;
   background: 0;
   display: block;
@@ -41,14 +41,14 @@
   border-radius: 24px;
   cursor:pointer;
 }
-.box input[type = "submit"]:hover{
+.yp_form input[type = "submit"]:hover{
   background: #2ecc71;
 }
 /*End of Form animation*/
 
 /*This CSS is for Images so that they could flip*/
 /*Put the image like this: "to get effect":
-<div class="inner">
+<div class="flip_image_inner">
   <div class="front">
     All the images should go here 
     <img src="">
@@ -58,37 +58,38 @@
   </div>
 </div>
 */
-.inner{
+.yp_flip_image_inner{
   position: relative;
   perspective: 1000px;
   width:300px;
   height:168px;/*Specify The width and height of images*/
   transform-style: preserve-3d;
 }
-.inner:hover .front{
+.yp_flip_image_inner:hover .yp_flip_image_front{
   transform: rotateX(180deg);
 }
-.inner:hover .back{
+.yp_flip_image_inner:hover .yp_flip_image_back{
   transform: rotateX(360deg);
 }
-.front, .back{
+.yp_flip_image_front, .yp_flip_image_back{
   position: absolute;
   width:100%;
   height:100%;
 }
-.back{
+.yp_flip_image_back{
   transform: rotateX(180deg);
   //backface-visibility: hidden;/*remove the coment line, if the front
                                  class does not contain image.*/
   transition: transform 0.8s;
 }
-.front{
+.yp_flip_image_front{
   backface-visibility: hidden;
   transition: transform 0.8s;
 }
 /*End of Image animation*/
 
-/*Put The button inside a div: like this
+/*This is social media social_media animatio*/
+/*Put social_media class inside a div: like this
 <div>
   <a class="some class" href="">
     <span></span>
@@ -100,16 +101,16 @@
 </div>
 !!!Important It must contain 4 span for this to work
 */
-.button{
+.yp_social_media{
   position: relative;
   top:100px;
-    display:flex;/*This is for when we bunch of button,
+    display:flex;/*This is for when we bunch of social_media,
                  they will appear in row*/
 }
-.button a {
+.yp_social_media a {
   display:block;
   position:relative;
-  width:50px;/*change width and height to change the box size of button*/
+  width:50px;/*change width and height to change the form size of social_media*/
   height:50px;
   line-height:50px;
   font-size:20px;/*Change This to change the size of facebook*/
@@ -118,63 +119,63 @@
   color:#404040;
   cursor: pointer;
 }
-.button a span{
+.yp_social_media a span{
   bottom:0;
   right:0;
   position:absolute;
   transition:transform .5s;
 }
-.button a span:nth-child(1),
-.button a span:nth-child(3){
+.yp_social_media a span:nth-child(1),
+.yp_social_media a span:nth-child(3){
   width:100%;
   height:3px;
   background:#404040;
 }
-.button a span:nth-child(1){
+.yp_social_media a span:nth-child(1){
   top:0;
   transform-origin:left;
 }
-.button a span:nth-child(3){
+.yp_social_media a span:nth-child(3){
   bottom:0;
   transform-origin:right;
 }
-.button a:hover span:nth-child(1){
+.yp_social_media a:hover span:nth-child(1){
   transform:scale(0);
   background-color:#404040;
   //transform-origin:left;
   transition:transform .5%;
 }
-.button a:hover span:nth-child(3){
+.yp_social_media a:hover span:nth-child(3){
   bottom:0;
   transform:scale(0);
   transform-origin:right;
   transition:transform .5s;
 }
-.button a span:nth-child(2),
-.button a span:nth-child(4){
+.yp_social_media a span:nth-child(2),
+.yp_social_media a span:nth-child(4){
   width:3px;
   height:100%;
 }
-.button a span:nth-child(2){
+.yp_social_media a span:nth-child(2){
   top:0;
   left:0;
   transform:scale(0);
   transform-origin:top;
   transition: 0.6s;
 }
-.button a:hover span:nth-child(2){
+.yp_social_media a:hover span:nth-child(2){
   transform:scale(1);
   transform-origin:top;
   background-color:#404040;
   transition:transform .5s;
 }
-.button a span:nth-child(4){
+.yp_social_media a span:nth-child(4){
   top:0;
   transform:scale(0);
   transform-origin:top;
   transition: 0.6s;
 }
-.button a:hover span:nth-child(4){
+.yp_social_media a:hover span:nth-child(4){
   transform:scale(1);
   transform-origin:bottom;
   transition:transform .5s;
@@ -186,108 +187,4 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
-/*End Of button animation*/
-
-/* neon button*/
-/*use 4 spans in html file
-   <body>
-        <a href="#">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-             button
-        </a>
-    </body>*/
-body
-{
-   margin:0;
-   padding:0;
-   display:flex;
-   justify-content: center;
-   align-items: center;
-   min-height:100vh;
-   background:#031321;
-   font-family:consolas;
-}
-a
-{
-    position:relative;
-    display:inline-block;
-    padding:15px 30px;
-    color:#2196f3;
-    text-transform: uppercase;
-    letter-spacing: 4px;
-    text-decoration:none;
-    font-size:24px;
-    overflow:hidden;
-    transition:0.2s;
-}
-a:hover
-{
-   color:#255784;
-   background:#2196f3;
-   box-shadow: 0 0 10px #2196f3,0 0 40px #2196f3,0 0 80px #2196f3,0 0 10px #2196f3;
-   transition-delay:1s;
-}
-a span
-{
-   position: absolute;
-   display:block;
-}
-a span:nth-child(1)
-{
-    top:0;
-    left:-100;
-    width: 100%;
-    height:2px;
-    background:linear-gradient(90deg,transparent,#2196f3);
-}
-a:hover span:nth-child(1)
-{
-    left:100%;
-    transition:1s;
-}
-a span:nth-child(3)
-{
-    bottom:0;
-    right:-100;
-    width: 100%;
-    height:2px;
-    background:linear-gradient(270deg,transparent,#2196f3);
-}
-a:hover span:nth-child(3)
-{
-    right:100%;
-    transition:1s;
-    transition-delay: 0.5s;
-}
-a span:nth-child(2)
-{
-    top:-100%;
-    right:0;
-    width:2px;
-    height:100%;
-    background:linear-gradient(180deg,transparent,#2196f3);
-}
-a:hover span:nth-child(2)
-{
-    top:100%;
-    transition:1s;
-    transition-delay: 0.25s;
-}
-a span:nth-child(4)
-{
-    bottom:-100%;
-    left:0;
-    width: 2px;
-    height:100%;
-    background:linear-gradient(360deg,transparent,#2196f3);
-}
-a:hover span:nth-child(4)
-{
-    bottom:100%;
-    transition:1s;
-    transition-delay: 0.75s;
-}
-
+/*End of social media social_media animation*/

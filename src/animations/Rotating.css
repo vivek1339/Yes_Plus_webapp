@@ -14,22 +14,22 @@ The most important is define the angle at which we want
 to place the image like:
 for 3 the difference should be 106deg
 for 4 the difference should be 80deg*/
-.round{
+.yp_round{
   position: relative;
   perspective: 1000px;/*Change this from 10000 to 1 to see different rotating effects*/
   margin: auto;/*This is to make it middle*/
   width: 168px;/*This is to Specify the size of images you want to see during rotation*/
 }
-.rotate{
+.yp_rotate{
   width: 100%;
   animation: rotar 12s infinite linear;/*Change here time to change the speed of rotation*/
   transform-style: preserve-3d;
 }
-.rotate:hover{
+.yp_rotate:hover{
   animation-play-state: paused;
   cursor: pointer;
 }
-.rotate div{
+.yp_rotate div{
   width: 100%;
   height: 168px;
   overflow: hidden;
@@ -38,44 +38,44 @@ for 4 the difference should be 80deg*/
 to place the images it should be between 0 to 320 and should be 
 placed so that they do not intersect each other.
 */ 
-
-.rotate div:nth-child(1){
+/*Decrease translateZ to make images nearer to each other*/
+.yp_rotate div:nth-child(1){
   transform: rotateY(0deg) translateZ(300px);
 }
-.rotate div:nth-child(2){
+.yp_rotate div:nth-child(2){
   transform: rotateY(40deg) translateZ(300px);
 }
-.rotate div:nth-child(3){
+.yp_rotate div:nth-child(3){
   transform: rotateY(80deg) translateZ(300px);
 }
-.rotate div:nth-child(4){
+.yp_rotate div:nth-child(4){
   transform: rotateY(120deg) translateZ(300px);
 }
-.rotate div:nth-child(5){
+.yp_rotate div:nth-child(5){
   transform: rotateY(160deg) translateZ(300px);
 }
-.rotate div:nth-child(6){
+.yp_rotate div:nth-child(6){
   transform: rotateY(200deg) translateZ(300px);
 }
-.rotate div:nth-child(7){
+.yp_rotate div:nth-child(7){
   transform: rotateY(240deg) translateZ(300px);
 }
-.rotate div:nth-child(8){
+.yp_rotate div:nth-child(8){
   transform: rotateY(280deg) translateZ(300px);
 }
-.rotate div:nth-child(9){
+.yp_rotate div:nth-child(9){
   transform: rotateY(320deg) translateZ(300px);
 }
-.rotation{
+.yp_rotation{
   position: absolute;
 }
-.rotate img{
+.yp_rotate img{
   image-rendering: auto;
   transition: all 300ms;
   width: 100%;
   height: 100%;
 }
-.rotate img:hover{
+.yp_rotate img:hover{
   transform: scale(1.1);
   transition: 300ms;
 }

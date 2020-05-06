@@ -1,5 +1,5 @@
 body{
-   background-color:#EBEBEB;
+   background-color:#F3F3F3;
 }
 
 
@@ -14,11 +14,11 @@ body{
 }
 
 nav{
-  background-color: #F7F7F7;
+  background-color: #FBFBFB;
 }
-.container-fluid {
+#navbar {
   height: 80px;
-  background-color:#F7F7F7;
+  background-color:#FBFBFB;
   display:-webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -32,13 +32,13 @@ nav{
 
 }
 
-.container-fluid .logo {
+#navbar .logo {
   width: 35%;
   padding: 0 10px;
   overflow: hidden;
 }
 
-.container-fluid .logo a {
+#navbar .logo a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -51,12 +51,12 @@ nav{
   height: 60px;
 }
 
-.container-fluid .logo a img {
+#navbar .logo a img {
   max-width: 100%;
   max-height: 60px;
 }
 
-.container-fluid .navbar {
+#navbar .yp_navbar {
 
   display: -webkit-box;
   display: -ms-flexbox;
@@ -68,8 +68,8 @@ nav{
   padding: 0 ;
 }
 
-.container-fluid .navbar ul {
-   background-color: #F7F7F7;
+#navbar .yp_navbar ul {
+  
   text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -82,8 +82,8 @@ nav{
   width: 100%;
 }
 
-.container-fluid .navbar ul li a {
-  background-color: #F7F7F7;
+#navbar .yp_navbar ul li a {
+  
   color: #666666;
   text-decoration: none;
   
@@ -96,20 +96,20 @@ nav{
   padding: 0 10px ;
 }
 
-.container-fluid .navbar ul li a:hover {
+#navbar .yp_navbar ul li a:hover {
   color: white;
-   background-color: #F7F7F7;
+   
   color:rgb(255,145,0) !important;
   font-weight: bold;
 }
 
-.container-fluid .navbar ul .close {
+#navbar .yp_navbar ul .close {
   display: none;
   text-align: right;
   padding: 10px;
 }
 
-.container-fluid .navbar ul .close span {
+#navbar .yp_navbar ul .close span {
   font-size: 20px;
   display: inline-block;
   color:rgba(0,0,0,.4) !important;
@@ -117,9 +117,9 @@ nav{
   cursor: pointer;
 }
 
-.container-fluid .navbar .icon-bar {
-  padding: 20px 18px;
-  width: 55px;
+#navbar .yp_navbar .yp_icon-bar {
+  padding: 18px 8px;
+  width: 50px;
   height: 60px;
   display: none;
   -webkit-box-orient: vertical;
@@ -130,40 +130,36 @@ nav{
   -ms-flex-pack: justify;
   justify-content: space-between;
   cursor: pointer;
-  margin-top: 0;
-  margin-right: 10px;
 }
 
-.container-fluid .navbar .icon-bar i {
+#navbar .yp_navbar .yp_icon-bar i {
   background-color: #B2B2B2;
   display: block;
   font-style: bold;
   height: 2px;
-  width: 25px;
-  font-weight: bold;
 }
 
 @media only screen and (max-width: 900px) {
-  .container-fluid {
-     background-color: #f2f2f2;
+#navbar {
+     z-index: 9999;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
   }
 
-  .container-fluid .logo {
+#navbar .logo {
     -webkit-box-flex: 1;
     -ms-flex: 1;
     flex: 1;
   }
 
-  .container-fluid .navbar {
+#navbar .yp_navbar {
     -webkit-box-flex: 0;
     -ms-flex: 0;
     flex: 0;
   }
 
-  .container-fluid .navbar ul {
+#navbar .yp_navbar ul {
     -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
     position: fixed;
@@ -180,9 +176,10 @@ nav{
     -webkit-transition: left .3s;
     -o-transition: left .3s;
     transition: left .3s;
+    z-index: 9999;
   }
 
-  .container-fluid .navbar ul li a {
+#navbar .yp_navbar ul li a {
      background-color: white;
     padding: 10px;
     font-size: 16px;
@@ -191,17 +188,19 @@ nav{
      color:rgba(0,0,0,.4) !important;
   }
 
-  .container-fluid .navbar ul .close {
+#navbar .yp_navbar ul .close {
     display: block;
   }
 
-  .container-fluid .navbar .icon-bar {
+#navbar .yp_navbar .yp_icon-bar {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    z-index: 9999;
   }
 
-  .container-fluid .navbar ._Menus-show {
+#navbar .yp_navbar ._Menus-show {
     left: 50%;
   }
 }
+

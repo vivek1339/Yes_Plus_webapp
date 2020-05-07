@@ -2,38 +2,253 @@
 <html>
 
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="../css/navbar.css">
-<link rel="stylesheet" type="text/css" href="../css/about_us.css">
+  
 </head>
-
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <!-- <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script> -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <link rel="stylesheet" href="../css/navbar.css">
+  <link rel="stylesheet" type="text/css" href="../css/home.css">
+  <link rel="stylesheet" type="text/css" href="../css/about_us.css">
+  <link rel="stylesheet" type="text/css" href="../animations/Rotating.css">
+  <link rel="stylesheet" type="text/css" href="../animations/slider1.css">
+  
 <body>
-    <nav >
-<div class="container-fluid" id="navbar">
-    <div>
-    <img src="https://2.bp.blogspot.com/-beUrUOb3btQ/T1PFJcGPDWI/AAAAAAAAAEM/hBCu0lFtbC8/s400/YES%2521%252B.png" height=80px width=140px style="float: left;top: 0%; left: 1%;position: relative;">
-    </div>
+  <nav >
+    <div class="container-fluid" id="navbar">
+      <div>
+      <img src="https://2.bp.blogspot.com/-beUrUOb3btQ/T1PFJcGPDWI/AAAAAAAAAEM/hBCu0lFtbC8/s400/YES%2521%252B.png" height=80px width=140px style="float: left;top: 0%; left: 1%;position: relative;">
+      </div>
    
-    <div class="navbar">
-        <div class="icon-bar" onclick="Show()">
+      <div class="yp_navbar">
+        <div class="yp_icon-bar" onclick="Show()">
            <i></i>
            <i></i>
-           <i></i>
-           
+           <i></i>   
         </div>
         <ul id="nav-lists">
           <li class="close"><span onclick="Hide()">X</span></li>
           <li><a href="./home.html">Home</a></li>
           <li><a href="./register.html">Register</a></li>
           <li><a href="./about_us.html">About Us</a></li>
-          
-
         </ul>
+      </div>
     </div>
-</div>
-</nav>
+  </nav>
+    <!-----------------      CAROUSEL      ----------->
 
-<script>
+  <div id="slides" class="info_carousel carousel slide" data-ride= "carousel" style="padding-top: 10px;">
+    <ul class="carousel-indicators" style="border-color: black;">
+        <li data-target="#slides" data-slide-to="0" class="active"></li>
+        <li data-target="#slides" data-slide-to="1" ></li>
+        <li data-target="#slides" data-slide-to="2" ></li>            
+    </ul>
+    <div class="info_carousel-inner carousel-inner">
+        <div class="info_carousel-item carousel-item active">
+            <img  class="img-responsive d-block w-100" src="../../res/img/info_carousel/carousel_1.png" alt="pic" >
+            <div class="info_carousel-caption carousel-caption d-block mb-4 d-none ">
+                <h2 class="display-5 text-white">Online YES!+ program</h2>
+                <button type="button" class="info_carousel-button btn btn-outline-light btn-lg text-dark" >Know more</button>
+                
+            </div>
+        </div>
+        <div class="info_carousel-item carousel-item">
+            <img  class="img-responsive d-block w-100" src="../../res/img/info_carousel/carousel_2.jpg" alt="pic">
+            <div class="info_carousel-caption carousel-caption d-block mb-4 d-none ">
+                <h2 class="display-5 text-white">Online Happiness program</h2>
+
+                <button type="button" class="info_carousel-button btn btn-outline-light btn-lg text-dark" >Know more</button>
+                
+            </div>
+        </div>
+        <div class="info_carousel-item carousel-item">
+            <img class="img-responsive d-block w-100" src="../../res/img/info_carousel/carousel_3.jpg" alt="pic">
+            <div class="info_carousel-caption carousel-caption d-block mb-4 d-none ">
+                <h2 class="display-5 text-white">Online YES program</h2>
+                <button type="button" class="info_carousel-button btn btn-outline-light btn-lg text-dark" >Know more</button>
+                
+            </div>
+        </div>
+    </div>
+    <a class="carousel-control-prev" href="#slides" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#slides" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+  </div>
+
+    <!---------------END OF CAROUSEL--------------->
+  <div class="yp_slider">
+    <div class="yp_slide">
+        <div class="yp_content">
+            <h2>Poojitha M K(Dept co-ordinator)</h2><b>4th Sem ECE</b>
+            <p>Ph No:9482941128</p>
+        </div>
+    </div>
+    <div class="yp_slide">
+        <div class="yp_content">
+            <h2>Harshitha P(Dept co-ordinator)</h2><b>4th Sem CSE</b>
+            <p>Ph No:9900519539</p>
+        </div>
+    </div>
+    <div class="yp_slide">
+        <div class="yp_content">
+            <h2>Ihit Shukla(Secretary)</h2><b>8th Sem Mech</b>
+            <p>Ph No - 990173822.</p>
+        </div>
+    </div>
+    <div class="yp_slide">
+        <div class="yp_content">
+            <h2>Vivek K(General Secretary)</h2><b>8th Sem CSE</b>
+            <p>Ph No - 974551764.</p>
+        </div>
+    </div>
+    <div class="yp_slide">
+        <div class="yp_content">
+            <h2>Gosu Satish(Secretary)</h2><b>8th Sem Mech</b>
+            <p>Ph No - 7996998373.</p>
+        </div>
+    </div>
+    <div class="yp_slide">
+        <div class="yp_content">
+            <h2>Divitha E(Dept co-ordinator)</h2><b>4th Sem CSE</b>
+            <p>Ph No - 7995350908.</p>
+        </div>
+    </div>
+    <div class="yp_slide">
+        <div class="yp_content">
+            <h2>Kriti(Dept co-ordinator)</h2><b>4th Sem Mech</b>
+            <p>Ph No:9829711745.</p>
+        </div>
+    </div>
+  </div>
+  <div class="yp_grid-contain yp_contain1">
+    <div>
+      <div class="yp_round">
+        <div class="yp_rotate">
+          <div class="yp_rotation">
+            <img src="https://images.wallpaperscraft.com/image/forest_fog_trees_128751_300x168.jpg">
+          </div>
+            
+          <div class="yp_rotation">
+            <img src="https://images.wallpaperscraft.com/image/sea_coast_rocks_underwater_world_vegetation_fish_53966_300x168.jpg">
+          </div>
+          
+          <div class="yp_rotation">
+            <img src="https://images.wallpaperscraft.com/image/tent_starry_sky_night_tourism_119523_300x168.jpg">
+          </div>
+          
+          <div class="yp_rotation">
+            <img src="https://images.wallpaperscraft.com/image/pier_lake_water-lilies_trees_painting_art_polenov_overgrown_pond_60806_300x168.jpg">
+          </div>
+          <div class="yp_rotation">
+            <img src="https://images.wallpaperscraft.com/image/boat_mountains_lake_135258_300x168.jpg">
+          </div>
+          <!-- <div class="yp_rotation">
+            <img src="https://images.wallpaperscraft.com/image/lake_mountains_trees_129959_300x168.jpg">
+          </div>
+          <div class="yp_rotation">
+            <img src="https://images.wallpaperscraft.com/image/pier_lake_water-lilies_trees_painting_art_polenov_overgrown_pond_60806_300x168.jpg">
+          </div>
+          <div class="yp_rotation">
+            <img src="https://images.wallpaperscraft.com/image/lake_mountains_trees_129959_300x168.jpg">
+          </div>
+          <div class="yp_rotation">
+            <img src="https://images.wallpaperscraft.com/image/pier_lake_water-lilies_trees_painting_art_polenov_overgrown_pond_60806_300x168.jpg">
+          </div> -->
+        </div>
+      </div>
+    </div>
+      <!-- <div> -->
+        <div class="yp_text">
+          <div>
+            <h2>
+              Content
+            </h2>
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            </p>
+          </div>
+        </div>
+      <!-- </div> -->
+  </div>
+  <div class="yp_grid-contain yp_contain2">
+    <div class="yp_text">
+      <div>
+        <h2>
+          Content
+        </h2>
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        </p>
+      </div>
+    </div>
+    <div>
+    <div class="yp_round">
+      <div class="yp_rotate">
+        <div class="yp_rotation">
+          <img src="https://images.wallpaperscraft.com/image/forest_fog_trees_128751_300x168.jpg">
+        </div>
+          
+        <div class="yp_rotation">
+          <img src="https://images.wallpaperscraft.com/image/sea_coast_rocks_underwater_world_vegetation_fish_53966_300x168.jpg">
+        </div>
+        
+        <div class="yp_rotation">
+          <img src="https://images.wallpaperscraft.com/image/tent_starry_sky_night_tourism_119523_300x168.jpg">
+        </div>
+        
+        <div class="yp_rotation">
+          <img src="https://images.wallpaperscraft.com/image/pier_lake_water-lilies_trees_painting_art_polenov_overgrown_pond_60806_300x168.jpg">
+        </div>
+        <div class="yp_rotation">
+          <img src="https://images.wallpaperscraft.com/image/boat_mountains_lake_135258_300x168.jpg">
+        </div>
+        <!-- <div class="yp_rotation">
+          <img src="https://images.wallpaperscraft.com/image/lake_mountains_trees_129959_300x168.jpg">
+        </div>
+        <div class="yp_rotation">
+          <img src="https://images.wallpaperscraft.com/image/pier_lake_water-lilies_trees_painting_art_polenov_overgrown_pond_60806_300x168.jpg">
+        </div>
+        <div class="yp_rotation">
+          <img src="https://images.wallpaperscraft.com/image/lake_mountains_trees_129959_300x168.jpg">
+        </div>
+        <div class="yp_rotation">
+          <img src="https://images.wallpaperscraft.com/image/pier_lake_water-lilies_trees_painting_art_polenov_overgrown_pond_60806_300x168.jpg">
+        </div> -->
+      </div>
+    </div>
+    </div>
+  </div>
+  <div class="yp_social_media">
+    <div>
+        <li class="social_media">
+          <a class="facebook" href="https://www.facebook.com">
+          <i class="fa fa-facebook" aria-hidden="true"></i></a>
+        </li>
+        <li class="social_media">
+          <a class="instagram" href="https://www.instagram.com">
+          <i class="fa fa-instagram" aria-hidden="true"></i></a>
+        </li>
+        <li class="social_media">
+          <a class="twitter" href="https://www.twitter.com">
+          <i class="fa fa-twitter" aria-hidden="true"></i></a>
+         </li>
+        <li class="social_media">
+          <a class="whatsapp" href="https://www.whatsapp.com">
+          <i class="fa fa-whatsapp" aria-hidden="true"></i></a>
+        </li>
+    </div>
+  </div>
+  <script>
     var navList = document.getElementById("nav-lists");
     function Show() {
     navList.classList.add("_Menus-show");
@@ -41,8 +256,9 @@
     function Hide(){
     navList.classList.remove("_Menus-show");
     }
-</script>
-
-
+  </script>
+  
 </body>
 </html>
+
+

@@ -40,21 +40,21 @@ placed so that they do not intersect each other.
 */ 
 /*Decrease translateZ to make images nearer to each other*/
 .yp_rotate div:nth-child(1){
-  transform: rotateY(0deg) translateZ(300px);
+  transform: rotateY(0deg) translateZ(150px);
 }
 .yp_rotate div:nth-child(2){
-  transform: rotateY(40deg) translateZ(300px);
+  transform: rotateY(72deg) translateZ(150px);
 }
 .yp_rotate div:nth-child(3){
-  transform: rotateY(80deg) translateZ(300px);
+  transform: rotateY(144deg) translateZ(150px);
 }
 .yp_rotate div:nth-child(4){
-  transform: rotateY(120deg) translateZ(300px);
+  transform: rotateY(216deg) translateZ(150px);
 }
 .yp_rotate div:nth-child(5){
-  transform: rotateY(160deg) translateZ(300px);
+  transform: rotateY(288deg) translateZ(150px);
 }
-.yp_rotate div:nth-child(6){
+/*.yp_rotate div:nth-child(6){
   transform: rotateY(200deg) translateZ(300px);
 }
 .yp_rotate div:nth-child(7){
@@ -65,7 +65,7 @@ placed so that they do not intersect each other.
 }
 .yp_rotate div:nth-child(9){
   transform: rotateY(320deg) translateZ(300px);
-}
+}*/
 .yp_rotation{
   position: absolute;
 }
@@ -87,4 +87,22 @@ placed so that they do not intersect each other.
     transform: rotateY(0deg);
   }
 }
-/*End of rotating images*/
+.yp_grid-contain{
+  display: grid;
+  grid-gap: 5%;
+  margin: 50px 0 50px 0;
+}
+.yp_contain1{
+  grid-template-columns: 45% 50%;
+}
+.yp_contain2{
+  grid-template-columns: 50% 45%;
+}
+.yp_text{
+  //background-color: blue;
+  background-image: linear-gradient(lightblue, pink);
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+/*End of rotating images

@@ -1,20 +1,27 @@
 const express=require('express');
 const http=require('http');
-const morgan=require('morgan');
+
 
 const hostname='localhost';
 const port=3000;
 
 const app= express();
-app.use(morgan('dev'));
-//app.use('/',express.static(__dirname)+'/public');
 
-app.use(express.static(__dirname+'src/html'));
+const path=require('path');
+
+
+//app.use(express.static(path.join(__dirname+'src/html')));
+
+app.get('/',function(req,res){
+    res.sendFile(path.join(__dirname+'/src/html/home.html')); 
+});
+
+//app.use(express.static(path.join(__dirname, '/src/css')));
 
 app.use((req,res,next)=>{
     res.statusCode=200;
     res.setHeader('Content-Type','text/html');
-    res.end('<html><body><h1>Express server</h1></body</html');
+    res.end('<html><body><h1>Express server</h1></body</html>');
 });
 
 const server=http.createServer(app);

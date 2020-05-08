@@ -16,6 +16,7 @@ body{
 nav{
   background-color: #FBFBFB;
 }
+
 #navbar {
   height: 80px;
   background-color:#FBFBFB;
@@ -29,7 +30,6 @@ nav{
   align-items: center;
   overflow: hidden;
   width: 100%;
-
 }
 
 #navbar .logo {

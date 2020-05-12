@@ -1,52 +1,48 @@
+const express=require('express');
 const http=require('http');
-const fs=require('fs');
-const path=require('path');
+
 
 const hostname='localhost';
-const port =3000;
+const port=3000;
 
-const server=http.createServer((req,res)=>{
-    console.log("Request for "+req.url+" by method "+req.method);
+const app= express();
 
-    if(req.method=="GET"){
-        var fileUrl;
-        if(req.url=='/') fileUrl='src/html/home.html';
-        else fileUrl=req.url;
+const path=require('path');
 
-        var filePath=path.resolve(fileUrl);
-        const fileExt=path.extname(filePath);
-        if(fileExt=='.html'){
-            fs.exists(filePath, (exists)=>{
-                if(!exists){
-                    res.status=404;
-                    res.setHeader('Content-Type','text/html');
-                    res.end('<html><body><h1>Error 404: '+fileUrl+' not found </h1></body></html>');
 
-                    return;
-                }
-                res.statusCode=200;
-                res.setHeader('Content-Type','text/html');
-                fs.createReadStream(filePath).pipe(res);
-            })
-        }
-        else{
-            res.status=404;
-            res.setHeader('Content-Type','text/html');
-            res.end('<html><body><h1>Error 404: '+fileUrl+' not found </h1></body></html>');
+app.use(express.static(path.join(__dirname, 'src/css')));
+app.use(express.static(path.join(__dirname, 'src/js')));
+app.use(express.static(path.join(__dirname, 'src/animations')));
+app.use(express.static(path.join(__dirname, 'res/')));
 
-            return;  
-        }
 
-    }
-    else{
-        res.status=404;
-        res.setHeader('Content-Type','text/html');
-        res.end('<html><body><h1>Error 404: '+req.method+' not supported </h1></body></html>');
+//app.use(express.static(path.join(__dirname+'src/html')));
+app.get('/',function(req,res){
+    res.sendFile(path.join(__dirname+'/src/html/home.html')); 
+    console.log('got req form(get) '+req.url);
+});       
+app.get('/register.html',function(req,res){
+    res.sendFile(path.join(__dirname+'/src/html/register.html')); 
+});
 
-        return; 
-    }
-})
+app.get('/about_us.html',function(req,res){
+    res.sendFile(path.join(__dirname+'/src/html/about_us.html')); 
+});
+app.get('/home.html',function(req,res){
+    res.sendFile(path.join(__dirname+'/src/html/home.html')); 
+    console.log('got req form(get) '+req.url);
+});
 
-server.listen(port, hostname, ()=>{
+
+app.use((req,res,next)=>{
+	console.log('got req for '+req.url); 
+    res.statusCode=200;
+    res.setHeader('Content-Type','text/html');
+    res.end('<html><body><h1>Express server</h1></body</html>');
+});
+
+const server=http.createServer(app);
+
+server.listen(port,hostname,()=>{
     console.log(`Server running at http://${hostname}:${port}`);
 });

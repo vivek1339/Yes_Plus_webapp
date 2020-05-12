@@ -12,17 +12,19 @@
   <!-- <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script> -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   
-  <link rel="stylesheet" href="../css/navbar.css">
-  <link rel="stylesheet" type="text/css" href="../css/home.css">
-  <link rel="stylesheet" type="text/css" href="../css/about_us.css">
-  <link rel="stylesheet" type="text/css" href="../animations/Rotating.css">
-  <link rel="stylesheet" type="text/css" href="../animations/slider1.css">
+  <link rel="stylesheet" href="/navbar.css">
+  <link rel="stylesheet" type="text/css" href="/home.css">
+  <link rel="stylesheet" type="text/css" href="/about_us.css">
+  <link rel="stylesheet" type="text/css" href="/Rotating.css">
+  <link rel="stylesheet" type="text/css" href="/slider1.css">
   
 <body>
-  <nav >
+  <nav class="navbar sticky-top">
     <div class="container-fluid" id="navbar">
       <div>
+     <a href="./home.html">
       <img src="https://2.bp.blogspot.com/-beUrUOb3btQ/T1PFJcGPDWI/AAAAAAAAAEM/hBCu0lFtbC8/s400/YES%2521%252B.png" height=80px width=140px style="float: left;top: 0%; left: 1%;position: relative;">
+      </a>
       </div>
    
       <div class="yp_navbar">
@@ -33,9 +35,10 @@
         </div>
         <ul id="nav-lists">
           <li class="close"><span onclick="Hide()">X</span></li>
-          <li><a href="./home.html">Home</a></li>
-          <li><a href="./register.html">About Us</a></li>
-          <li><a href="./about_us.html">Testimonials</a></li>
+           <li><a href="./about_us.html">About Us</a></li>
+           <li><a href="./join_us.html">Join Us</a></li>
+           <li><a href="#">Login</a></li>
+    	   <li><a href="#">Testimonials</a></li>
         </ul>
       </div>
     </div>
@@ -50,7 +53,7 @@
     </ul>
     <div class="info_carousel-inner carousel-inner">
         <div class="info_carousel-item carousel-item active">
-            <img  class="img-responsive d-block w-100" src="../../res/img/info_carousel/carousel_1.png" alt="pic" >
+            <img  class="img-responsive d-block w-100" src="/img/info_carousel/carousel_1.png" alt="pic" >
             <div class="info_carousel-caption carousel-caption d-block mb-4 d-none ">
                 <h2 class="display-5 text-white">Online YES!+ program</h2>
                 <button type="button" class="info_carousel-button btn btn-outline-light btn-lg text-dark" >Know more</button>
@@ -58,7 +61,7 @@
             </div>
         </div>
         <div class="info_carousel-item carousel-item">
-            <img  class="img-responsive d-block w-100" src="../../res/img/info_carousel/carousel_2.jpg" alt="pic">
+            <img  class="img-responsive d-block w-100" src="/img/info_carousel/carousel_2.jpg" alt="pic">
             <div class="info_carousel-caption carousel-caption d-block mb-4 d-none ">
                 <h2 class="display-5 text-white">Online Happiness program</h2>
 
@@ -67,7 +70,7 @@
             </div>
         </div>
         <div class="info_carousel-item carousel-item">
-            <img class="img-responsive d-block w-100" src="../../res/img/info_carousel/carousel_3.jpg" alt="pic">
+            <img class="img-responsive d-block w-100" src="/img/info_carousel/carousel_3.jpg" alt="pic">
             <div class="info_carousel-caption carousel-caption d-block mb-4 d-none ">
                 <h2 class="display-5 text-white">Online YES program</h2>
                 <button type="button" class="info_carousel-button btn btn-outline-light btn-lg text-dark" >Know more</button>

@@ -29,31 +29,31 @@ div .yp_slide:hover{
     flex-grow:5;
 }
 div .yp_slide:nth-child(1){
-    background: url('../../res/img/poojitha.jpeg') no-repeat center top;
+    background: url('/img/poojitha.jpeg') no-repeat center top;
     
 }
 div .yp_slide:nth-child(2){
-    background: url('../../res/img/harshitha.jpeg') no-repeat center;
+    background: url('/img/harshitha.jpeg') no-repeat center;
     
 }
 div .yp_slide:nth-child(3){
-    background: url('../../res/img/ihit.jpeg') center top;
+    background: url('/img/ihit.jpeg') center top;
     
 }
 div .yp_slide:nth-child(4){
-    background: url('../../res/img/vivek.jpeg') center top;
+    background: url('/img/vivek.jpeg') center top;
     
 }
 div .yp_slide:nth-child(5){
-    background: url('../../res/img/satish.jpeg') left center;
+    background: url('/img/satish.jpeg') left center;
     
 }
 div .yp_slide:nth-child(6){
-    background: url('../../res/img/divitha.jpeg') center;
+    background: url('/img/divitha.jpeg') center;
     
 }
 div .yp_slide:nth-child(7){
-    background: url('../../res/img/kriti.jpeg') no-repeat center;
+    background: url('/img/kriti.jpeg') no-repeat center;
     
 }
 div .yp_slide .yp_content{

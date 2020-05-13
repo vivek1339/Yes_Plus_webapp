@@ -32,6 +32,11 @@ app.get('/home.html',function(req,res){
     res.sendFile(path.join(__dirname+'/src/html/home.html')); 
     console.log('got req form(get) '+req.url);
 });
+app.get('/login.html',function(req,res){
+    res.sendFile(path.join(__dirname+'/src/html/login.html')); 
+    console.log('got req form(get) '+req.url);
+});
+
 
 
 app.use((req,res,next)=>{

@@ -188,3 +188,109 @@
   transform: translate(-50%, -50%);
 }
 /*End of social media social_media animation*/
+
+/*This class is for the sign_up page */
+/*Put The input inside the form with class "form"*/
+/*It should be like this:
+ <form class="yp_form">
+          <input type="text" name="" placeholder="Username">
+          <input type="email" name="" placeholder="email">
+          <input type="password" name="" placeholder="Password">
+          <input type="tel" name="" placeholder="Phone Number">
+          <input type="number" name="" placeholder="Year of Joining">
+	      <input type="submit" name="" value="Sign Up">
+		</form>
+*/
+.yp_form{
+  width:300px;
+  padding:40px;
+  background: #191919;/*Change this for changing the background color of form*/
+}
+.yp_form input[type = "text"], .yp_form input[type = "password"]{
+  border:0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  border: 2px solid #3498db;
+  padding: 14px 10px;
+  width: 200px;
+  outline:none;
+  color: white;
+  border-radius: 24px;
+  transition: width 0.3s;
+}
+.yp_form input[type = "number"], .yp_form input[type = "password"]{
+  border:0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  border: 2px solid #3498db;
+  padding: 14px 10px;
+  width: 200px;
+  outline:none;
+  color: white;
+  border-radius: 24px;
+  transition: width 0.3s;
+}
+.yp_form input[type = "email"], .yp_form input[type = "password"]{
+  border:0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  border: 2px solid #3498db;
+  padding: 14px 10px;
+  width: 200px;
+  outline:none;
+  color: white;
+  border-radius: 24px;
+  transition: width 0.3s;
+}
+.yp_form input[type = "tel"], .yp_form input[type = "password"]{
+  border:0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  border: 2px solid #3498db;
+  padding: 14px 10px;
+  width: 200px;
+  outline:none;
+  color: white;
+  border-radius: 24px;
+  transition: width 0.3s;
+}
+.yp_form input[type = "text"]:focus, .yp_form input[type = "password"]:focus{
+  width:80%; /*Change This to keep the width of streching less*/
+  width:95%; /*Change This to keep the width of streching less*/
+  border-color: #2ecc71;
+}
+.yp_form input[type = "number"]:focus, .yp_form input[type = "password"]:focus{
+  width:80%; /*Change This to keep the width of streching less*/
+  width:95%; /*Change This to keep the width of streching less*/
+  border-color: #2ecc71;
+}
+.yp_form input[type = "email"]:focus, .yp_form input[type = "password"]:focus{
+  width:80%; /*Change This to keep the width of streching less*/
+  width:95%; /*Change This to keep the width of streching less*/
+  border-color: #2ecc71;
+}
+.yp_form input[type = "tel"]:focus, .yp_form input[type = "password"]:focus{
+  width:80%; /*Change This to keep the width of streching less*/
+  width:95%; /*Change This to keep the width of streching less*/
+  border-color: #2ecc71;
+}
+.yp_form input[type = "submit"]{
+  border:0;
+  background: 0;
+  display: block;
+  margin: 20px auto;
+  border: 2px solid #3498db;
+  padding: 14px 40px;
+  outline:none;
+  color: white;
+  border-radius: 24px;
+  cursor:pointer;
+}
+.yp_form input[type = "submit"]:hover{
+  background: #2ecc71;
+}
+/*End of sing_up Form animation*/

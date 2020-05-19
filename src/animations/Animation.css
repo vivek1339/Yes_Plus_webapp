@@ -88,105 +88,34 @@
 }
 /*End of Image animation*/
 
-/*This is social media social_media animatio*/
-/*Put social_media class inside a div: like this
-<div>
-  <a class="some class" href="">
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <i class="fa fa-facebook" aria-hidden="true"></i>
-  </a>
-</div>
-!!!Important It must contain 4 span for this to work
-*/
+/*This is social media social_media animation*/
+.fa{
+  color:grey;
+}
+.yp_social_media div{
+    position: absolute;
+    right:25%;
+    left:15%;
+    margin-left:-150px;
+}
 .yp_social_media{
-  position: relative;
-  top:100px;
-    display:flex;/*This is for when we bunch of social_media,
-                 they will appear in row*/
+   list-style:none;
+   margin:50px 10px;
+   display:inline-block;
+   font-size:30px;
+   padding:20px 10px;
+   color:grey;
 }
-.yp_social_media a {
-  display:block;
-  position:relative;
-  width:50px;/*change width and height to change the form size of social_media*/
-  height:50px;
-  line-height:50px;
-  font-size:20px;/*Change This to change the size of facebook*/
-  text-align:center;
-  //text-decoration:none;/*Remove commentif it contain text*/
-  color:#404040;
-  cursor: pointer;
+.yp_social_media:hover{
+  opacity:0.7;
+  transition-display:1s;
 }
-.yp_social_media a span{
-  bottom:0;
-  right:0;
-  position:absolute;
-  transition:transform .5s;
+.fa:hover{
+  color:RGB(254,174,0);
+
 }
-.yp_social_media a span:nth-child(1),
-.yp_social_media a span:nth-child(3){
-  width:100%;
-  height:3px;
-  background:#404040;
-}
-.yp_social_media a span:nth-child(1){
-  top:0;
-  transform-origin:left;
-}
-.yp_social_media a span:nth-child(3){
-  bottom:0;
-  transform-origin:right;
-}
-.yp_social_media a:hover span:nth-child(1){
-  transform:scale(0);
-  background-color:#404040;
-  //transform-origin:left;
-  transition:transform .5%;
-}
-.yp_social_media a:hover span:nth-child(3){
-  bottom:0;
-  transform:scale(0);
-  transform-origin:right;
-  transition:transform .5s;
-}
-.yp_social_media a span:nth-child(2),
-.yp_social_media a span:nth-child(4){
-  width:3px;
-  height:100%;
-}
-.yp_social_media a span:nth-child(2){
-  top:0;
-  left:0;
-  transform:scale(0);
-  transform-origin:top;
-  transition: 0.6s;
-}
-.yp_social_media a:hover span:nth-child(2){
-  transform:scale(1);
-  transform-origin:top;
-  background-color:#404040;
-  transition:transform .5s;
-}
-.yp_social_media a span:nth-child(4){
-  top:0;
-  transform:scale(0);
-  transform-origin:top;
-  transition: 0.6s;
-}
-.yp_social_media a:hover span:nth-child(4){
-  transform:scale(1);
-  transform-origin:bottom;
-  transition:transform .5s;
-  background-color:#404040;
-}
-.fa {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
+
+
 /*End of social media social_media animation*/
 
 /*This class is for the sign_up page */

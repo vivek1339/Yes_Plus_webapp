@@ -1,0 +1,108 @@
+/*This is for rotation of images:
+The images should be put inside the div with class "rotation"
+This div should be put another two div with class rotate and round 
+respectively like this:
+<div class="round">
+  <div class="rotate">
+    <div class="rotation">
+      <img src="">
+    </div>
+  <div>
+<div>
+
+The most important is define the angle at which we want 
+to place the image like:
+for 3 the difference should be 106deg
+for 4 the difference should be 80deg*/
+.yp_round{
+  position: relative;
+  perspective: 1000px;/*Change this from 10000 to 1 to see different rotating effects*/
+  margin: auto;/*This is to make it middle*/
+  width: 168px;/*This is to Specify the size of images you want to see during rotation*/
+}
+.yp_rotate{
+  width: 100%;
+  animation: rotar 12s infinite linear;/*Change here time to change the speed of rotation*/
+  transform-style: preserve-3d;
+}
+.yp_rotate:hover{
+  animation-play-state: paused;
+  cursor: pointer;
+}
+.yp_rotate div{
+  width: 100%;
+  height: 168px;
+  overflow: hidden;
+}
+/*Here The rotateY degree contains the place at which we are going 
+to place the images it should be between 0 to 320 and should be 
+placed so that they do not intersect each other.
+*/ 
+/*Decrease translateZ to make images nearer to each other*/
+.yp_rotate div:nth-child(1){
+  transform: rotateY(0deg) translateZ(150px);
+}
+.yp_rotate div:nth-child(2){
+  transform: rotateY(72deg) translateZ(150px);
+}
+.yp_rotate div:nth-child(3){
+  transform: rotateY(144deg) translateZ(150px);
+}
+.yp_rotate div:nth-child(4){
+  transform: rotateY(216deg) translateZ(150px);
+}
+.yp_rotate div:nth-child(5){
+  transform: rotateY(288deg) translateZ(150px);
+}
+/*.yp_rotate div:nth-child(6){
+  transform: rotateY(200deg) translateZ(300px);
+}
+.yp_rotate div:nth-child(7){
+  transform: rotateY(240deg) translateZ(300px);
+}
+.yp_rotate div:nth-child(8){
+  transform: rotateY(280deg) translateZ(300px);
+}
+.yp_rotate div:nth-child(9){
+  transform: rotateY(320deg) translateZ(300px);
+}*/
+.yp_rotation{
+  position: absolute;
+}
+.yp_rotate img{
+  image-rendering: auto;
+  transition: all 300ms;
+  width: 100%;
+  height: 100%;
+}
+.yp_rotate img:hover{
+  transform: scale(1.1);
+  transition: 300ms;
+}
+@keyframes rotar{
+  from{
+    transform: rotateY(360deg);/*Change 360 to 0 and 0 to 360 to rotate in clockwise*/
+  }
+  to{
+    transform: rotateY(0deg);
+  }
+}
+.yp_grid-contain{
+  display: grid;
+  grid-gap: 5%;
+  margin: 50px 0 50px 0;
+}
+.yp_contain1{
+  grid-template-columns: 45% 50%;
+}
+.yp_contain2{
+  grid-template-columns: 50% 45%;
+}
+.yp_text{
+  //background-color: blue;
+  background-image: linear-gradient(lightblue, pink);
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+/*End of rotating images

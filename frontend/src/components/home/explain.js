@@ -57,7 +57,7 @@ export default class Explain extends React.Component{
                   </div>
                 
                 </div>
-                    <div className="yp_fade2"><img src="/images/s1.jpeg"  /></div>
+                    <div className="yp_fade2"><img src="/images/e1.jpeg"  /></div>
                 </div>
 
                 <div className="yp_explain">
@@ -80,7 +80,7 @@ export default class Explain extends React.Component{
 
                                    </div>
                     </div>
-                    <div className="yp_fade2"><img src="/images/s7.jpeg" /></div>
+                    <div className="yp_fade2"><img src="/images/e2.jpeg" /></div>
                 </div>
 
 
@@ -97,7 +97,7 @@ export default class Explain extends React.Component{
                 </div>
                 <div className="yp_explain">
                     <div className="yp_fade1">hello4</div>
-                    <div className="yp_fade2"><img src="/images/img31.jpg" /></div>
+                    <div className="yp_fade2"><img src="/images/e3.jpg" /></div>
                 </div>
             </div>
             </div>

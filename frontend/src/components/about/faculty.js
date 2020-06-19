@@ -4,7 +4,7 @@ const Teacher = () =>{
           <div className="start1">
           
           <figure className="snip blue">
-          <img src="Ajay.jpeg" alt=""/>
+          <img src="/images/Ajay.jpeg" alt=""/>
           <figcaption>
               <h3>Ajay Kumar</h3>
               <p>
@@ -15,7 +15,7 @@ const Teacher = () =>{
       </figure>
       
        <figure className="snip red ">
-          <img src="Ananth.jpeg" alt=""/>
+          <img src="/images/Ananth.jpeg" alt=""/>
           <figcaption>
               <h3>Anant Bhandarkar</h3>
               <p>
@@ -26,7 +26,7 @@ const Teacher = () =>{
       </figure>
       
       <figure className="snip blue">
-          <img src="Deepti.jpeg" alt=""/>
+          <img src="/images/Deepti.jpeg" alt=""/>
           <figcaption>
               <h3>Deepti</h3>
               <p>
@@ -38,7 +38,7 @@ const Teacher = () =>{
  
  
           <figure className="snip red">
-          <img src="Hemanth.jpeg" alt=""/>
+          <img src="/images/Hemanth.jpeg" alt=""/>
           <figcaption>
               <h3>Hemanth</h3>
               <p>
@@ -49,7 +49,7 @@ const Teacher = () =>{
       </figure>
       
       <figure className="snip blue">
-          <img src="Priyanka.jpeg" alt=""/>
+          <img src="/images/Priyanka.jpeg" alt=""/>
           <figcaption>
               <h3>Dr. Priyanka Agarwal</h3>
               <p>
@@ -61,7 +61,7 @@ const Teacher = () =>{
 
 
             <figure className="snip red">
-          <img src="Sahana.jpeg" alt=""/>
+          <img src="/images/Sahana.jpeg" alt=""/>
           <figcaption>
               <h3>Sahana sathish</h3>
               <p>
@@ -73,7 +73,7 @@ const Teacher = () =>{
  
  
           <figure className="snip blue">
-          <img src="Sai sankalp.jpeg" alt=""/>
+          <img src="/images/Sai sankalp.jpeg" alt=""/>
           <figcaption>
               <h3>Sai Sankalp</h3>
               <p>
@@ -84,7 +84,7 @@ const Teacher = () =>{
       </figure>
 
       <figure className="snip red">
-          <img src="Seema.jpeg" alt=""/>
+          <img src="/images/Seema.jpeg" alt=""/>
           <figcaption>
               <h3>Seema Kalro</h3>
               <p>

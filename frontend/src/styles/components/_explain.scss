@@ -1,13 +1,14 @@
 .yp_explain{
     display:flex;
     justify-content: space-between;
+    background-color:rgb(197,196,196);
 }
 .yp_fade2{
     justify-self: flex-end;
 }
 
 .yp_fade2 img{
-    height: 200px;
+    height: 300px;
     width: 200px;
     margin: 0 100px 0 0;
 }
@@ -15,3 +16,43 @@
 .yp_fade1{
     margin-left: 100px;
 }
+.heading{
+   text-align: center;
+   
+  
+}
+.slide-title{
+    font-size: 3vw;
+    font-weight: 400;
+    letter-spacing: 0.1vw;
+    line-height: 1.55vw;
+    padding-bottom: 1.8vw;
+    color:black;
+    font-style: arial;
+   
+ 
+ }
+ .slide-text{
+    font-size: 1vw;
+    line-height: 1.5vw;
+    opacity: 0.8;
+    padding-bottom: 4vw;
+    color: black;
+    font-style: sans-serif;
+ }
+ .yp_fade1{
+    width: 50vw;
+    color: black;
+    padding: 3vw 3vw 5vw 5vw;
+  }
+  .yp_fade2{
+    padding: 3vw 3vw 5vw 5vw;
+    width: 500px;
+    height: 500px;
+    align-items: right;
+    justify-content: right;
+    
+  }
+  .jumbotron .jumbotron-fluid{
+      background-color: gray;
+  }

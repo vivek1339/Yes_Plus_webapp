@@ -30,7 +30,7 @@ export default class Explain extends React.Component{
     render(){
         return(
             <div>
-                <div className="heading"><h1> explain </h1>
+                <div className="heading"><h1> Know Us More!!! </h1>
                 </div>
                 <div classname="jumbotron jumbotron-fluid">
                 <div className="yp_explain">
@@ -93,13 +93,9 @@ export default class Explain extends React.Component{
                              <ul>contact:</ul>
                           </div>
                         </div>
-                    <div className="yp_fade2"><img src="/images/img30.jpg" /></div>
-                </div>
-                <div className="yp_explain">
-                    <div className="yp_fade1">hello4</div>
                     <div className="yp_fade2"><img src="/images/e3.jpg" /></div>
                 </div>
-            </div>
+             </div>
             </div>
         );
     };

@@ -5,47 +5,47 @@ const Grid = () => {
         <div className="yp_grid">
           <center><h1>Things we gain</h1></center>
           <div className="yp_grid1"></div>
-        <div class="container1">
-            <div class="box1">
-                <div class="content1"> 
-                    <img src="#" alt="one"/>
-                    <p>hi fx,fhgddb xszmdxcbc fhcczg cbxgrfc uksxb guz3sgk</p>
+        <div className="container1">
+            <div className="box1">
+                <div className="content1"> 
+                    <img src="/images/anger.jpeg" alt="anger"/>
+                    <p>One main thing to get rid off, we assure that u will be free from it</p>
                 </div>
             </div>
-            <div class="box1">
-                <div class="content1">
-                    <img src="#" alt="two"/>
-                    <p>hi2 fdvjhh hjbcgc cjhbhcf fcbc  gfcbhv</p>
+            <div className="box1">
+                <div className="content1">
+                    <img src="/images/confidence.jpeg" alt="confidence"/>
+                    <p>Self confidence could just be thing that you require to be the best</p>
                 </div>
             </div>
-            <div class="box1">
-                <div class="content1">
-                    <img src="#" alt="three"/>
-                    <p>hi3 shxsc bfv btvcfder lbnsgxer shemzhs</p>
+            <div className="box1">
+                <div className="content1">
+                    <img src="/images/time.jpeg" alt="time"/>
+                    <p>Time best gift to your self</p>
                 </div>
             </div>
-            <div class="box1">
-                <div class="content1">
-                    <img src="" alt="four"/>
-                    <p>hi4 cdytjxsjgn xgnkg rszvex vxhg  jbcdgv drtvjr</p>
+            <div className="box1">
+                <div className="content1">
+                    <img src="/images/fun.jpeg" alt="fun"/>
+                    <p>We share happiness as santa share gifts</p>
                 </div>
             </div>
-            <div class="box1">
-                <div class="content1">
-                    <img src="" alt="five"/>
-                    <p>hi5 xxhv gffxvgdx fxvcxdfxg xfgxgfdx fhdxxgxgx</p>
+            <div className="box1">
+                <div className="content1">
+                    <img src="/images/innovation.jpeg" alt="innovation"/>
+                    <p>We work on many projects </p>
                 </div>
             </div>
-            <div class="box1">
-                <div class="content1">
-                    <img src="11.jpg" alt="six"/>
-                    <p>hi6 czsgzh gbhvxgx cvc  xvhdxh</p>
+            <div className="box1">
+                <div className="content1">
+                    <img src="/images/skills.jpeg" alt="skills"/>
+                    <p>We learn new subjects and concepts</p>
                 </div>
             </div>
-            <div class="box1">
-                <div class="content1">
-                    <img src="11.jpg" alt="seven"/>
-                    <p>hi7 duvtjdxy ffcvyt dudesuvjf ftdtrrdbgrh trdytrd reyxdvdyh</p>
+            <div className="box1">
+                <div className="content1">
+                    <img src="/images/public.jpeg" alt="public"/>
+                    <p>We being the best make sure that everyone are bought up as leaders.</p>
                 </div>
             </div>
         </div>

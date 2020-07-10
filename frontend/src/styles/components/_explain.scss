@@ -1,58 +1,155 @@
+
+
 .yp_explain{
-    display:flex;
-    justify-content: space-between;
-    background-color:rgb(197,196,196);
-}
-.yp_fade2{
-    justify-self: flex-end;
-}
-
-.yp_fade2 img{
-    height: 300px;
-    width: 200px;
-    margin: 0 100px 0 0;
-}
-
-.yp_fade1{
-    margin-left: 100px;
-}
-.heading{
-   text-align: center;
-   
-  
-}
-.slide-title{
-    font-size: 3vw;
-    font-weight: 400;
-    letter-spacing: 0.1vw;
-    line-height: 1.55vw;
-    padding-bottom: 1.8vw;
-    color:black;
-    font-style: arial;
-   
+    display:flex; 
+    justify-content:space-between; 
+     background-color:rgb(197,196,196);
+     font-size:1.5em;
+     width:100%;
+ }
+  .yp_fade2{
+    justify-self: flex-end; 
+ }
+ 
+ .yp_fade2 img{
+     height:15em;
+     margin-left:-20%;
+     width:100%;
  
  }
- .slide-text{
-    font-size: 1vw;
-    line-height: 1.5vw;
-    opacity: 0.8;
-    padding-bottom: 4vw;
-    color: black;
-    font-style: sans-serif;
+ 
+  .yp_fade1{
+     margin-left: 4em;
  }
- .yp_fade1{
-    width: 50vw;
-    color: black;
-    padding: 3vw 3vw 5vw 5vw;
+ div .heading h1{
+    display: block;
+ }
+ .heading h1{
+    text-align:center;
+    font-size:4vw;
+    background: linear-gradient(330deg,  #642b73,#bd3f32,#642b73,#bd3f32);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: block;
+    font-family:sans-serif;
+    padding-top:2%;
+ }
+ .slide-title{
+     font-size: 3vw;
+     font-weight: 400;
+     letter-spacing: 0.1vw;
+     line-height: 1.55vw;
+     padding-bottom: 1.8vw;
+     color:black;
+     font-style: arial;
+     display: block;
   }
-  .yp_fade2{
-    padding: 3vw 3vw 5vw 5vw;
-    width: 500px;
-    height: 500px;
-    align-items: right;
-    justify-content: right;
-    
+  .slide-text{
+     font-size: 1vw;
+     line-height: 1.5vw;
+    opacity: 0.8; 
+     padding-bottom: -200px;
+     color: black;
+     font-style: sans-serif;
+     display: block;
   }
-  .jumbotron .jumbotron-fluid{
-      background-color: gray;
-  }
+  .yp_fade1{
+     width: 50vw;
+     color: black;
+     padding: 3vw 3vw 5vw 5vw;
+   }
+   .yp_fade2{
+     padding: 3vw 3vw 5vw 5vw;
+     width: 500px;
+     height: 500px;
+     align-items: right;
+     justify-content: right;
+     
+   }
+   .jumbotron .jumbotron-fluid{
+       background-color: gray;
+   }
+ 
+   @media (max-width: 990px) {
+    .yp_explain{
+        display: block;
+        width:100%;
+    }
+  
+     .yp_fade2{
+         padding-top:-300%;
+     }
+     .yp_fade2 img{
+         height:15em;
+         width:80%;
+         margin-left:10%;
+     }
+     .slide-title{
+      font-size:4vw;
+      line-height:1;
+      text-align:center;
+      display: block;
+      }
+ 
+      .slide-text{
+        font-size:15px;
+        padding-top:10%; 
+         max-width:100%;
+         line-height:1;
+         display:block;
+         flex-direction:column;
+      }
+      .heading h1{
+         text-align:center;
+         font-size:8vw;
+         background: linear-gradient(330deg,  #642b73,#bd3f32,#642b73,#bd3f32);
+         -webkit-background-clip: text;
+         -webkit-text-fill-color: transparent;
+         font-family:sans-serif;
+         padding-top:5%;
+         
+      }
+      .yp_fade1 ul{
+          font-size:3vw;
+      } 
+     }
+      @media (max-width:800px) {
+         .yp_explain{
+             display: block;
+             width:100%;
+         }
+       
+         .yp_fade2 img{
+             height:15em;
+             width:70%;
+             margin-left:10%;
+         } 
+      }
+      @media (max-width:700px) {
+         .yp_explain{
+             display: block;
+             width:100%;
+         }
+       
+         .yp_fade2 img{
+             height:15em;
+             width:70%;
+             margin-left:10%;
+         } 
+      }
+      @media (max-width:600px) {
+         .yp_explain{
+             display: block;
+             width:100%;
+         }
+       
+         .yp_fade2 img{
+             height:15em;
+             width:60%;
+             margin-left:15%;
+         } 
+      }
+ 
+ 
+  
+ 

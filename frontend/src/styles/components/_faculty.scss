@@ -1,23 +1,23 @@
 
-.start1 {
 
+.start1 {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: wrap;
   margin: 0;
   height: 100%;
-    overflow: hidden;
+  overflow: hidden;
 }
 figure.snip {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
-  font-family:  'Roboto Condensed', sans-serif;;
+  font-family: arial;
   color: #fff;
   position: relative;
   overflow: hidden;
   margin: 10px;
-  min-width: 220px;
-  max-width: 310px;
+  min-width: 250px;
+  max-width: 300px;
   width: 100%;
   text-align: center;
 }
@@ -72,6 +72,7 @@ figure.snip h3 {
   background: #333333;
   text-transform: uppercase;   
   transform: translateY(-50%) rotate(0deg) scale(1);
+  font-size:20px;
 }
 
 figure.snip p {
@@ -120,4 +121,26 @@ figure.snip.hover:after {
 .start1 img{
   width:50%;
   height:20%;
+}
+
+.faculty h1{
+  text-align:center;
+  font-size:4vw;
+  background: linear-gradient(330deg,  #642b73,#bd3f32,#642b73,#bd3f32);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family:sans-serif;
+  padding-top:2%;
+}
+@media(max-width:800px){
+  .faculty h1{
+    text-align:center;
+    font-size:8vw;
+    background: linear-gradient(330deg,  #642b73,#bd3f32,#642b73,#bd3f32);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family:sans-serif;
+    padding-top:5%;
+    
+ }
 }

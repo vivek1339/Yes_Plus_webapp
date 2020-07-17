@@ -1,1 +1,141 @@
+/* *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}*/
 
+.container{
+    position: relative;
+    width:85%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 10%;
+    padding-top:-1%;
+}
+.container .card{
+    position: relative;
+    height: 27em;
+    background: #fff;
+    display: flex;
+    width: 40%;
+    margin: 2em 0;
+}
+.container .card .imgbx{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #333;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: 0.5s ease-in-out;
+
+}
+.container .card:hover .imgbx{
+    width: 10em;
+    height: 10em;
+    left:-5em;
+    top: calc( 50% - 5px);
+    transition: 0.5s ease-in-out;
+    background-color: #000080; /* For browsers that do not support gradients */
+    background-image: linear-gradient(to top right, #b91372  12%, #000080);
+}
+.container .card .imgbx:before{
+    content: attr(data-text) ;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 6em;
+    color: rgba(255, 255, 255,.05);
+    font-weight: 700;
+}
+.container .card .imgbx img{
+    max-width: 26em;
+    height: 19em;
+    transition: 0.5s ease-in-out;
+
+}
+.container .card:hover .imgbx img{
+    max-width: 8em;
+    max-height: 8em;
+
+}
+.container .card .content{
+    position: absolute;
+    
+    right: 0;
+    width: calc(100% - 75px);
+    height: 100%;
+    padding:0.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container .card .content h3{
+    display: flex;
+    margin-bottom:0.5em;
+    font-size: 2.4em;
+}
+/* .container .card .content a{
+    display: inline-block;
+    margin-top: 10px;
+    padding: 5px 10px;
+    background: #333;
+    text-decoration: none;
+    color: #fff;
+}*/
+
+.activity h1{
+    text-align:center;
+    font-size:4vw;
+    background: linear-gradient(330deg,  #642b73,#bd3f32,#642b73,#bd3f32);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family:sans-serif;
+    padding-top:1%;
+}
+
+@media(max-width:800px){
+    .container{
+        width:85%;
+        flex-direction: column;
+        align-items: center;
+    }
+    .container .card{
+        width:95%;
+        padding-left:0;
+        padding-right:0;
+    }
+    .activity h1{
+        text-align:center;
+        font-size:8vw;
+        background: linear-gradient(330deg,  #642b73,#bd3f32,#642b73,#bd3f32);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-family:sans-serif;
+        padding-top:5%;
+        
+     }
+    
+}
+@media(max-width:990px){
+    .container{
+        width:80%;
+        flex-direction: column;
+        align-items: center;
+    }
+    .container .card{
+        width:90%;
+        padding-left:0;
+        padding-right:0;
+    }
+}

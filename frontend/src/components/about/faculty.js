@@ -1,7 +1,9 @@
 import React from 'react';
 const Teacher = () =>{
         return (
-          <div className="start1">
+            <div class="faculty">
+            <h1>Our Faculty</h1>
+            <div className="start1">
           
           <figure className="snip blue">
           <img src="/images/Ajay.jpeg" alt=""/>
@@ -95,7 +97,7 @@ const Teacher = () =>{
       </figure>
 
       </div>
-       
+       </div>
         );
     };
     export default Teacher;

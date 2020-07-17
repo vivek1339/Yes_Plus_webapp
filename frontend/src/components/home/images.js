@@ -1,5 +1,6 @@
 import React from 'react';
 
+<<<<<<< HEAD
 const Images = () => {
     return(
         <div className="images">
@@ -220,3 +221,4 @@ const Images = () => {
 };
     
 export default Images
+

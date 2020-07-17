@@ -74,7 +74,7 @@ app.post('/add',(req, res) => {
       user_name: user_obj.name,
       user_email: user_obj.email,
       user_password: user_obj.password,
-      user_type: user_obj.type,
+      user_branch: user_obj.branch,
       user_phno: user_obj.phno,
       user_join_year: user_obj.join_year,
     };

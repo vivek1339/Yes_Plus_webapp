@@ -1,9 +1,14 @@
 import React from 'react';
+import Testimonials from './Testimonal/Testimonials';
 
-const Testimonials = () =>(
+import PostForm from './Testimonal/PostForm';
+
+const Home = () =>(
     <div>
-        This is Testimonials page.
+        <Testimonials />
+        <PostForm />
+        
     </div>
 )
 
-export default Testimonials;
+export default Home;

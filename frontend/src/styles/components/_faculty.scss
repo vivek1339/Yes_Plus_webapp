@@ -16,8 +16,8 @@ figure.snip {
   position: relative;
   overflow: hidden;
   margin: 10px;
-  min-width: 250px;
-  max-width: 300px;
+  min-width: 220px;
+  max-width: 350px;
   width: 100%;
   text-align: center;
 }
@@ -131,16 +131,4 @@ figure.snip.hover:after {
   -webkit-text-fill-color: transparent;
   font-family:sans-serif;
   padding-top:2%;
-}
-@media(max-width:800px){
-  .faculty h1{
-    text-align:center;
-    font-size:8vw;
-    background: linear-gradient(330deg,  #642b73,#bd3f32,#642b73,#bd3f32);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-family:sans-serif;
-    padding-top:5%;
-    
- }
 }

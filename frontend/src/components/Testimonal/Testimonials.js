@@ -1,9 +1,9 @@
 import React from 'react';
 
-const SignUp = () =>(
+const Testimonal = () =>(
     <div>
         This is Sign up page
     </div>
 )
 
-export default SignUp; 
+export default Testimonal;

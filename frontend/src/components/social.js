@@ -2,7 +2,7 @@ import React from 'react';
 
 const Social = () => {
     return (
-      <div className="yp_social_media">
+      <div className="yp_social_media"> 
         <ul>
           <li className="social_media">
             <a className="facebook" href="https://www.facebook.com">

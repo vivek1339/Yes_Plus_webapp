@@ -30,7 +30,7 @@ export default class Explain extends React.Component{
     render(){
         return(
             <div>
-                <div className="heading"><h1> Know Us More!!! </h1>
+                <div className="heading"><h1> Know us more </h1>
                 </div>
                 <div classname="jumbotron jumbotron-fluid">
                 <div className="yp_explain">
@@ -38,7 +38,7 @@ export default class Explain extends React.Component{
                     <div className="slide-title"> What’s new?? </div>
                     
                     <div className="slide-text"> For what??
-                        The environment created during this course is so comfortable
+                    <p>The environment created during this course is so comfortable
                         but succeeds in getting you out of your comfort zone. You get to 
                         have the wonderful experience of Sudharshan Kriya. Along with 
                         this there are a lot of activities awaiting you.
@@ -53,19 +53,21 @@ export default class Explain extends React.Component{
                              More activities doesn't mean that you have to spend a lot of time to try
                       and understand things which you can do with the tiniest of things.
                     The only requirement for the course your interest and enthusiasm towards it. 
-                    There many new things for you to explore in it so hurry up and be a part of us and the best of yourself.    
+                    There many new things for you to explore in it so hurry up and be a part of us and the best of yourself. 
+                    </p> 
                   </div>
                 
+                
                 </div>
-                    <div className="yp_fade2"><img src="/images/e1.jpeg"  /></div>
+                    <div className="yp_fade2"><img src="/images/e1.jpeg"/></div>
                 </div>
 
                 <div className="yp_explain">
                     <div className="yp_fade1">
-                    <div className="slide-title">for what?? </div>
+                    <div className="slide-title">For What?? </div>
                            
                              <div className="slide-text"> For what??
-                                Do it for yourself, for your betterment, for your peace of mind
+                   <p>       Do it for yourself, for your betterment, for your peace of mind
                                 and give yourself a chance to enjoy all the activities we have
                                 awaiting you. Enjoy while you learn something new and
                                 benefit yourself with this course.
@@ -77,15 +79,15 @@ export default class Explain extends React.Component{
                                 Do this for yourself because you deserve the best of experiences you can have. 
                                 Learn to explore yourself and your ability which was stopped without your knowledge.
                                  Give the chance to yourself because you are what you want to be and try out be the most calm, patient, de-stressed, confident and happiest you have ever been.
-
+                    </p>
                                    </div>
                     </div>
-                    <div className="yp_fade2"><img src="/images/e2.jpeg" /></div>
+                    <div className="yp_fade2"><img src="/images/e2.jpeg"/></div>
                 </div>
 
 
                 <div className="yp_explain">
-                    <div className="yp_fade1"> <div className="slide-title"> when???</div>
+                    <div className="yp_fade1"> <div className="slide-title"> When???</div>
                           <div>
                               <ul>date :</ul>
                              <ul>time :</ul>
@@ -93,10 +95,9 @@ export default class Explain extends React.Component{
                              <ul>contact:</ul>
                           </div>
                         </div>
-                    <div className="yp_fade2"><img src="/images/e3.jpg" /></div>
+                    <div className="yp_fade2"><img src="/images/e3.jpeg"/></div>
                 </div>
-             </div>
-            </div>
+            </div></div>
         );
     };
 };

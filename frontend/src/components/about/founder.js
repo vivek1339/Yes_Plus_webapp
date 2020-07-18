@@ -2,7 +2,7 @@ import React from 'react';
 /*this feature should be constant throughtout the club exists*/
 const Founder = () =>{
     return(
-        <div className="yp_slidder_head">
+        <div className="yp_slidder_head2">
           <center><h1>Founders</h1> 
             <h4>(Student Chapter)</h4></center>
             <div className="container2">
@@ -11,7 +11,7 @@ const Founder = () =>{
                         <img src="/images/ihit.jpeg" height="243.8" width="260"/>
                     </div>
                     <div className="content2">
-                        <h1 >Ihit Shukla<br /><span>Mechanical Engineer</span></h1>
+                        <h2>Ihit Shukla<br /><span>Mechanical Engineer</span></h2>
                         <p>I feel a new enthusiam for life.I feel strength within to reach new heights and achieve the impossible.</p>
                     </div>
                 </div>

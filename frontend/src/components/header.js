@@ -9,7 +9,7 @@ export default class Header extends React.Component{
         }else{
             x.className = "yp_navbar";
         }
-    };  
+    };   
 
     render() {
         return(

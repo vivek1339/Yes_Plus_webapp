@@ -29,3 +29,10 @@
     background-clip: text;
   
   }
+  @media (max-width: 1000px) {
+    .yp_social_media{
+      position: absolute;
+      left:50%;
+      margin-left:-150px;
+  }
+  }

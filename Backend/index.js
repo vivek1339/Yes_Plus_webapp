@@ -8,6 +8,7 @@ var admin = require("firebase-admin");
 
 var serviceAccount = require("./ServiceAccountKey.json");
 
+
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
   databaseURL: "https://yesplus-webapp.firebaseio.com"
@@ -27,39 +28,15 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(bodyParser.json());
 
-app.use(express.static(path.join(__dirname, "src/css")));
-app.use(express.static(path.join(__dirname, "src/js")));
-app.use(express.static(path.join(__dirname, "src/animations")));
-app.use(express.static(path.join(__dirname, "res/")));
 
+var cors = require("cors");
+var cors_options = {
+  origin : '*',
+
+}
+app.use(cors(cors_options));
 //app.use(express.static(path.join(__dirname+'src/html')));
-app.get("/", function (req, res) {
-  res.sendFile(path.join(__dirname + "/src/html/home.html"));
-  console.log("got req form(get) " + req.url);
-});
-app.get("/register.html", function (req, res) {
-  res.sendFile(path.join(__dirname + "/src/html/register.html"));
-});
 
-app.get("/about_us.html", function (req, res) {
-  res.sendFile(path.join(__dirname + "/src/html/about_us.html"));
-});
-app.get("/home.html", function (req, res) {
-  res.sendFile(path.join(__dirname + "/src/html/home.html"));
-  console.log("got req form(get) " + req.url);
-});
-app.get("/login.html", function (req, res) {
-  res.sendFile(path.join(__dirname + "/src/html/login.html"));
-  console.log("got req form(get) " + req.url);
-});
-app.get("/join_us.html", function (req, res) {
-  res.sendFile(path.join(__dirname + "/src/html/join_us.html"));
-  console.log("got req form(get) " + req.url);
-});
-app.get("/sign_up.html", function (req, res) {
-  res.sendFile(path.join(__dirname + "/src/html/sign_up.html"));
-  console.log("got req form(get) " + req.url);
-});
 
 /*const usersRouter = require('./users');
 console.log("Accessing users");
@@ -76,7 +53,7 @@ app.post('/add',(req, res) => {
       user_password: user_obj.password,
       user_branch: user_obj.branch,
       user_phno: user_obj.phno,
-      user_join_year: user_obj.join_year,
+      user_join_year: user_obj.joinyear,
     };
     console.log(user_data);
     return db

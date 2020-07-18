@@ -1,17 +1,17 @@
-*
+/*
 {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body
+ body
 {
     display: flex;
     justify-content: center;
     align-self: center;
     min-height: 100vh;
   
-}
+}*/
 .container1
 {
     position: relative;
@@ -37,7 +37,8 @@ body
 }
 .container1 .box1:hover
 {
-    background: #e91e63;
+    background-color: #000080; /* For browsers that do not support gradients */
+    background-image: linear-gradient(to top right, #b91372  12%, #000080);
 }
 .container1 .box1 img
 {
@@ -47,7 +48,7 @@ body
 }
 .container1 .box1:nth-child(1)
 {
-    grid-column: span 2;
+    grid-column: span 3;
     grid-row: span 1;
 }
 .container1 .box1:nth-child(2)
@@ -57,13 +58,22 @@ body
 }
 .container1 .box1:nth-child(4)
 {
-    grid-column: span 1;
-    grid-row: span 2;
+    grid-column: span 2;
+    grid-row: span 3;
 }
 .container1 .box1:nth-child(5)
 {
     grid-column: span 3;
     grid-row: span 1;
+}
+.yp_grid h1{
+    text-align:center;
+    font-size:4vw;
+    background: linear-gradient(330deg,  #642b73,#bd3f32,#642b73,#bd3f32);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family:sans-serif;
+    padding-top:2%;
 }
 @media (max-width: 991px)
 {
@@ -81,3 +91,12 @@ body
 /*.yp_benefit_head{
     text-align: center;
 }*/
+@media (max-width: 1000px){
+.container1
+{
+    display: block;
+}
+    .yp_grid h1{
+        font-size:6vw;
+    }
+}

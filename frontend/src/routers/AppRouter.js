@@ -24,6 +24,6 @@ const AppRouter = () =>(
             <Social />
         </div>
     </BrowserRouter>
-);
+); 
 
 export default AppRouter;

@@ -23,6 +23,7 @@ export default class Header extends React.Component{
                 <NavLink to="/testimonials" activeClassName="is-active" className="yp_navbar1">Testimonials</NavLink>
                 <NavLink to="/login" activeClassName="is-active" className="yp_navbar1">Join Us</NavLink>
                 <NavLink to="/about" activeClassName="is-active" className="yp_navbar1">About Us</NavLink>
+                 <NavLink to="/events" activeClassName="is-active" className="yp_navbar1">Events</NavLink>
             
             </header>
         )

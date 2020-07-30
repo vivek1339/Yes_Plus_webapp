@@ -35,25 +35,15 @@ export default class Explain extends React.Component{
                 <div classname="jumbotron jumbotron-fluid">
                 <div className="yp_explain">
                     <div className="yp_fade1">
-                    <div className="slide-title"> What’s new?? </div>
+                    <div className="slide-title"> Why Yes+? </div>
                     
-                    <div className="slide-text"> For what??
-                    <p>The environment created during this course is so comfortable
-                        but succeeds in getting you out of your comfort zone. You get to 
-                        have the wonderful experience of Sudharshan Kriya. Along with 
-                        this there are a lot of activities awaiting you.
-                        This course teaches you a lot of new things which you don't want to miss at all.
-                         It is you the best environment, makes you comfortable enough to speak to anyone, 
-                         helps to understand yourself better and make sure you learn the most.
-                            Here you learn to come out of your comfort zone and be better at communication. 
-                        Most of us have a problem with the talking to new people or fear new 
-                        changes in our surrounding and never accept the fact of change or be happy.
-                        This can be over come by a little help provided by Yes+ course with a little exercise,
-                         sudarshan kriya and many more activities.
-                             More activities doesn't mean that you have to spend a lot of time to try
-                      and understand things which you can do with the tiniest of things.
-                    The only requirement for the course your interest and enthusiasm towards it. 
-                    There many new things for you to explore in it so hurry up and be a part of us and the best of yourself. 
+                    <div className="slide-text"> 
+                    <p>There is a quote “When you get out of comfort zone it expands and follows you!”, the YES!+ workshop gives you a first-hand experience of this.
+This workshop is packed with a lot of fun and simple activities which makes you wonder about the mind and its abilities, to engage you and make you feel special. We make sure that you experience a lot of new things which you wouldn't want to miss at all.
+ 
+This workshop offers a very comfortable environment that makes you see us as a family! As you practice the tasks we assign in this workshop, you will gain confidence as well as public speaking skills gradually. This workshop is specially designed for you, the only requirement for the course your interest and enthusiasm towards it.
+ 
+There are many new things for you to experience, so hurry up and be a part of us and explore the best in yourself.
                     </p> 
                   </div>
                 
@@ -64,21 +54,17 @@ export default class Explain extends React.Component{
 
                 <div className="yp_explain">
                     <div className="yp_fade1">
-                    <div className="slide-title">For What?? </div>
+                    <div className="slide-title">Discover New You! </div>
                            
-                             <div className="slide-text"> For what??
-                   <p>       Do it for yourself, for your betterment, for your peace of mind
-                                and give yourself a chance to enjoy all the activities we have
-                                awaiting you. Enjoy while you learn something new and
-                                benefit yourself with this course.
-                                Everyone deserve to be the best of themselves.
-                                 everyone must enjoy and the same time learn something new, get better at what they are 
-                                 and be happy with a really pisses me.
-                                    You should do this course to give a chance for yourself to learn, to love,
-                               get new skills and enjoy which most of us miss out in our busy schedules.
-                                Do this for yourself because you deserve the best of experiences you can have. 
-                                Learn to explore yourself and your ability which was stopped without your knowledge.
-                                 Give the chance to yourself because you are what you want to be and try out be the most calm, patient, de-stressed, confident and happiest you have ever been.
+                             <div className="slide-text"> 
+                   <p>   This workshop has a lot of elements which will assist you, to let go of your previous self and enter a new dimension. The transition is going to be amazing. Trust us!
+This is a personality development workshop. These days as we all know, Soft skills are much more important than Tech skills. This workshop is conducted in different parts of the world as well as in most of the top universities ( Like Havard, IITs and lot of NITs) which has their own YES!+ clubs.
+
+We are here to help you discover and uncover the skills from within yourselves one after the other. 
+
+This workshop focuses on leadership, creativity, enthusiasm and responsibility. manages to de-stress and enable the release of negative emotions. We target and talk about the stress of studies, career, love and relationships with parents through various interactive sessions and activities.
+
+So, come join us and be a part of this journey to find you!
                     </p>
                                    </div>
                     </div>

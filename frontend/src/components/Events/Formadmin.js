@@ -1,17 +1,17 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
+import axios from 'axios'
 import { NavLink } from 'react-router-dom';
-import axios from 'axios';
-class PostForm extends Component {
+class Formadmin extends Component {
 	constructor(props) {
 		super(props)
 
 		this.state = {
 			name:'',
-			email:'',
-			password:'',
-			branch:'',
+			eventtheme:'',
+			startdate:'',
+			enddate:'',
 			phno:'',
-			joinyear:''			
+			
 		}
 	}
 
@@ -36,36 +36,45 @@ class PostForm extends Component {
 	render() {
 		const { name,email,password,branch,contact,joinyear } = this.state
 		return (
-        
+          
 			<div className="form">
-					<h1 className="heading">Sign Up</h1>
 				<form onSubmit={this.submitHandler}>
 					<div>
 						<label>Name:</label>
 						<input
 							type="text"
 							name="name"
-							placeholder="Name"
+							placeholder="event name"
 							value={name}
 							onChange={this.changeHandler}
 						/>
 					</div>
 					<div>
-						<label>email:</label>
+						<label>event theme</label>
 						<input
-							type="email"
-							name="email"
-							placeholder="Email"
+							type="text"
+							name="theme"
+							placeholder="event theme"
 							value={email}
 							onChange={this.changeHandler}
 						/>
 					</div>
 					<div>
-						<label>Password:</label>
+						<label>event registration start date</label>
 						<input
-							type="password"
-							name="password"
-							placeholder="Password"
+							type="date"
+							name="date"
+							placeholder="start date"
+							value={password}
+							onChange={this.changeHandler}
+						/>
+					</div>
+                    <div>
+						<label>event registration end date</label>
+						<input
+							type="date"
+							name="date"
+							placeholder="end date"
 							value={password}
 							onChange={this.changeHandler}
 						/>
@@ -80,37 +89,36 @@ class PostForm extends Component {
 							onChange={this.changeHandler}
 						/>
 					</div>
-					<div>
-					<label>branch:</label>
+                    <div>
+                       <label>event details:</label> <br/>
+                       <textarea>
+                           event details
+                     </textarea>
+                    </div>
+                    <div>
+						<label>event fee:</label>
 						<input
 							type="text"
-							name="branch"
-							placeholder="Branch"
-							value={branch}
+							name="fee"
+							placeholder="fees"
+							value={contact}
 							onChange={this.changeHandler}
 						/>
 					</div>
-					<div>
-						<label>joinyear:</label>
-						<input
-							type="date"
-							name="joinyear"
-							placeholder="Join"
-							value={joinyear}
-							onChange={this.changeHandler}
-						/>
-					</div>
+				
 
-					<button class="submit-button" type="submit">Submit</button>
+					<button type="submit">Submit</button>
 				</form>
 				<div> to login
-				<NavLink to="/login" className="yp_navbar2">login</NavLink>
+				<NavLink to="/login" >login</NavLink>
 				</div>
 			</div>
-			
 		)
 	}
 }
 
 
-export default PostForm
+export default Formadmin;
+
+
+

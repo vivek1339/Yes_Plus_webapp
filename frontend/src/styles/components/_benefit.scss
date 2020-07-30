@@ -3,14 +3,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
- body
-{
-    display: flex;
-    justify-content: center;
-    align-self: center;
-    min-height: 100vh;
-  
 }*/
 .container1
 {
@@ -19,15 +11,15 @@
     display: grid;
     grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
     grid-template-rows: minmax(100px,auto);
-    margin: 40px;
+    margin: 4em;
     grid-auto-flow: dense;
-    grid-gap: 10px;
+    grid-gap: 0.2em;
     background: #222;
 }
 .container1 .box1
 {
     background: #333;
-    padding: 20px;
+    padding: 0.0001em;
     display: grid;
     font-size: 20px;
     place-items: center;
@@ -43,8 +35,8 @@
 .container1 .box1 img
 {
     position: relative;
-    max-width: 100px;
-    margin-bottom: 10px;
+    max-width: 4em;
+    margin-bottom: 1em;
 }
 .container1 .box1:nth-child(1)
 {
@@ -73,14 +65,34 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-family:sans-serif;
-    padding-top:2%;
+    padding-top:1%;   
 }
-@media (max-width: 991px)
+@media (max-width: 990px)
 {
     .container1
     {
         grid-template-columns: repeat(auto-fill,minmax(50%,1fr));
         grid-template-rows: minmax(auto,auto);
+        max-width: 100%;
+        margin:2em;
+    }   
+    .container1 .box1
+    {
+        grid-column: unset !important;
+        grid-row: unset !important;
+    }
+
+
+}
+
+@media (max-width: 800px)
+{
+    .container1
+    {
+        grid-template-columns: repeat(auto-fill,minmax(50%,1fr));
+        grid-template-rows: minmax(auto,auto);
+        max-width:100%;
+        margin:3em;
     }   
     .container1 .box1
     {
@@ -91,12 +103,44 @@
 /*.yp_benefit_head{
     text-align: center;
 }*/
-@media (max-width: 1000px){
-.container1
+@media (max-width: 700px)
 {
-    display: block;
-}
+    .container1
+    {
+        grid-template-columns: repeat(auto-fill,minmax(50%,1fr));
+        grid-template-rows: minmax(auto,auto);
+        max-width:100%;
+        margin:3em;
+    }   
+    .container1 .box1
+    {
+        grid-column: unset !important;
+        grid-row: unset !important;
+    }
     .yp_grid h1{
-        font-size:6vw;
+        text-align: center;
+        font-size:8vw;
+        background: linear-gradient(330deg,  #642b73,#bd3f32,#642b73,#bd3f32);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-family:sans-serif;
+        padding-top:5%;
+        
+     }
+
+}
+@media (max-width: 600px)
+{
+    .container1
+    {
+        grid-template-columns: repeat(auto-fill,minmax(50%,1fr));
+        grid-template-rows: minmax(auto,auto);
+        max-width:100%;
+        margin:3em;
+    }   
+    .container1 .box1
+    {
+        grid-column: unset !important;
+        grid-row: unset !important;
     }
 }

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import { NavLink } from 'react-router-dom';
-class Formtesti extends Component {
+class Testimonialform extends Component {
 	constructor(props) {
 		super(props)
 
@@ -133,7 +133,7 @@ class Formtesti extends Component {
 }
 
 
-export default Formtesti
+export default Testimonialform
 
 
 

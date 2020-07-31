@@ -9,8 +9,9 @@ import NotFoundPage from '../components/NotFound';
 import Header from '../components/Header';
 import Social from '../components/social';
 import Events from '../components/events';
-import Formtesti from '../components/Testimonal/Formtesti';
-import Formadmin from '../components/Events/Formadmin';
+import Testimonialform from '../components/Testimonials/testimonialform';
+import Eventform from '../components/Events/eventform';
+
 
 const AppRouter = () =>(
     <BrowserRouter>
@@ -23,8 +24,8 @@ const AppRouter = () =>(
                 <Route path="/signup" component={SignUp} />
                 <Route path="/events" component={Events} />
                 <Route path="/testimonials" component={Testimonials} />
-                <Route path="/formtesti" component={Formtesti} />
-                <Route path="/formadmin" component={Formadmin} />
+                <Route path="/testimonialform" component={Testimonialform} />
+                <Route path="/eventform" component={Eventform} />
                 <Route component={NotFoundPage} />
             </Switch>
             <Social />

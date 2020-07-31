@@ -1,110 +1,97 @@
 
 
 .yp_explain{
-   display:flex; 
-   justify-content:space-between; 
-    background-color:rgb(197,196,196);
-    font-size:15px;
-}
- .yp_fade2{
-   justify-self: flex-end; 
-}
-
-.yp_fade2 img{
-    height:350px;
-    margin-left:-20%;
-    width:100%;
-
-}
-
- .yp_fade1{
-    margin-left: 100px;
-}
-div .heading h1{
-   display: block;
-}
-.heading h1{
-   text-align:center;
-   font-size:4vw;
-   background: linear-gradient(330deg,  #642b73,#bd3f32,#642b73,#bd3f32);
-   -webkit-background-clip: text;
-   -webkit-text-fill-color: transparent;
-   display: block;
-   font-family:sans-serif;
-   padding-top:2%;
-}
-.slide-title{
-    font-size: 3vw;
-    font-weight: 400;
-    letter-spacing: 0.1vw;
-    line-height: 1.55vw;
-    padding-bottom: 1.8vw;
-    color:black;
-    font-style: arial;
-    display: block;
+    display:flex; 
+    justify-content:space-between; 
+     background-color:rgb(197,196,196);
+     font-size:1.5em;
  }
- .slide-text{
-    font-size: 1vw;
-    line-height: 1.5vw;
-   opacity: 0.8; 
-    padding-bottom: -200px;
-    color: black;
-    font-style: sans-serif;
-    display: block;
- }
- .yp_fade1{
-    width: 50vw;
-    color: black;
-    padding: 3vw 3vw 5vw 5vw;
-  }
   .yp_fade2{
-    padding: 3vw 3vw 5vw 5vw;
-    width: 500px;
-    height: 500px;
-    align-items: right;
-    justify-content: right;
-    
+    justify-self: flex-end; 
+ }
+ 
+ .yp_fade2 img{
+     height:15em;
+     margin-left:-20%;
+     width:100%;
+ 
+ }
+ 
+  .yp_fade1{
+     margin-left: 4em;
+ }
+ div .heading h1{
+    display: block;
+ }
+ .heading h1{
+    font-size:4vw;
+    background: linear-gradient(330deg,  #642b73,#bd3f32,#642b73,#bd3f32);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: block;
+    font-family:sans-serif;
+    padding-top:2%;
+    padding-left: -170%;
+ }
+ .slide-text p{
+    font-size: 1.2em;
+}
+ .slide-title{
+     font-size: 3vw;
+     font-weight: 400;
+     letter-spacing: 0.1vw;
+     line-height: 1.55vw;
+     padding-bottom: 1.8vw;
+     color:black;
+     font-style: arial;
+     display: block;
   }
-  .jumbotron .jumbotron-fluid{
-      background-color: gray;
+  .slide-text{
+     font-size: 1vw;
+     line-height: 1.5vw;
+    opacity: 0.8; 
+     padding-bottom: -200px;
+     color: black;
+     font-style: sans-serif;
+     display: block;
   }
-
-  @media (max-width: 1000px) {
-   .yp_explain{
-       display: block;
+  .yp_fade1{
+     width: 50vw;
+     color: black;
+     padding: 3vw 3vw 5vw 5vw;
    }
-    .jumbotron jumbotron-fluid{
-   /*     top:10%; */
-        max-width:100%;
-      /*  max-height:100%;*/
-    }
-    .yp_fade2{
-        padding-top:-300%;
-    }
-    .yp_fade2 img{
-        height: 350px;
-        margin-left:1%;
-        width:100%;
-
+   .yp_fade2{
+     padding: 3vw 3vw 5vw 5vw;
+     width: 500px;
+     height: 500px;
+     align-items: right;
+     justify-content: right;
+     
+   }
+   .jumbotron .jumbotron-fluid{
+       background-color: gray;
+   }
+@media(max-width:767px){
+    .slide-text p{
+        font-size: 2.7em;
+        margin-left: -53%;
+        line-height: 1;
+        width: 180%;
     }
     .slide-title{
-     font-size:4vw;
-     line-height:1;
-     text-align:center;
-     display: block;
-     }
-
-     .slide-text{
-       font-size:15px;
-       padding-top:10%; 
-        max-width:100%;
-        line-height:1;
-        display:block;
-        flex-direction:column;
-     }
-     .heading h1{
-        text-align:center;
-        font-size:6vw;
+        font-size: 1em;
+        margin-left: -50%;
+        line-height: 1;
+    }
+    .yp_fade2 img{
+        height: 20em;
+        margin-left: 2%;
+        width:100%;
+    
+    }
+    .heading h1{
+        margin-left: -17%;
+        font-size:8vw;
         background: linear-gradient(330deg,  #642b73,#bd3f32,#642b73,#bd3f32);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -112,9 +99,35 @@ div .heading h1{
         padding-top:5%;
         
      }
-     .yp_fade1 ul{
-         font-size:3vw;
-     } 
-    
+
 }
+@media(min-width:992px) and (max-width:1199px){
+    .slide-text p{
+        font-size: 1.9em;
+        margin-left: -20%;
+        line-height: 1;
+        width: 100%;
+    }
+    .yp_fade2 img{
+        height: 15em;
+        margin-left: -15%;
+        width:110%;
+    
+    }
  
+}
+@media(max-width:990px){
+    .slide-text p{
+        font-size: 2.4em;
+        margin-left: -35%;
+        line-height: 1;
+        width: 144%;
+    }
+    .yp_fade2 img{
+        height: 19em;
+        margin-left: -13%;
+        width:110%;
+    
+    }
+
+}

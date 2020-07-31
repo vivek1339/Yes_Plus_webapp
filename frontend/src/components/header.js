@@ -21,9 +21,9 @@ export default class Header extends React.Component{
                 </div>
                 <NavLink to="/" activeClassName="is-active" exact={true} className="yp_navbar"><img src="https://2.bp.blogspot.com/-beUrUOb3btQ/T1PFJcGPDWI/AAAAAAAAAEM/hBCu0lFtbC8/s400/YES%2521%252B.png"/></NavLink>
                 <NavLink to="/testimonials" activeClassName="is-active" className="yp_navbar1">Testimonials</NavLink>
+                <NavLink to="/events" activeClassName="is-active" className="yp_navbar1">Events</NavLink>
                 <NavLink to="/login" activeClassName="is-active" className="yp_navbar1">Join Us</NavLink>
                 <NavLink to="/about" activeClassName="is-active" className="yp_navbar1">About Us</NavLink>
-                 <NavLink to="/events" activeClassName="is-active" className="yp_navbar1">Events</NavLink>
             
             </header>
         )

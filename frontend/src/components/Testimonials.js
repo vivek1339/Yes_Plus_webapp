@@ -1,13 +1,11 @@
 import React from 'react';
 import Testimonials from './Testimonal/Testimonials';
-
-import PostForm from './Testimonal/PostForm';
+import Formtesti from './Testimonal/Formtesti';
 
 const Home = () =>(
     <div>
         <Testimonials />
-        <PostForm />
-        
+
     </div>
 )
 

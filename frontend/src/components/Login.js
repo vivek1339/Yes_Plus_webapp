@@ -1,11 +1,13 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import Login from './login/Login';
+import SignUp from './login/SignUp';
 
-const Login = () =>(
+
+
+const Log = () =>(
     <div>
-        This is login page
-        <NavLink to="/signup">Sign Up</NavLink>
+     <Login />
     </div>
 )
 
-export default Login;
+export default Log;

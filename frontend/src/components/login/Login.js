@@ -4,9 +4,9 @@ import { NavLink } from 'react-router-dom';
 const Login = () =>(
     <div>
         <div>
-        This is login page
+        
         <NavLink to="/signup">Sign Up</NavLink>
-        <NavLink to="/Comment" className="yp_navbar2">comment</NavLink>
+        <NavLink to="/Comment" className="yp_navbar2"></NavLink>
         </div>
 
         <form className="login" >

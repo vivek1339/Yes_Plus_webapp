@@ -1,12 +1,12 @@
 import React from 'react';
-import Testimonials from './Testimonal/Testimonials';
-import Formtesti from './Testimonal/Formtesti';
+import Testimonial from './Testimonials/testimonial';
+import Testimonialform from './Testimonials/testimonialform';
 
-const Home = () =>(
+const Testimonials = () =>(
     <div>
-        <Testimonials />
-
+        <Testimonial />
+    
     </div>
 )
 
-export default Home;
+export default Testimonials;

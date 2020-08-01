@@ -24,9 +24,17 @@ class PostForm extends Component {
 		e.preventDefault()
 		console.log(this.state)
 		axios
-			.post('http://localhost:5000/add', this.state)
-			.then(response => {
-				console.log(response)
+			.post('http://localhost:5000/add_user', this.state)
+			//.then(res=>res.text())
+			.then(res=>{
+				if (res.data == 200){
+				   console.log("User added");
+				   alert(`${this.state.name}  Registered Successfully !!!!`);
+				}
+				else{
+				   console.log("User couldn't be added");
+				   alert(`${this.state.name}  Registeration Unsuccessful !!!!`);
+				} 
 			})
 			.catch(error => {
 				console.log(error)
@@ -34,7 +42,7 @@ class PostForm extends Component {
 	}
 
 	render() {
-		const { name,email,password,branch,contact,joinyear } = this.state
+		const { name,email,password,branch,phno,joinyear } = this.state
 		return (
         
 			<div className="form">
@@ -74,9 +82,9 @@ class PostForm extends Component {
 						<label>contact:</label>
 						<input
 							type="tel"
-							name="contact"
+							name="phno"
 							placeholder="Phone number"
-							value={contact}
+							value={phno}
 							onChange={this.changeHandler}
 						/>
 					</div>

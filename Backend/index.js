@@ -35,61 +35,87 @@ var cors_options = {
 
 }
 app.use(cors(cors_options));
-//app.use(express.static(path.join(__dirname+'src/html')));
-
 
 /*const usersRouter = require('./users');
 console.log("Accessing users");
 app.use('/users', usersRouter);*/
 
-app.post('/add',(req, res) => {
-  
-  //function getNewUser() {
+app.post('/add_user',(req, res) => {
     //Call this function when sign up happens
-    const user_obj = req.body;
-    const user_data = {
-      user_name: user_obj.name,
-      user_email: user_obj.email,
-      user_password: user_obj.password,
-      user_branch: user_obj.branch,
-      user_phno: user_obj.phno,
-      user_join_year: user_obj.joinyear,
-    };
-    console.log(user_data);
-    return db
-      .collection("user_data")
-      .doc(user_data.user_email)
-      .set(user_data)
-      .then(() => {
-        console.log("new user added");
-      });
-    
-  });
-  /*
-  app.post('/data',(req, res) => {
-  //function getuser(email) {
-    //Call this to retrieve user password
-    const user_obj = req.body;
-    const user_data = {
-      user_email: user_obj.email,
-      user_password: user_obj.password
-    };
-    console.log(user_data);
+  const user_obj = req.body;
+  const user_data = {
+    user_name: user_obj.name,
+    user_email: user_obj.email,
+    user_password: user_obj.password,
+    user_branch: user_obj.branch,
+    user_phno: user_obj.phno,
+    user_join_year: user_obj.joinyear,
+  };
+  console.log(user_data);
+  return db
+    .collection("user_data")
+    .doc(user_data.user_email)
+    .set(user_data)
+    .then(() => {
+      console.log("new user added");
+      res.send("200");
+    })
+    .catch(()=>{
+      console.log("Unable to add user");
+      res.send("404");
+    });
+});
 
-    db.collection("user_data")
-      .doc(user_data.user_email)
-      .get()
-      .then(function (user_data.user_email) {
-        console.log("got data");
-        console.log(user_data.data().password);
-        return user_data.data().password;
-      })
-      .catch((error) => {
-        console.log("Couldn't get data");
-      });
-  });
-  */
 
+//Make login work
+/*
+app.post('/data',(req, res) => {
+//function getuser(email) {
+  //Call this to retrieve user password
+  const user_obj = req.body;
+  const user_data = {
+    user_email: user_obj.email,
+    user_password: user_obj.password
+  };
+  console.log(user_data);
+
+  db.collection("user_data")
+    .doc(user_data.user_email)
+    .get()
+    .then(function (user_data.user_email) {
+      console.log("got data");
+      console.log(user_data.data().password);
+      return user_data.data().password;
+    })
+    .catch((error) => {
+      console.log("Couldn't get data");
+    });
+});
+*/
+
+
+//Change testimonial accordingly
+// app.post('/testimonial_add',(req, res) => {
+  //     const user_obj = req.body;
+  //     const user_data = {
+
+  //       user_email: user_obj.email,
+
+  //     };
+  //     console.log(user_data);
+  //     return db
+  //       .collection("user_data")  has to be named
+  //       .doc(user_data.user_email)
+  //       .set(user_data)
+  //       .then(() => {
+  //         console.log("new user added");
+  //         //res.send("Api is working");
+  //       });
+      
+  //   });
+
+// Write a function to display all the testimonials
+// 
 
 app.use((req, res, next) => {
   console.log("got req for " + req.url);

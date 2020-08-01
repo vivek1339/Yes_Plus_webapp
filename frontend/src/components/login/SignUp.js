@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import axios from 'axios';
-class PostForm extends Component {
+class SignUp extends Component {
 	constructor(props) {
 		super(props)
 
@@ -121,4 +121,4 @@ class PostForm extends Component {
 }
 
 
-export default PostForm
+export default SignUp

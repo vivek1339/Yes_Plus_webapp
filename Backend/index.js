@@ -115,8 +115,9 @@ app.post('/data',(req, res) => {
   //   });
 
 // Write a function to display all the testimonials
-// 
-
+// event add+display
+  //create collection name & function name & user data 
+  
 app.use((req, res, next) => {
   console.log("got req for " + req.url);
   res.statusCode = 200;

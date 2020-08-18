@@ -15,29 +15,29 @@ export default class log extends Component {
 		
 		}
 	}
-
+// e is a representative varible of this.state
 	changeHandler = e => {
-		this.setState({ [e.target.name]: e.target.value })
+		this.setState({ [e.target.name]: e.target.value })//json object key value pair
 	}
 
 	submitHandler = e => {
 		alert(`${this.state.email}  Login Successfully !!!!`)
 		e.preventDefault()
 		console.log(this.state)
-		axios
-			.post('http://localhost:5000/data', this.state)
-			.then(response => {
-				var user_obj=response.data;
+		axios // used for post requests also works similar to promises
+			.post('http://localhost:5000/data', this.state) //data is the function name written for login in backend also this line helps to pass the data to backend server from frontend server
+			.then(response => { //this line helps use to rececive response from backend 
+				var user_obj=response.data; //user_obj is the response rececived from the backend
 				console.log(user_obj);
 			})
 			.catch(error => {
-				console.log(error)
+				console.log(error)// if u find some error catch gets exceuted
 			})
 	}
 
 
 	render() {
-    const { email,password } = this.state
+    const { email,password } = this.state//declaration
 		return (
     <div>
         <div>

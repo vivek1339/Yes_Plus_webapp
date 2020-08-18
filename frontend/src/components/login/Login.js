@@ -21,7 +21,7 @@ export default class log extends Component {
 	}
 
 	submitHandler = e => {
-		alert(`${this.state.email}  Login Successfully !!!!`)
+		
 		e.preventDefault()
 		console.log(this.state)
 		axios // used for post requests also works similar to promises
@@ -29,6 +29,7 @@ export default class log extends Component {
 			.then(response => { //this line helps use to rececive response from backend 
 				var user_obj=response.data; //user_obj is the response rececived from the backend
 				console.log(user_obj);
+				//alert(`${this.state.email}  Login Successfully !!!!`)
 			})
 			.catch(error => {
 				console.log(error)// if u find some error catch gets exceuted

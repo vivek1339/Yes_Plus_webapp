@@ -78,7 +78,6 @@ app.post('/data',(req, res) => {
     user_password: user_obj.password
   };
   console.log(user_data);
-
   db.collection("user_data")
     .doc(user_data.user_email)
     .get()
@@ -115,7 +114,28 @@ app.post('/data',(req, res) => {
   //   });
 
 // Write a function to display all the testimonials
-// 
+// event add+display 
+app.post('/add_event',(req, res) => {
+  const event_obj = req.body;
+  const event_data = {
+    event_title: event_obj.title,
+    event_description: event_obj.description,
+    event_date: event_obj.date,
+  };
+  console.log(event_data);
+  return db
+    .collection("event_data")
+    .doc(event_data.event_title)
+    .set(event_data)
+    .then(() => {
+      console.log("new event added");
+      res.send("200");
+    })
+    .catch(()=>{
+      console.log("Unable to add event");
+      res.send("404");
+    });
+});
 
 app.use((req, res, next) => {
   console.log("got req for " + req.url);

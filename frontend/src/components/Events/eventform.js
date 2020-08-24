@@ -24,7 +24,7 @@ class Eventform extends Component {
 		e.preventDefault()
 		console.log(this.state)
 		axios
-			.post('http://localhost:5000/add', this.state)
+			.post('http://localhost:5000/add_event', this.state)
 			.then(response => {
 				console.log(response)
 			})

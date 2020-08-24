@@ -49,6 +49,7 @@ app.post('/add_user',(req, res) => {
     user_password: user_obj.password,
     user_branch: user_obj.branch,
     user_phno: user_obj.phno,
+    user_type: 0,
     user_join_year: user_obj.joinyear,
   };
   console.log(user_data);

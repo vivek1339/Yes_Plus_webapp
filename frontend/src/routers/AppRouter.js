@@ -28,7 +28,7 @@ const AppRouter = () =>(
                 <Route path="/eventform" component={Eventform} />
                 <Route component={NotFoundPage} />
             </Switch>
-            <Social />
+
         </div>
     </BrowserRouter>
 );

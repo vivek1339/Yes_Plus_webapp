@@ -30,7 +30,7 @@ export default class log extends Component {
 				user_obj=response.data;
 				if(user_obj){ //user_obj is the response rececived from the backend
 					console.log(user_obj);
-					
+			
 					localStorage.setItem('email', this.state.email);
 					alert('${this.state.email}  Login Successfully !!!!');
 					this.props.history.push('/')

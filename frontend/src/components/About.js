@@ -3,6 +3,7 @@ import Ordinator from './about/ordinator';
 import Founder from './about/founder';
 import Faculty from './about/faculty';
 import Subordinator from './about/subordinator';
+import Social1 from './about/social1';
 
 const About = () =>{
     return(
@@ -12,6 +13,7 @@ const About = () =>{
             <Subordinator />
             <Faculty />
             <Founder />
+            <Social1 />
         </div>
     );
 };

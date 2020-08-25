@@ -2,6 +2,8 @@ import React from 'react';
 
 const Social = () => {
     return (
+      
+      <div className="container-fluid">
       <div className="yp_social_media"> 
         <ul>
           <li className="social_media">
@@ -22,6 +24,8 @@ const Social = () => {
           </li>
         </ul>
       </div>  
+      </div>
+      
     );
 };
 

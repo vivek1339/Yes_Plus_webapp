@@ -3,9 +3,10 @@ import Welcome from './home/welcome';
 import Explain from './home/explain';
 import Benefit from './home/benefit';
 import Activity from './home/activity';
-import Images from './home/images';
 import PopUp from './home/popup';
 import Social1 from './home/social1';
+
+var username = localStorage.getItem('email');
 
 const Home = () =>(
     <div>
@@ -14,7 +15,6 @@ const Home = () =>(
         <Explain />
         <Benefit /> 
         <Activity />
-        <Images />
         <PopUp />
         <Social1 />
         

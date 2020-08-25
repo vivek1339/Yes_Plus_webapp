@@ -7,7 +7,6 @@ import SignUp from '../components/login/SignUp';
 import Testimonials from '../components/Testimonials';
 import NotFoundPage from '../components/NotFound';
 import Header from '../components/Header';
-import Social from '../components/social';
 import Events from '../components/events';
 import Testimonialform from '../components/Testimonials/testimonialform';
 import Eventform from '../components/Events/eventform';

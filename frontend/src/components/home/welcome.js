@@ -2,7 +2,7 @@ import React from 'react';
 export default class welcoming extends React.Component{
     render() {
         return (
-          <div className="yp_g">
+          <div className="yp_welcome">
               <center>
                   <h2 className="yp_first"> Welcome to </h2>
                   <h1 className="yp_second">Yes!+</h1>

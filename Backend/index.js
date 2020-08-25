@@ -130,3 +130,25 @@ const server = http.createServer(app);
 server.listen(port, hostname, () => {
   console.log(`Server running at http://${hostname}:${port}`);
 });
+
+app.get('/display_event',(req,res)=>{
+  var user_temp=[];
+var x;
+  return db
+  .collection("event_data")
+  .get()
+  .then(snap => {
+      snap.forEach(doc => {
+        console.log(doc.data());
+        user_temp[x] = doc.data();
+        x++;
+         // console.log(doc.id);          
+      });
+      console.log(user_temp);
+      res.send(user_temp);
+  })
+  .catch(()=>{
+ console.log("huh");
+    res.send("404");
+  });
+});

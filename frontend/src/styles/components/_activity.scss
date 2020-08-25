@@ -11,7 +11,8 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin-left:16%;
+    margin-left:12%;
+    margin-bottom: 90px;
 } 
 .container .card{
     position: relative;
@@ -19,7 +20,7 @@
     background: #fff;
     display: flex;
     width: 40%;
-    margin: 2em 0;
+    margin: 2em 0em;
 }
 .container .card .imgbx{
     position: absolute;

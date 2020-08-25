@@ -22,7 +22,7 @@ class Testimonialform extends Component {
     }
     fileUploadhandler=()=>{
         axios
-			.post('http://localhost:5000/add', this.state)
+			.post('http://localhost:5000/add_testimonial', this.state)
 			.then(response => {
 				console.log(response)
 			})

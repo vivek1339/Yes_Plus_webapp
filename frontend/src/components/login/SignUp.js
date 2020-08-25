@@ -20,7 +20,6 @@ class SignUp extends Component {
 	}
 
 	submitHandler = e => {
-		alert(`${this.state.name}  Registered Successfully !!!!`)
 		e.preventDefault()
 		console.log(this.state)
 		axios

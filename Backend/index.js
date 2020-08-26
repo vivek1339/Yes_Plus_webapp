@@ -155,12 +155,6 @@ app.post('/data',(req, res) => {
   db.collection("user_data")
     .doc(user_data.user_email)
     .get()
-<<<<<<< HEAD
-    .then(function (user_data.user_email) {
-      console.log("got data");
-      console.log(user_data.data().password);
-     return user_data.data().password;
-=======
     .then(doc => {
       console.log(doc.data());  
       user_temp=doc.data();
@@ -171,7 +165,6 @@ app.post('/data',(req, res) => {
         res.send("Wrong password");
       }
       
->>>>>>> upstream/master
     })
     .catch((error) => {
       console.log(error);
@@ -179,55 +172,37 @@ app.post('/data',(req, res) => {
       res.send('<h1>Couldnt get data</h1>');
     });
 });
-<<<<<<< HEAD
-*/
-
-
-//Change testimonial accordingly
-app.post('/testimonial_add',(req, res) => {
-      const user_obj = req.body;
-      const user_data = {
-        user_email: user_obj.email,
-        user_faculty: user_obj.faculty,
-        user_experience: user_obj.experience,
-        user_date_course:user_obj.date_course,
-    
-      };
-      console.log(user_data);
-      return db
-        .collection("testimonial_data")
-        .doc(user_data.user_email)
-        
-        .set(user_data)
-        .then(() => {
-          console.log("new user added");
-          res.send("200");
-          //res.send("Api is working");
-        })
-        .catch(()=>{
-          console.log("Unable to add user");
-          res.send("404");
-        });
-        
-    });
-
-// Write a function to display all the testimonials
-
-app.get('/display_testimonials',function(req,res){
-  const user=req.body;
-  user.find({},function(err,users){
-    if(err){
-      res.send('something went wrong');
-    }
-    res.json(user);
-  });
-
-});
-=======
 
 
 // Write a function to display all the testimonials
 // 
+app.post('/testimonial_add',(req, res) => {
+  const user_obj = req.body;
+  const user_data = {
+    user_email: user_obj.email,
+    user_faculty: user_obj.faculty,
+    user_experience: user_obj.experience,
+    user_date_course:user_obj.date_course,
+
+  };
+  console.log(user_data);
+  return db
+    .collection("testimonial_data")
+    .doc(user_data.user_email)
+    
+    .set(user_data)
+    .then(() => {
+      console.log("new testimonial added");
+      res.send("200");
+      //res.send("Api is working");
+    })
+    .catch(()=>{
+      console.log("Unable to add testimonial");
+      res.send("404");
+    });
+    
+});
+
 app.get('/display_testimonial',(req,res)=>{
   var user_temp=[];
   return db
@@ -275,7 +250,6 @@ app.post('/add_event',(req, res) => {
     });
 });
 
->>>>>>> upstream/master
 
 app.use((req, res, next) => {
   console.log("got req for " + req.url);

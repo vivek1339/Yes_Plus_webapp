@@ -105,6 +105,33 @@ app.post('/data',(req, res) => {
 
 // Write a function to display all the testimonials
 // 
+app.post('/testimonial_add',(req, res) => {
+  const user_obj = req.body;
+  const user_data = {
+    user_email: user_obj.email,
+    user_faculty: user_obj.faculty,
+    user_experience: user_obj.experience,
+    user_date_course:user_obj.date_course,
+
+  };
+  console.log(user_data);
+  return db
+    .collection("testimonial_data")
+    .doc(user_data.user_email)
+    
+    .set(user_data)
+    .then(() => {
+      console.log("new testimonial added");
+      res.send("200");
+      //res.send("Api is working");
+    })
+    .catch(()=>{
+      console.log("Unable to add testimonial");
+      res.send("404");
+    });
+    
+});
+
 app.get('/display_testimonial',(req,res)=>{
   var user_temp=[];
   return db

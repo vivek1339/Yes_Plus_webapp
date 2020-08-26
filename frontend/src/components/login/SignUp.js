@@ -20,7 +20,6 @@ class SignUp extends Component {
 	}
 
 	submitHandler = e => {
-		alert(`${this.state.name}  Registered Successfully !!!!`)
 		e.preventDefault()
 		console.log(this.state)
 		axios
@@ -30,6 +29,8 @@ class SignUp extends Component {
 				if (res.data == 200){
 				   console.log("User added");
 				   alert(`${this.state.name}  Registered Successfully !!!!`);
+				   localStorage.setItem('name', this.state.email);
+				   this.props.history.push('/')
 				}
 				else{
 				   console.log("User couldn't be added");

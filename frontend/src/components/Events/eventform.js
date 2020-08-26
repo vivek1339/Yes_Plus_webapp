@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import { NavLink } from 'react-router-dom';
+
+var username = localStorage.getItem('email');
+
 class Eventform extends Component {
 	constructor(props) {
 		super(props)
@@ -24,7 +27,7 @@ class Eventform extends Component {
 		e.preventDefault()
 		console.log(this.state)
 		axios
-			.post('http://localhost:5000/add', this.state)
+			.post('http://localhost:5000/add_event', this.state)
 			.then(response => {
 				console.log(response)
 			})

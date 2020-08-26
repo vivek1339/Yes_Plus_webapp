@@ -1,6 +1,6 @@
 
 
-.start1 {
+.yp_start1 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9,7 +9,7 @@
   height: 100%;
   overflow: hidden;
 }
-figure.snip {
+figure.yp_snip {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
   font-family: arial;
   color: #fff;
@@ -22,15 +22,15 @@ figure.snip {
   text-align: center;
 }
 
-figure.snip * {
+figure.yp_snip * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 
-figure.snip:before,
-figure.snip:after {
+figure.yp_snip:before,
+figure.yp_snip:after {
   position: absolute;
   width: 100%;
   background: #000000;
@@ -41,32 +41,32 @@ figure.snip:after {
   transition: all 0.3s;
 }
 
-figure.snip:before {
+figure.yp_snip:before {
   top: 0;
 }
 
-figure.snip:after {
+figure.yp_snip:after {
   bottom: 0;
 }
 
-figure.snip img {
+figure.yp_snip img {
   max-width: 100%;
   margin-bottom: -5px;
 }
 
-figure.snip figcaption {
+figure.yp_snip figcaption {
   position: relative;
   background: #ffffff;
 }
 
-figure.snip h3,
-figure.snip p {
+figure.yp_snip h3,
+figure.yp_snip p {
   margin: 0;
   display: inline-block;
   width: 100%;
 }
 
-figure.snip h3 {
+figure.yp_snip h3 {
   width: 70%;
   padding: 12px 15px;
   background: #333333;
@@ -75,7 +75,7 @@ figure.snip h3 {
   font-size:20px;
 }
 
-figure.snip p {
+figure.yp_snip p {
   font-size: 0.9em;
   font-weight: 500;
   background: #ffffff;
@@ -83,7 +83,7 @@ figure.snip p {
   padding: 10px 40px 40px;
 }
 
-figure.snip a {
+figure.yp_snip a {
   left: 0;
   right: 0;
   top: 0;
@@ -92,38 +92,38 @@ figure.snip a {
   color: #ffffff;
 }
 
-figure.snip.blue h3,
-figure.snip.blue:before,
-figure.snip.blue:after {
+figure.yp_snip.blue h3,
+figure.yp_snip.blue:before,
+figure.yp_snip.blue:after {
 background: linear-gradient(to top right, #b91372, #000080);
 }
 
-figure.snip.red h3,
-figure.snip.red:before,
-figure.snip.red:after {
+figure.yp_snip.red h3,
+figure.yp_snip.red:before,
+figure.yp_snip.red:after {
   background: linear-gradient(to top right, #642b73,#bd3f32);
 }
 
 
 
-figure.snip:hover figcaption h3,
-figure.snip.hover figcaption h3 {   
+figure.yp_snip:hover figcaption h3,
+figure.yp_snip.hover figcaption h3 {   
   transform: translateY(-50%) rotate(-8deg) scale(1.1);
 }
 
-figure.snip:hover:before,
-figure.snip.hover:before,
-figure.snip:hover:after,
-figure.snip.hover:after {
+figure.yp_snip:hover:before,
+figure.yp_snip.hover:before,
+figure.yp_snip:hover:after,
+figure.yp_snip.hover:after {
   height: 10px;
 }
 
-.start1 img{
+.yp_start1 img{
   width:50%;
   height:20%;
 }
 
-.faculty h1{
+.yp_faculty h1{
   text-align:center;
   font-size:4vw;
   background: linear-gradient(330deg,  #642b73,#bd3f32,#642b73,#bd3f32);

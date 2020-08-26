@@ -34,10 +34,10 @@ class Formadmin extends Component {
 	}
 
 	render() {
-		const { name,email,password,branch,contact,joinyear } = this.state
+		const { name,theme,startdate,enddate,contact,fees} = this.state
 		return (
           
-			<div className="form">
+			<div className="yp_form">
 				<form onSubmit={this.submitHandler}>
 					<div>
 						<label>Name:</label>
@@ -55,7 +55,7 @@ class Formadmin extends Component {
 							type="text"
 							name="theme"
 							placeholder="event theme"
-							value={email}
+							value={theme}
 							onChange={this.changeHandler}
 						/>
 					</div>
@@ -65,7 +65,7 @@ class Formadmin extends Component {
 							type="date"
 							name="date"
 							placeholder="start date"
-							value={password}
+							value={startdate}
 							onChange={this.changeHandler}
 						/>
 					</div>
@@ -75,7 +75,7 @@ class Formadmin extends Component {
 							type="date"
 							name="date"
 							placeholder="end date"
-							value={password}
+							value={enddate}
 							onChange={this.changeHandler}
 						/>
 					</div>
@@ -101,7 +101,7 @@ class Formadmin extends Component {
 							type="text"
 							name="fee"
 							placeholder="fees"
-							value={contact}
+							value={fees}
 							onChange={this.changeHandler}
 						/>
 					</div>

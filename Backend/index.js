@@ -69,6 +69,111 @@ app.post('/add_user',(req, res) => {
     });
 });
 
+const express = require("express");
+const http = require("http");
+
+const hostname = "localhost";
+const port = 5000;
+
+var admin = require("firebase-admin");
+
+var serviceAccount = require("./ServiceAccountKey.json");
+
+
+admin.initializeApp({
+  credential: admin.credential.cert(serviceAccount),
+  databaseURL: "https://yesplus-webapp.firebaseio.com"
+});
+
+const db = admin.firestore();
+
+const app = express();
+
+const path = require("path");
+
+var x=0;
+
+const bodyParser = require('body-parser');
+const { Http2ServerResponse } = require("http2");
+
+app.use(bodyParser.urlencoded({
+  extended: true
+}));
+app.use(bodyParser.json());
+
+
+var cors = require("cors");
+var cors_options = {
+  origin : '*',
+
+}
+app.use(cors(cors_options));
+
+/*const usersRouter = require('./users');
+console.log("Accessing users");
+app.use('/users', usersRouter);*/
+
+
+app.post('/add_user',(req, res) => {
+    //Call this function when sign up happens
+  const user_obj = req.body;
+  const user_data = {
+    user_name: user_obj.name,
+    user_email: user_obj.email,
+    user_password: user_obj.password,
+    user_branch: user_obj.branch,
+    user_phno: user_obj.phno,
+    user_type: 0,
+    user_join_year: user_obj.joinyear,
+  };
+  console.log(user_data);
+  return db
+    .collection("user_data")
+    .doc(user_data.user_email)
+    .set(user_data)
+    .then(() => {
+      console.log("new user added");
+      res.send("200");
+    })
+    .catch(()=>{
+      console.log("Unable to add user");
+      res.send("404");
+    });
+});
+
+app.post('/data',(req, res) => {
+  //function getuser(email) {
+  //Call this to retrieve user password
+  console.log("here");
+  const user_obj = req.body;
+  const user_data = {
+    user_email: user_obj.email,
+    user_password: user_obj.password
+  };
+  console.log(user_data);
+
+  db.collection("user_data")
+    .doc(user_data.user_email)
+    .get()
+    .then(doc => {
+      console.log(doc.data());  
+      user_temp=doc.data();
+      if(user_temp.user_password==user_data.user_password){
+        res.send(user_temp);
+      }
+      else{
+        res.send("Wrong password");
+      }
+      
+    })
+    .catch((error) => {
+      console.log(error);
+      console.log("Couldn't get data");
+      res.send('<h1>Couldnt get data</h1>');
+    });
+});
+
+
 // Write a function to display all the testimonials
 // 
 app.get('/display_testimonial',(req,res)=>{
@@ -117,6 +222,7 @@ app.post('/add_event',(req, res) => {
       res.send("404");
     });
 });
+
 
 app.use((req, res, next) => {
   console.log("got req for " + req.url);

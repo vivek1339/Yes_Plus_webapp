@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import { NavLink } from 'react-router-dom';
+
+var username = localStorage.getItem('email');
+
 class Eventform extends Component {
 	constructor(props) {
 		super(props)

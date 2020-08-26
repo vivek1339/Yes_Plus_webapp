@@ -46,7 +46,7 @@ class SignUp extends Component {
 		const { name,email,password,branch,phno,joinyear } = this.state
 		return (
         
-			<div className="form">
+			<div className="yp_form">
 					<h1 className="heading">Sign Up</h1>
 				<form onSubmit={this.submitHandler}>
 					<div>

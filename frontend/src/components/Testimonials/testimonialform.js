@@ -48,7 +48,7 @@ class Testimonialform extends Component {
 	render() {
 		const { name,branch,batchno,joinyear,experience,faculty,pic } = this.state
 		return (
-			<div className="form">
+			<div className="yp_form">
 				<form onSubmit={this.submitHandler}>
 					<div>
 						<label>Name:</label>

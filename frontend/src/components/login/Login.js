@@ -30,7 +30,7 @@ export default class log extends Component {
 				user_obj=response.data;
 				if(user_obj){ //user_obj is the response rececived from the backend
 					console.log(user_obj);
-			
+					
 					localStorage.setItem('email', this.state.email);
 					alert('${this.state.email}  Login Successfully !!!!');
 					this.props.history.push('/')
@@ -55,19 +55,19 @@ export default class log extends Component {
         <NavLink to="/signup">Sign Up</NavLink>
         <NavLink to="/Comment" className="yp_navbar2"></NavLink>
         </div>
-<div className="form">
+           <div className="yp_form">
      			<form onSubmit={this.submitHandler}>
-			<h1 className="heading">Login</h1>
-					<div >
+		        	<h1 className="heading">Login</h1>
+					  <div >
 						<label>User id:</label>
-						<input
+						  <input
 								type="email"
 								name="email"
 								placeholder="Email"
 								value={email}
 								onChange={this.changeHandler}
-						/>
-					</div>
+						  />
+					  </div>
 				
 					<div>
 						<label>Password:</label>
@@ -77,22 +77,16 @@ export default class log extends Component {
 									placeholder="Password"
 									value={password}
 									onChange={this.changeHandler}
-						/>
-					</div>
-					
-				
-
+					     	/>
+					   </div>
 				<button className="submit-button" type="submit">Submit</button>
 				<div> to Signup
 				<NavLink to="/signup" className="yp_navbar2">signup</NavLink>
-				
-			</div>
-		</form>
-    </div>
+				</div>
+		  </form>
+       </div>
 	</div>
 			
       )
     }
   }
-  
-  

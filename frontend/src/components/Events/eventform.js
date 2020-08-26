@@ -1,9 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import { NavLink } from 'react-router-dom';
-
-var username = localStorage.getItem('email');
-
 class Eventform extends Component {
 	constructor(props) {
 		super(props)
@@ -27,7 +24,7 @@ class Eventform extends Component {
 		e.preventDefault()
 		console.log(this.state)
 		axios
-			.post('http://localhost:5000/add_event', this.state)
+			.post('http://localhost:5000/add', this.state)
 			.then(response => {
 				console.log(response)
 			})
@@ -37,10 +34,10 @@ class Eventform extends Component {
 	}
 
 	render() {
-		const { name,email,password,branch,contact,joinyear } = this.state
+		const { name,theme,startdate,enddate,contact,fees } = this.state
 		return (
           
-			<div className="form">
+			<div className="yp_form">
 				<form onSubmit={this.submitHandler}>
 					<div>
 						<label>Name:</label>
@@ -58,7 +55,7 @@ class Eventform extends Component {
 							type="text"
 							name="theme"
 							placeholder="event theme"
-							value={email}
+							value={theme}
 							onChange={this.changeHandler}
 						/>
 					</div>
@@ -68,7 +65,7 @@ class Eventform extends Component {
 							type="date"
 							name="date"
 							placeholder="start date"
-							value={password}
+							value={startdate}
 							onChange={this.changeHandler}
 						/>
 					</div>
@@ -78,7 +75,7 @@ class Eventform extends Component {
 							type="date"
 							name="date"
 							placeholder="end date"
-							value={password}
+							value={enddate}
 							onChange={this.changeHandler}
 						/>
 					</div>
@@ -104,7 +101,7 @@ class Eventform extends Component {
 							type="text"
 							name="fee"
 							placeholder="fees"
-							value={contact}
+							value={fees}
 							onChange={this.changeHandler}
 						/>
 					</div>
@@ -122,6 +119,5 @@ class Eventform extends Component {
 
 
 export default Eventform;
-
 
 

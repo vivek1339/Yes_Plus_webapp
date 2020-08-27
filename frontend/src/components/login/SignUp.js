@@ -28,7 +28,7 @@ class SignUp extends Component {
 			.then(res=>{
 				if (res.data == 200){
 				   console.log("User added");
-				   alert(`${this.state.name}  Registered Successfully !!!!`);
+				   alert(`Registered Successfully !!!!`);
 				   localStorage.setItem('name', this.state.email);
 				   this.props.history.push('/')
 				}
@@ -60,7 +60,7 @@ class SignUp extends Component {
 						/>
 					</div>
 					<div>
-						<label>email:</label>
+						<label>Email:</label>
 						<input
 							type="email"
 							name="email"
@@ -80,7 +80,7 @@ class SignUp extends Component {
 						/>
 					</div>
 					<div>
-						<label>contact:</label>
+						<label>Contact:</label>
 						<input
 							type="tel"
 							name="phno"
@@ -90,7 +90,7 @@ class SignUp extends Component {
 						/>
 					</div>
 					<div>
-					<label>branch:</label>
+					<label>Branch:</label>
 						<input
 							type="text"
 							name="branch"
@@ -100,7 +100,7 @@ class SignUp extends Component {
 						/>
 					</div>
 					<div>
-						<label>joinyear:</label>
+						<label>Joinyear:</label>
 						<input
 							type="date"
 							name="joinyear"
@@ -112,8 +112,8 @@ class SignUp extends Component {
 
 					<button class="submit-button" type="submit">Submit</button>
 				</form>
-				<div> to login
-				<NavLink to="/login" className="yp_navbar2">login</NavLink>
+				<div> To Login - 
+				<NavLink to="/login" className="yp_navbar2"> Login</NavLink>
 				</div>
 			</div>
 			

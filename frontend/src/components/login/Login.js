@@ -32,7 +32,7 @@ export default class log extends Component {
 					console.log(user_obj);
 					
 					localStorage.setItem('email', this.state.email);
-					alert('${this.state.email}  Login Successfully !!!!');
+					alert(`${this.state.name} Login Successfully !!!!`);
 					this.props.history.push('/')
 					
 				}
@@ -52,7 +52,6 @@ export default class log extends Component {
     <div>
         <div>
         
-        <NavLink to="/signup">Sign Up</NavLink>
         <NavLink to="/Comment" className="yp_navbar2"></NavLink>
         </div>
            <div className="yp_form">
@@ -80,8 +79,8 @@ export default class log extends Component {
 					     	/>
 					   </div>
 				<button className="submit-button" type="submit">Submit</button>
-				<div> to Signup
-				<NavLink to="/signup" className="yp_navbar2">signup</NavLink>
+				<div> To Signup -
+				<NavLink to="/signup" className="yp_navbar2"> Signup</NavLink>
 				</div>
 		  </form>
        </div>

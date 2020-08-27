@@ -15,7 +15,7 @@ class Testimonialform extends Component {
             batchno:'',
             experience:'',
             faculty:'',
-          img:'',
+          	img:'',
 
 		}
 	}
@@ -32,13 +32,13 @@ class Testimonialform extends Component {
     }
 
 	submitHandler = e => {
-		alert(`${this.state.name}  Registered Successfully !!!!`)
 		e.preventDefault()
 		console.log(this.state)
 		axios
-			.post('http://localhost:5000/add', this.state)
+			.post('http://localhost:5000/add_testimonial', this.state)
 			.then(response => {
-				console.log(response)
+				console.log(response);
+				alert(`Added Successfully !!!!`)
 			})
 			.catch(error => {
 				console.log(error)
@@ -62,7 +62,7 @@ class Testimonialform extends Component {
 					</div>
 				
 					<div>
-					<label>branch:</label>
+					<label>Branch:</label>
 						<input
 							type="text"
 							name="branch"
@@ -72,7 +72,7 @@ class Testimonialform extends Component {
 						/>
 					</div>
 					<div>
-						<label>joinyear:</label>
+						<label>Joinyear:</label>
 						<input
 							type="date"
 							name="joinyear"
@@ -82,7 +82,7 @@ class Testimonialform extends Component {
 						/>
 					</div>
                     <div>
-						<label>batchno:</label>
+						<label>Batch No:</label>
 						<input
 							type="text"
 							name="batchno"
@@ -92,7 +92,7 @@ class Testimonialform extends Component {
 						/>
 					</div>
                     <div>
-						<label>experience:</label>
+						<label>Experience:</label>
 						<input
 							type="text"
 							name="experience"
@@ -102,7 +102,7 @@ class Testimonialform extends Component {
 						/>
 					</div>
                     <div>
-						<label>faculty:</label>
+						<label>Faculty:</label>
 						<input
 							type="text"
 							name="faculty"
@@ -112,7 +112,7 @@ class Testimonialform extends Component {
 						/>
 					</div>
                     <div>
-                        <label>upload img:</label><br/>
+                        <label>Upload Img:</label><br/>
                         <input 
                         type="file" 
                         name="file"
@@ -125,8 +125,8 @@ class Testimonialform extends Component {
 
 					<button type="submit">Submit</button>
 				</form>
-				<div> to login
-				<NavLink to="/login" >login</NavLink>
+				<div> To Login -
+				<NavLink to="/login" > Login</NavLink>
 				
 				</div>
 				

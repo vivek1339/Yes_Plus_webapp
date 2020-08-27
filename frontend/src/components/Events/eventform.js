@@ -50,7 +50,7 @@ class Eventform extends Component {
 						/>
 					</div>
 					<div>
-						<label>event theme</label>
+						<label>Event Theme</label>
 						<input
 							type="text"
 							name="theme"
@@ -60,7 +60,7 @@ class Eventform extends Component {
 						/>
 					</div>
 					<div>
-						<label>event registration start date</label>
+						<label>Event Registration Start Date</label>
 						<input
 							type="date"
 							name="date"
@@ -70,7 +70,7 @@ class Eventform extends Component {
 						/>
 					</div>
                     <div>
-						<label>event registration end date</label>
+						<label>Event Registration End Date</label>
 						<input
 							type="date"
 							name="date"
@@ -80,7 +80,7 @@ class Eventform extends Component {
 						/>
 					</div>
 					<div>
-						<label>contact:</label>
+						<label>Contact:</label>
 						<input
 							type="tel"
 							name="contact"
@@ -90,13 +90,13 @@ class Eventform extends Component {
 						/>
 					</div>
                     <div>
-                       <label>event details:</label> <br/>
+                       <label>Event Details:</label> <br/>
                        <textarea>
                            event details
                      </textarea>
                     </div>
                     <div>
-						<label>event fee:</label>
+						<label>Event Fee:</label>
 						<input
 							type="text"
 							name="fee"

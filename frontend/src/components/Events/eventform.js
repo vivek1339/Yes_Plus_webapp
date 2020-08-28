@@ -47,6 +47,7 @@ class Eventform extends Component {
 							placeholder="event name"
 							value={name}
 							onChange={this.changeHandler}
+							required
 						/>
 					</div>
 					<div>
@@ -57,6 +58,7 @@ class Eventform extends Component {
 							placeholder="event theme"
 							value={theme}
 							onChange={this.changeHandler}
+							required
 						/>
 					</div>
 					<div>
@@ -67,6 +69,7 @@ class Eventform extends Component {
 							placeholder="start date"
 							value={startdate}
 							onChange={this.changeHandler}
+							required
 						/>
 					</div>
                     <div>
@@ -77,6 +80,7 @@ class Eventform extends Component {
 							placeholder="end date"
 							value={enddate}
 							onChange={this.changeHandler}
+							required
 						/>
 					</div>
 					<div>
@@ -87,6 +91,7 @@ class Eventform extends Component {
 							placeholder="Phone number"
 							value={contact}
 							onChange={this.changeHandler}
+							required
 						/>
 					</div>
                     <div>
@@ -103,6 +108,7 @@ class Eventform extends Component {
 							placeholder="fees"
 							value={fees}
 							onChange={this.changeHandler}
+							required
 						/>
 					</div>
 				

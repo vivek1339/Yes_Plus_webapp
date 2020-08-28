@@ -20,13 +20,13 @@ class Formadmin extends Component {
 	}
 
 	submitHandler = e => {
-		alert(`${this.state.name}  Registered Successfully !!!!`)
 		e.preventDefault()
 		console.log(this.state)
 		axios
-			.post('http://localhost:5000/add', this.state)
+			.post('http://localhost:5000/add_event', this.state)
 			.then(response => {
-				console.log(response)
+				console.log(response);
+				alert(`Added Successfully !!!!`)
 			})
 			.catch(error => {
 				console.log(error)

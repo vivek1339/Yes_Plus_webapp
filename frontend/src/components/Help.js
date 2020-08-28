@@ -1,6 +1,6 @@
 import React from 'react';
 
-var username = localStorage.getItem('email');
+var username = localStorage.getItem('user');
 
 const HelpPage = () =>(
     <div>

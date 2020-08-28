@@ -4,7 +4,7 @@
     padding: 0;
     box-sizing: border-box;
 }*/
-.yp_container1
+.container1
 {
     position: relative;
     max-width: 100%;
@@ -16,7 +16,7 @@
     grid-gap: 0.2em;
     background: #222;
 }
-.yp_container1 .yp_box1
+.container1 .box1
 {
     background: #333;
     padding: 0.0001em;
@@ -27,38 +27,38 @@
     color: #fff;
     transition: 0.5s;
 }
-.yp_container1 .yp_box1:hover
+.container1 .box1:hover
 {
     background-color: #000080; /* For browsers that do not support gradients */
     background-image: linear-gradient(to top right, #b91372  12%, #000080);
 }
-.yp_container1 .yp_box1 img
+.container1 .box1 img
 {
     position: relative;
     max-width: 4em;
     margin-bottom: 1em;
 }
-.yp_container1 .yp_box1:nth-child(1)
+.container1 .box1:nth-child(1)
 {
     grid-column: span 3;
     grid-row: span 1;
 }
-.yp_container1 .yp_box1:nth-child(2)
+.container1 .box1:nth-child(2)
 {
     grid-column: span 1;
     grid-row: span 2;
 }
-.yp_container1 .yp_box1:nth-child(4)
+.container1 .box1:nth-child(4)
 {
     grid-column: span 2;
     grid-row: span 3;
 }
-.yp_container1 .yp_box1:nth-child(5)
+.container1 .box1:nth-child(5)
 {
     grid-column: span 3;
     grid-row: span 1;
 }
-.yp_grid h1{
+.grid h1{
     text-align:center;
     font-size:4vw;
     background: linear-gradient(330deg,  #642b73,#bd3f32,#642b73,#bd3f32);
@@ -69,14 +69,14 @@
 }
 @media (max-width: 990px)
 {
-    .yp_container1
+    .container1
     {
         grid-template-columns: repeat(auto-fill,minmax(50%,1fr));
         grid-template-rows: minmax(auto,auto);
         max-width: 100%;
         margin:2em;
     }   
-    .yp_container1 .yp_box1
+    .container1 .box1
     {
         grid-column: unset !important;
         grid-row: unset !important;
@@ -87,14 +87,14 @@
 
 @media (max-width: 800px)
 {
-    .yp_container1
+    .container1
     {
         grid-template-columns: repeat(auto-fill,minmax(50%,1fr));
         grid-template-rows: minmax(auto,auto);
         max-width:100%;
         margin:3em;
     }   
-    .yp_container1 .yp_box1
+    .container1 .box1
     {
         grid-column: unset !important;
         grid-row: unset !important;
@@ -105,19 +105,19 @@
 }*/
 @media (max-width: 700px)
 {
-    .yp_container1
+    .container1
     {
         grid-template-columns: repeat(auto-fill,minmax(50%,1fr));
         grid-template-rows: minmax(auto,auto);
         max-width:100%;
         margin:3em;
     }   
-    .yp_container1 .yp_box1
+    .container1 .box1
     {
         grid-column: unset !important;
         grid-row: unset !important;
     }
-    .yp_grid h1{
+    .grid h1{
         text-align: center;
         font-size:8vw;
         background: linear-gradient(330deg,  #642b73,#bd3f32,#642b73,#bd3f32);
@@ -131,14 +131,14 @@
 }
 @media (max-width: 600px)
 {
-    .yp_container1
+    .container1
     {
         grid-template-columns: repeat(auto-fill,minmax(50%,1fr));
         grid-template-rows: minmax(auto,auto);
         max-width:100%;
         margin:3em;
     }   
-    .yp_container1 .yp_box1
+    .container1 .box1
     {
         grid-column: unset !important;
         grid-row: unset !important;

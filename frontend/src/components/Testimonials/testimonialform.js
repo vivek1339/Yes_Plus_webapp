@@ -58,6 +58,7 @@ class Testimonialform extends Component {
 							placeholder="Name"
 							value={name}
 							onChange={this.changeHandler}
+							required
 						/>
 					</div>
 				
@@ -69,6 +70,7 @@ class Testimonialform extends Component {
 							placeholder="Branch"
 							value={branch}
 							onChange={this.changeHandler}
+							required
 						/>
 					</div>
 					<div>
@@ -79,6 +81,7 @@ class Testimonialform extends Component {
 							placeholder="Join"
 							value={joinyear}
 							onChange={this.changeHandler}
+							required
 						/>
 					</div>
                     <div>
@@ -89,6 +92,7 @@ class Testimonialform extends Component {
 							placeholder="batchno"
 							value={batchno}
 							onChange={this.changeHandler}
+							required
 						/>
 					</div>
                     <div>
@@ -99,6 +103,7 @@ class Testimonialform extends Component {
 							placeholder="experience"
 							value={experience}
 							onChange={this.changeHandler}
+							required
 						/>
 					</div>
                     <div>
@@ -109,6 +114,7 @@ class Testimonialform extends Component {
 							placeholder="faculty"
 							value={faculty}
 							onChange={this.changeHandler}
+							required
 						/>
 					</div>
                     <div>
@@ -117,7 +123,8 @@ class Testimonialform extends Component {
                         type="file" 
                         name="file"
                         placeholder="upload"
-                        onChange={this.fileSelectedHandler}/>
+                        onChange={this.fileSelectedHandler}
+			required/>
                         <button onClick={this.fileUploadhandler}>upload</button>
 					
 					</div>

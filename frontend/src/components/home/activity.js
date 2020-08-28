@@ -8,7 +8,7 @@ const Activity = () => {
         <div className="yp_container">
           <div className="yp_card">
             <div className="yp_imgbx" data-text="river rejuvination">
-              <img src="./images/a1.jpeg"  alt=""/>
+              <img src="./images/a2.jpeg"  alt=""/>
             </div>
             <div className="yp_content">
               <div>
@@ -24,7 +24,7 @@ const Activity = () => {
           </div>
           <div className="yp_card">
             <div className="yp_imgbx" data-text="swatch bit">
-              <img src="./images/a2.jpeg" alt=""/>
+              <img src="./images/a1.jpeg" alt=""/>
             </div>
             <div className="yp_content">
               <div>

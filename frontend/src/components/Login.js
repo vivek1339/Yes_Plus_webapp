@@ -1,7 +1,7 @@
 import React from 'react';
 import Login from './login/Login';
 import SignUp from './login/SignUp';
-import Social1 from './login/social1';
+import Social1 from './Login/social1';
 
 
 

@@ -57,6 +57,7 @@ class SignUp extends Component {
 							placeholder="Name"
 							value={name}
 							onChange={this.changeHandler}
+							required
 						/>
 					</div>
 					<div>
@@ -67,6 +68,7 @@ class SignUp extends Component {
 							placeholder="Email"
 							value={email}
 							onChange={this.changeHandler}
+							required
 						/>
 					</div>
 					<div>
@@ -77,6 +79,7 @@ class SignUp extends Component {
 							placeholder="Password"
 							value={password}
 							onChange={this.changeHandler}
+							required
 						/>
 					</div>
 					<div>
@@ -87,6 +90,7 @@ class SignUp extends Component {
 							placeholder="Phone number"
 							value={phno}
 							onChange={this.changeHandler}
+							required
 						/>
 					</div>
 					<div>
@@ -97,6 +101,7 @@ class SignUp extends Component {
 							placeholder="Branch"
 							value={branch}
 							onChange={this.changeHandler}
+							required
 						/>
 					</div>
 					<div>
@@ -107,6 +112,7 @@ class SignUp extends Component {
 							placeholder="Join"
 							value={joinyear}
 							onChange={this.changeHandler}
+							required
 						/>
 					</div>
 

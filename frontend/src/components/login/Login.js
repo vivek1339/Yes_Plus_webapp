@@ -65,6 +65,7 @@ export default class log extends Component {
 								placeholder="Email"
 								value={email}
 								onChange={this.changeHandler}
+								required
 						  />
 					  </div>
 				
@@ -76,6 +77,7 @@ export default class log extends Component {
 									placeholder="Password"
 									value={password}
 									onChange={this.changeHandler}
+									required
 					     	/>
 					   </div>
 				<button className="submit-button" type="submit">Submit</button>

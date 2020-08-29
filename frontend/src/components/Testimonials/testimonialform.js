@@ -15,7 +15,7 @@ class Testimonialform extends Component {
             batchno:'',
             experience:'',
             faculty:'',
-          	img:'',
+          //	img:'',
 
 		}
 	}
@@ -23,13 +23,13 @@ class Testimonialform extends Component {
 	changeHandler = e => {
 		this.setState({ [e.target.name]: e.target.value })
     }
-    fileUploadhandler=()=>{
-        axios
-			.post('http://localhost:5000/add_testimonial', this.state)
-			.then(response => {
-				console.log(response)
-			})
-    }
+    // fileUploadhandler=()=>{
+    //     axios
+	// 		.post('http://localhost:5000/add_testimonial', this.state)
+	// 		.then(response => {
+	// 			console.log(response)
+	// 		})
+    // }
 
 	submitHandler = e => {
 		e.preventDefault()
@@ -117,7 +117,7 @@ class Testimonialform extends Component {
 							required
 						/>
 					</div>
-                    <div>
+                    {/* <div>
                         <label>Upload Img:</label><br/>
                         <input 
                         type="file" 
@@ -127,7 +127,7 @@ class Testimonialform extends Component {
 			required/>
                         <button onClick={this.fileUploadhandler}>upload</button>
 					
-					</div>
+					</div> */}
 
 
 					<button type="submit">Submit</button>

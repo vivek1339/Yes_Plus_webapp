@@ -119,16 +119,17 @@ app.post('/login',(req, res) => {
 app.post('/add_testimonial',(req, res) => {
   const user_obj = req.body;
   const user_data = {
-    user_email: user_obj.email,
-    user_faculty: user_obj.faculty,
+    user_name: user_obj.name,
+    user_branch: user_obj.branch,
+    user_join_year: user_obj.joinyear,
     user_experience: user_obj.experience,
-    user_date_course:user_obj.date_course,
+    user_faculty:user_obj.faculty
 
   };
   console.log(user_data);
   return db
     .collection("testimonial_data")
-    .doc(user_data.user_email)
+    .doc(user_data.user_name)
     
     .set(user_data)
     .then(() => {
@@ -172,14 +173,16 @@ app.get('/display_testimonial',(req,res)=>{
 app.post('/add_event',(req, res) => {
   const event_obj = req.body;
   const event_data = {
-    event_title: event_obj.title,
-    event_description: event_obj.description,
-    event_date: event_obj.date,
+    event_name: event_obj.name,
+    event_theme: event_obj.eventtheme,
+    event_startdate: event_obj.startdate,
+    event_enddate: event_obj.enddate,
+    event_phno: event_obj.phno,
   };
   console.log(event_data);
   return db
     .collection("event_data")
-    .doc(event_data.event_title)
+    .doc(event_data.event_name)
     .set(event_data)
     .then(() => {
       console.log("new event added");

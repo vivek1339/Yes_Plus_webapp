@@ -70,7 +70,7 @@ app.post('/add_user',(req, res) => {
     });
 });
 
-app.post('/data',(req, res) => {
+app.post('/login',(req, res) => {
   //function getuser(email) {
   //Call this to retrieve user password
   console.log("here");
@@ -87,8 +87,15 @@ app.post('/data',(req, res) => {
     .then(doc => {
       console.log(doc.data());  
       user_temp=doc.data();
+      var user_1 = {
+        "status" : 200,
+        "userdata": {
+          "email" : user_temp.user_email,
+          "type"  : user_temp.user_type
+        },
+      };
       if(user_temp.user_password==user_data.user_password){
-        res.send(user_temp);
+        res.send(user_1);
       }
       else{
         res.send("Wrong password");
@@ -98,14 +105,18 @@ app.post('/data',(req, res) => {
     .catch((error) => {
       console.log(error);
       console.log("Couldn't get data");
-      res.send('<h1>Couldnt get data</h1>');
+      var user_1 = {
+        "status" : 404,
+        "userdata": null
+      };
+      res.send(user_1);
     });
 });
 
 
 // Write a function to display all the testimonials
 // 
-app.post('/testimonial_add',(req, res) => {
+app.post('/add_testimonial',(req, res) => {
   const user_obj = req.body;
   const user_data = {
     user_email: user_obj.email,
@@ -138,6 +149,7 @@ app.get('/display_testimonial',(req,res)=>{
   .collection("testimonial_data")
   .get()
   .then(snap => {
+      x=0;
       snap.forEach(doc => {
         console.log(doc.data());
         user_temp[x] = doc.data();
@@ -182,11 +194,11 @@ app.post('/add_event',(req, res) => {
 
 app.get('/display_event',(req,res)=>{
   var user_temp=[];
-var x;
   return db
   .collection("event_data")
   .get()
   .then(snap => {
+      x=0;
       snap.forEach(doc => {
         console.log(doc.data());
         user_temp[x] = doc.data();
@@ -197,7 +209,7 @@ var x;
       res.send(user_temp);
   })
   .catch(()=>{
- console.log("huh");
+ console.log("Failed");
     res.send("404");
   });
 });

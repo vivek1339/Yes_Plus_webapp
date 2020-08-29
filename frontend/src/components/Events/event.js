@@ -1,48 +1,55 @@
-import React from 'react';
+import React, {Component} from 'react';
 import { NavLink } from 'react-router-dom';
+import axios from 'axios';
 
-function User(props){
+export default class Eventpage extends React.Component {
+    constructor(props) {
+      super(props)
+      
+      this.state = {
+        data: []
 
-   return (
-       <ul>
-            <li>{props.name}</li>
-       </ul>
-   )
-}
-
-var obj = [
-    {
-        name: "pooh",
-        class: "Five"
-    },
-    {
-        name: "ammu",
-        class: "Five"
-    },
-    {
-        name: "appi",
-        class: "Five"
+      };
     }
-]
+    
+    componentWillMount(){
+      axios
+        .get('http://localhost:5000/display_event')
+        .then(( response )=> {
+            console.log(response);
+
+            this.setState({  
+                data: response.data,   
+          });
+        })
+        .catch((err)=> {
+            console.log(err);
+        })
+    }
+
+    render(){
+        const child = this.state.data.map((el, index) => {
+            if(el==undefined)
+                return
+
+            return <div key={index}>
+              <p>Title - { el.event_title }</p>
+              <p>Date - { el.event_date }</p>
+              <p>Description - { el.event_description }</p>
+            </div>
+        });
+      
+        return(
+            <div>
+                <div className="yp_event">{ child }</div>
+
+                <div className="yp_event">
+                <NavLink to="/eventform" className="yp_navbar4"><button className="yp_event-button"> Form</button> </NavLink>
+                </div>
 
 
-const Eventpage = () =>(
-    <div>
-        <div>
-       Event page
-        <NavLink to="/eventform"></NavLink>
-        <NavLink to="/Comment" className="yp_navbar4"></NavLink>
-        </div>
-        <ul>
-         {obj.map((user)=><User key={user.id} name={user.name}/>)}
-      </ul>
-
-        <div class="yp_event">
-        <NavLink to="/eventform" className="yp_navbar4"><button class="yp_event-button"> Form</button> </NavLink>
-		</div>
-
-
-    </div>
-)
-
-export default Eventpage;
+            </div>
+            
+        );
+    }
+}

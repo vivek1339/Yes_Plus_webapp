@@ -5,7 +5,7 @@ import Faculty from './about/faculty';
 import Subordinator from './about/subordinator';
 import Social1 from './about/social1';
 
-var username = localStorage.getItem('email');
+var username = localStorage.getItem('user');
 
 const About = () =>{
     return(

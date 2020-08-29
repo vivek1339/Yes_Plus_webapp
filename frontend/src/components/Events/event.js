@@ -33,9 +33,11 @@ export default class Eventpage extends React.Component {
                 return
 
             return <div key={index}>
-              <p>Title - { el.event_title }</p>
-              <p>Date - { el.event_date }</p>
-              <p>Description - { el.event_description }</p>
+              <p>Event Name - { el.event_name }</p>
+              <p>Theme - { el.event_theme }</p>
+              <p>Start date - { el.event_startdate}</p>
+              <p>End date - { el.event_startdate}</p>
+              <p>Details Content - { el.event_phno}</p>
             </div>
         });
       

@@ -65,7 +65,7 @@ class Eventform extends Component {
 						<label>Event Registration Start Date</label>
 						<input
 							type="date"
-							name="date"
+							name="startdate"
 							placeholder="start date"
 							value={startdate}
 							onChange={this.changeHandler}
@@ -76,7 +76,7 @@ class Eventform extends Component {
 						<label>Event Registration End Date</label>
 						<input
 							type="date"
-							name="date"
+							name="enddate"
 							placeholder="end date"
 							value={enddate}
 							onChange={this.changeHandler}
@@ -87,9 +87,9 @@ class Eventform extends Component {
 						<label>Contact:</label>
 						<input
 							type="tel"
-							name="contact"
+							name="phno"
 							placeholder="Phone number"
-							value={contact}
+							value={phno}
 							onChange={this.changeHandler}
 							required
 						/>

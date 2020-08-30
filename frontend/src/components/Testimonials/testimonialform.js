@@ -8,11 +8,8 @@ class Testimonialform extends Component {
 	constructor(props) {
 		super(props)
 
-		this.state = {
-			name:'',	
+		this.state = {	
 			email:'',	
-			branch:'',
-            joinyear:''	,
             batchno:'',
             experience:'',
             faculty:'',
@@ -54,40 +51,6 @@ class Testimonialform extends Component {
 		return (
 			<div className="yp_form">
 				<form onSubmit={this.submitHandler}>
-					<div>
-						<label>Name:</label>
-						<input
-							type="text"
-							name="name"
-							placeholder="Name"
-							value={name}
-							onChange={this.changeHandler}
-							required
-						/>
-					</div>
-				
-					<div>
-					<label>Branch:</label>
-						<input
-							type="text"
-							name="branch"
-							placeholder="Branch"
-							value={branch}
-							onChange={this.changeHandler}
-							required
-						/>
-					</div>
-					<div>
-						<label>Joinyear:</label>
-						<input
-							type="date"
-							name="joinyear"
-							placeholder="Join"
-							value={joinyear}
-							onChange={this.changeHandler}
-							required
-						/>
-					</div>
                     <div>
 						<label>Batch No:</label>
 						<input
@@ -136,12 +99,7 @@ class Testimonialform extends Component {
 
 
 					<button type="submit">Submit</button>
-				</form>
-				<div> To Login -
-				<NavLink to="/login" > Login</NavLink>
-				
-				</div>
-				
+				</form>				
 			</div>
 		)
 	}

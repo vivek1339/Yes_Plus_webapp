@@ -23,14 +23,14 @@ export default class log extends Component {
 	submitHandler = e => {
 		var user_obj;
 		e.preventDefault()
-		console.log(this.state)
+		console.log(this.state)//line used to print on console
 		axios // used for post requests also works similar to promises
 			.post('http://localhost:5000/login', this.state) //data is the function name written for login in backend also this line helps to pass the data to backend server from frontend server
 			.then(response => { //this line helps use to rececive response from backend 
 				user_obj=response.data;
 				if(user_obj.status == 200){ //user_obj is the response rececived from the backend
 					localStorage.setItem('user', user_obj.userdata);
-					alert(`${this.state.name} Login Successfully !!!!`);
+					alert(`${this.state.email} Login Successfully !!!!`);
 					this.props.history.push('/')
 					
 				}

@@ -9,7 +9,8 @@ class Testimonialform extends Component {
 		super(props)
 
 		this.state = {
-			name:'',		
+			name:'',	
+			email:'',	
 			branch:'',
             joinyear:''	,
             batchno:'',
@@ -22,6 +23,7 @@ class Testimonialform extends Component {
 
 	changeHandler = e => {
 		this.setState({ [e.target.name]: e.target.value })
+		// this.setState({ [e.email]: username.email })
     }
     // fileUploadhandler=()=>{
     //     axios
@@ -46,7 +48,9 @@ class Testimonialform extends Component {
 	}
 
 	render() {
-		const { name,branch,batchno,joinyear,experience,faculty } = this.state
+		const { name,email,branch,batchno,joinyear,experience,faculty } = this.state
+		this.state.email = username.email
+
 		return (
 			<div className="yp_form">
 				<form onSubmit={this.submitHandler}>
@@ -117,6 +121,7 @@ class Testimonialform extends Component {
 							required
 						/>
 					</div>
+
                     {/* <div>
                         <label>Upload Img:</label><br/>
                         <input 
@@ -124,7 +129,7 @@ class Testimonialform extends Component {
                         name="file"
                         placeholder="upload"
                         onChange={this.fileSelectedHandler}
-			required/>
+						required/>
                         <button onClick={this.fileUploadhandler}>upload</button>
 					
 					</div> */}

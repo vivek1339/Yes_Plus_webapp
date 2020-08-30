@@ -123,8 +123,8 @@ app.post('/add_testimonial',(req, res) => {
     user_branch: user_obj.branch,
     user_join_year: user_obj.joinyear,
     user_experience: user_obj.experience,
-    user_faculty:user_obj.faculty
-
+    user_faculty:user_obj.faculty,
+    user_batchno:user_obj.batchno
   };
   console.log(user_data);
   return db

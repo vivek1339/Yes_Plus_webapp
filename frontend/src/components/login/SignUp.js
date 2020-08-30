@@ -28,13 +28,12 @@ class SignUp extends Component {
 			.then(res=>{
 				if (res.data == 200){
 				   console.log("User added");
-				   alert(`Registered Successfully !!!!`);
-				   localStorage.setItem('name', this.state.email);
+				   alert(`${this.state.name} Registered Successfully! Please login again`);
 				   this.props.history.push('/')
 				}
 				else{
 				   console.log("User couldn't be added");
-				   alert(`${this.state.name}  Registeration Unsuccessful !!!!`);
+				   alert(`${this.state.name} Registeration Unsuccessful!`);
 				} 
 			})
 			.catch(error => {

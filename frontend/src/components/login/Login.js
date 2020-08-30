@@ -29,10 +29,8 @@ export default class log extends Component {
 			.then(response => { //this line helps use to rececive response from backend 
 				user_obj=response.data;
 				if(user_obj.status == 200){ //user_obj is the response rececived from the backend
-					localStorage.setItem('user', user_obj.userdata);
-					alert(`${this.state.email} Login Successfully !!!!`);
+					localStorage.setItem('userdata', JSON.stringify(user_obj.userdata));
 					this.props.history.push('/')
-					
 				}
 				else
 					alert('pls do login');

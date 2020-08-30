@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import { NavLink } from 'react-router-dom';
 
-var username = localStorage.getItem('email');
+var username = JSON.parse(localStorage.getItem('userdata'));
 
 class Testimonialform extends Component {
 	constructor(props) {

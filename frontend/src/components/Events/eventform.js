@@ -1,12 +1,16 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import { NavLink } from 'react-router-dom';
+
+var username = JSON.parse(localStorage.getItem('userdata'));
+
 class Eventform extends Component {
 	constructor(props) {
 		super(props)
 
 		this.state = {
-			name:'',
+			email:'',
+			//name:'',
 			eventtheme:'',
 			startdate:'',
 			enddate:'',
@@ -34,12 +38,13 @@ class Eventform extends Component {
 	}
 
 	render() {
-		const { name,theme,startdate,enddate,contact,fees } = this.state
+		const { name,eventtheme,startdate,email,phno,enddate,contact,fees } = this.state
+		this.state.email = username.email
 		return (
           
 			<div className="yp_form">
 				<form onSubmit={this.submitHandler}>
-					<div>
+					{/* <div>
 						<label>Name:</label>
 						<input
 							type="text"
@@ -49,18 +54,18 @@ class Eventform extends Component {
 							onChange={this.changeHandler}
 							required
 						/>
-					</div>
-					<div>
+					</div> */}
+					 <div>
 						<label>Event Theme</label>
 						<input
 							type="text"
-							name="theme"
-							placeholder="event theme"
-							value={theme}
+							name="eventtheme"
+							placeholder="eventtheme"
+							value={eventtheme}
 							onChange={this.changeHandler}
 							required
 						/>
-					</div>
+					</div> 
 					<div>
 						<label>Event Registration Start Date</label>
 						<input
@@ -100,7 +105,7 @@ class Eventform extends Component {
                            event details
                      </textarea>
                     </div>
-                    <div>
+                    {/* <div>
 						<label>Event Fee:</label>
 						<input
 							type="text"
@@ -111,13 +116,11 @@ class Eventform extends Component {
 							required
 						/>
 					</div>
-				
+				 */}
 
 					<button type="submit">Submit</button>
 				</form>
-				<div> to login
-				<NavLink to="/login" >login</NavLink>
-				</div>
+				
 			</div>
 		)
 	}

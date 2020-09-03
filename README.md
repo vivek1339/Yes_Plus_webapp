@@ -11,21 +11,21 @@ Logging in an already existing user - Returns a JSON object { "status":number, "
 If the user doesnt exist	          - Returns a	JSON object { "status":number, "userdata": null }  
 
 
-B. **Event**  
-3. http://localhost:5000/add_event	-   
+B. **Event**   
+1. http://localhost:5000/add_event	-   
 Adding a new event to database		  
 Returns a JSON object { "status":number }  
 
-4. http://localhost:5000/display_event -   
+2. http://localhost:5000/display_event -   
 Displaying all the events from the database  
 Returns a JSON array [ { event object }, { next event object }, ... ]  
 
 
-C. **Testimonial**  
-5. http://localhost:5000/add_testimonial -   
+C. **Testimonial**   
+1. http://localhost:5000/add_testimonial -   
 Adding a new testimonial to database	  
 Returns a JSON object { "status":number }  
 
-6. http://localhost:5000/display_testimonial -   
+2. http://localhost:5000/display_testimonial -   
 Displaying all the events from the database  
 Returns a JSON array [ { event object }, { next event object }, ... ]  

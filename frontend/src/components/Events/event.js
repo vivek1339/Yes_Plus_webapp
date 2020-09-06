@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import { NavLink } from 'react-router-dom';
 import axios from 'axios';
 
+var username = JSON.parse(localStorage.getItem('userdata'));
+
 export default class Eventpage extends React.Component {
     constructor(props) {
       super(props)
@@ -46,7 +48,7 @@ export default class Eventpage extends React.Component {
                 <div className="yp_event">{ child }</div>
 
                 <div className="yp_event">
-                <NavLink to="/eventform" className="yp_navbar4"><button className="yp_event-button"> Form</button> </NavLink>
+                {username != null && username.type!=0 && <NavLink to="/eventform" className="yp_navbar4"><button className="yp_event-button"> Form</button> </NavLink>}
                 </div>
 
 

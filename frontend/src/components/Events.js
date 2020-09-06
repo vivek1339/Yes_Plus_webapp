@@ -10,7 +10,6 @@ const Events = () =>{
     return(
         <div>
              <Event />
-             {/* {username.type} */}
              <Social2 />
         </div>
     );

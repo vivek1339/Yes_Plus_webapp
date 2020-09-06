@@ -1,6 +1,7 @@
 import React from 'react';
-import axios from 'axios';
 import { NavLink } from 'react-router-dom';
+
+var username = JSON.parse(localStorage.getItem('userdata'));
 
 const Testimonialpage = () =>(
     <div>
@@ -12,7 +13,7 @@ const Testimonialpage = () =>(
 
 
         <div class="yp_testimonial">
-        <NavLink to="/testimonialform" className="yp_navbar4"> <button class="yp_testimonial-button"> Testimonial Form</button> </NavLink>
+        { username !=null && <NavLink to="/testimonialform" className="yp_navbar4"> <button class="yp_testimonial-button"> Testimonial Form</button> </NavLink> }
 		</div>
          
 </div>

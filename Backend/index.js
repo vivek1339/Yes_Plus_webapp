@@ -89,7 +89,7 @@ app.post('/data',(req, res) => {
       user_temp=doc.data();
       if(user_temp.user_password==user_data.user_password){
         res.send(user_temp);
-      }
+      }                                   
       else{
         res.send("Wrong password");
       }
@@ -130,26 +130,48 @@ app.get('/display_testimonial',(req,res)=>{
 
 // Write a function to display all the testimonials
 // event add+display 
+
 app.post('/add_event',(req, res) => {
   const event_obj = req.body;
   const event_data = {
-    event_title: event_obj.title,
-    event_description: event_obj.description,
-    event_date: event_obj.date,
-  };
+    event_name: event_obj.name,
+    event_theme: event_obj.eventtheme,
+    event_startdate: event_obj.startdate,
+    event_enddate: event_obj.enddate,
+    event_phno: event_obj.phno,
+ };
   console.log(event_data);
-  return db
-    .collection("event_data")
-    .doc(event_data.event_title)
-    .set(event_data)
-    .then(() => {
-      console.log("new event added");
-      res.send("200");
-    })
-    .catch(()=>{
-      console.log("Unable to add event");
-      res.send("404");
-    });
+  db.collection("user_data")
+    .doc(event_obj.email)
+    .get()
+    .then(doc => {
+      console.log(doc.data());  
+      user_temp=doc.data();
+
+      if (user_temp.user_type  ==1){
+        return db 
+   .collection("event_data")    
+   .doc(event_data.event_name)
+   .set(event_data)
+   .then(() => {
+     console.log("new event added");
+     res.send("200");
+   })
+   .catch(()=>{
+     console.log("User is not admin");
+     res.send("403");
+   });
+}
+ else{
+   res.send("404");
+ }
+
+})
+.catch(()=>{
+console.log("Unable to add event");
+res.send("404");
+});
+
 });
 
 

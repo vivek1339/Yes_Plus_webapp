@@ -170,6 +170,7 @@ app.get('/display_testimonial',(req,res)=>{
 
 // Write a function to display all the testimonials
 // event add+display 
+
 app.post('/add_event',(req, res) => {
   const event_obj = req.body;
   const event_data = {
@@ -178,20 +179,39 @@ app.post('/add_event',(req, res) => {
     event_startdate: event_obj.startdate,
     event_enddate: event_obj.enddate,
     event_phno: event_obj.phno,
-  };
+ };
   console.log(event_data);
-  return db
-    .collection("event_data")
-    .doc(event_data.event_name)
-    .set(event_data)
-    .then(() => {
-      console.log("new event added");
-      res.send("200");
+  db.collection("user_data")
+    .doc(event_obj.email)
+    .get()
+    .then(doc => {
+      console.log(doc.data());  
+      user_temp=doc.data();
+
+      if (user_temp.user_type  ==1){
+        return db 
+           .collection("event_data")    
+           .doc(event_data.event_name)
+           .set(event_data)
+           .then(() => {
+             console.log("new event added");
+             res.send("200");
+           })
+           .catch(()=>{
+             console.log("User is not admin");
+             res.send("403");
+           });
+          }
+       else{
+         res.send("404");
+       }
+
     })
     .catch(()=>{
-      console.log("Unable to add event");
-      res.send("404");
+        console.log("Unable to add event");
+        res.send("404");
     });
+
 });
 
 

@@ -2,14 +2,15 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import { NavLink } from 'react-router-dom';
 
-var username = localStorage.getItem('email');
+var username = JSON.parse(localStorage.getItem('userdata'));
 
 class Eventform extends Component {
 	constructor(props) {
 		super(props)
 
 		this.state = {
-			name:'',
+			email:'',
+			//name:'',
 			eventtheme:'',
 			startdate:'',
 			enddate:'',
@@ -23,13 +24,13 @@ class Eventform extends Component {
 	}
 
 	submitHandler = e => {
-		alert(`${this.state.name}  Registered Successfully !!!!`)
 		e.preventDefault()
 		console.log(this.state)
 		axios
 			.post('http://localhost:5000/add_event', this.state)
 			.then(response => {
-				console.log(response)
+				console.log(response);
+				alert(`Added Successfully !!!!`)
 			})
 			.catch(error => {
 				console.log(error)
@@ -37,12 +38,13 @@ class Eventform extends Component {
 	}
 
 	render() {
-		const { name,email,password,branch,contact,joinyear } = this.state
+		const { name,eventtheme,startdate,email,phno,enddate,contact,fees } = this.state
+		this.state.email = username.email
 		return (
           
-			<div className="form">
+			<div className="yp_form">
 				<form onSubmit={this.submitHandler}>
-					<div>
+					{/* <div>
 						<label>Name:</label>
 						<input
 							type="text"
@@ -50,71 +52,75 @@ class Eventform extends Component {
 							placeholder="event name"
 							value={name}
 							onChange={this.changeHandler}
+							required
 						/>
-					</div>
-					<div>
-						<label>event theme</label>
+					</div> */}
+					 <div>
+						<label>Event Theme</label>
 						<input
 							type="text"
-							name="theme"
-							placeholder="event theme"
-							value={email}
+							name="eventtheme"
+							placeholder="eventtheme"
+							value={eventtheme}
 							onChange={this.changeHandler}
+							required
 						/>
-					</div>
+					</div> 
 					<div>
-						<label>event registration start date</label>
+						<label>Event Registration Start Date</label>
 						<input
 							type="date"
-							name="date"
+							name="startdate"
 							placeholder="start date"
-							value={password}
+							value={startdate}
 							onChange={this.changeHandler}
+							required
 						/>
 					</div>
                     <div>
-						<label>event registration end date</label>
+						<label>Event Registration End Date</label>
 						<input
 							type="date"
-							name="date"
+							name="enddate"
 							placeholder="end date"
-							value={password}
+							value={enddate}
 							onChange={this.changeHandler}
+							required
 						/>
 					</div>
 					<div>
-						<label>contact:</label>
+						<label>Contact:</label>
 						<input
 							type="tel"
-							name="contact"
+							name="phno"
 							placeholder="Phone number"
-							value={contact}
+							value={phno}
 							onChange={this.changeHandler}
+							required
 						/>
 					</div>
                     <div>
-                       <label>event details:</label> <br/>
+                       <label>Event Details:</label> <br/>
                        <textarea>
                            event details
                      </textarea>
                     </div>
-                    <div>
-						<label>event fee:</label>
+                    {/* <div>
+						<label>Event Fee:</label>
 						<input
 							type="text"
 							name="fee"
 							placeholder="fees"
-							value={contact}
+							value={fees}
 							onChange={this.changeHandler}
+							required
 						/>
 					</div>
-				
+				 */}
 
 					<button type="submit">Submit</button>
 				</form>
-				<div> to login
-				<NavLink to="/login" >login</NavLink>
-				</div>
+				
 			</div>
 		)
 	}
@@ -122,6 +128,5 @@ class Eventform extends Component {
 
 
 export default Eventform;
-
 
 

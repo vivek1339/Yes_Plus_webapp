@@ -70,7 +70,7 @@ app.post('/add_user',(req, res) => {
     });
 });
 
-app.post('/data',(req, res) => {
+app.post('/login',(req, res) => {
   //function getuser(email) {
   //Call this to retrieve user password
   console.log("here");
@@ -87,9 +87,16 @@ app.post('/data',(req, res) => {
     .then(doc => {
       console.log(doc.data());  
       user_temp=doc.data();
+      var user_1 = {
+        "status" : 200,
+        "userdata": {
+          "email" : user_temp.user_email,
+          "type"  : user_temp.user_type
+        },
+      };
       if(user_temp.user_password==user_data.user_password){
-        res.send(user_temp);
-      }                                   
+        res.send(user_1);
+      }
       else{
         res.send("Wrong password");
       }
@@ -98,19 +105,52 @@ app.post('/data',(req, res) => {
     .catch((error) => {
       console.log(error);
       console.log("Couldn't get data");
-      res.send('<h1>Couldnt get data</h1>');
+      var user_1 = {
+        "status" : 404,
+        "userdata": null
+      };
+      res.send(user_1);
     });
 });
 
 
 // Write a function to display all the testimonials
 // 
+app.post('/add_testimonial',(req, res) => {
+  const user_obj = req.body;
+  const user_data = {
+    user_name: user_obj.name,
+    user_branch: user_obj.branch,
+    user_join_year: user_obj.joinyear,
+    user_experience: user_obj.experience,
+    user_faculty:user_obj.faculty,
+    user_batchno:user_obj.batchno
+  };
+  console.log(user_data);
+  return db
+    .collection("testimonial_data")
+    .doc(user_data.user_name)
+    
+    .set(user_data)
+    .then(() => {
+      console.log("new testimonial added");
+      res.send("200");
+      //res.send("Api is working");
+    })
+    .catch(()=>{
+      console.log("Unable to add testimonial");
+      res.send("404");
+    });
+    
+});
+
 app.get('/display_testimonial',(req,res)=>{
   var user_temp=[];
   return db
   .collection("testimonial_data")
   .get()
   .then(snap => {
+      x=0;
       snap.forEach(doc => {
         console.log(doc.data());
         user_temp[x] = doc.data();
@@ -150,38 +190,38 @@ app.post('/add_event',(req, res) => {
 
       if (user_temp.user_type  ==1){
         return db 
-   .collection("event_data")    
-   .doc(event_data.event_name)
-   .set(event_data)
-   .then(() => {
-     console.log("new event added");
-     res.send("200");
-   })
-   .catch(()=>{
-     console.log("User is not admin");
-     res.send("403");
-   });
-}
- else{
-   res.send("404");
- }
+           .collection("event_data")    
+           .doc(event_data.event_name)
+           .set(event_data)
+           .then(() => {
+             console.log("new event added");
+             res.send("200");
+           })
+           .catch(()=>{
+             console.log("User is not admin");
+             res.send("403");
+           });
+          }
+       else{
+         res.send("404");
+       }
 
-})
-.catch(()=>{
-console.log("Unable to add event");
-res.send("404");
-});
+    })
+    .catch(()=>{
+        console.log("Unable to add event");
+        res.send("404");
+    });
 
 });
 
 
 app.get('/display_event',(req,res)=>{
   var user_temp=[];
-var x;
   return db
   .collection("event_data")
   .get()
   .then(snap => {
+      x=0;
       snap.forEach(doc => {
         console.log(doc.data());
         user_temp[x] = doc.data();
@@ -192,7 +232,7 @@ var x;
       res.send(user_temp);
   })
   .catch(()=>{
- console.log("huh");
+ console.log("Failed");
     res.send("404");
   });
 });
@@ -210,4 +250,3 @@ const server = http.createServer(app);
 server.listen(port, hostname, () => {
   console.log(`Server running at http://${hostname}:${port}`);
 });
-

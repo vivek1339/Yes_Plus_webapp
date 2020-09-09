@@ -44,36 +44,41 @@ app.use('/users', usersRouter);*/
 
 
 app.post('/add_user',(req, res) => {
-    //Call this function when sign up happens
-  const user_obj = req.body;
-  const user_data = {
-    user_name: user_obj.name,
-    user_email: user_obj.email,
-    user_password: user_obj.password,
-    user_branch: user_obj.branch,
-    user_phno: user_obj.phno,
-    user_type: 0,
-    user_join_year: user_obj.joinyear,
-  };
-  console.log(user_data);
-  return db
-    .collection("user_data")
-    .doc(user_data.user_email)
-    .set(user_data)
-    .then(() => {
-      console.log("new user added");
-      res.send("200");
-    })
-    .catch(()=>{
-      console.log("Unable to add user");
-      res.send("404");
-    });
+  //Call this function when sign up happens
+const user_obj = req.body;
+const user_data = {
+  user_name: user_obj.name,
+  user_email: user_obj.email,
+  user_password: user_obj.password,
+  user_branch: user_obj.branch,
+  user_phno: user_obj.phno,
+  user_type: 0,
+  user_join_year: user_obj.joinyear,
+};
+console.log(user_data);
+var temp = {
+  "status" : 0 
+}
+return db
+  .collection("user_data")
+  .doc(user_data.user_email)
+  .set(user_data)
+  .then(() => {
+    console.log("new user added");
+    temp.status = 200;
+    res.send(temp);
+  })
+  .catch(()=>{
+    console.log("Unable to add user");
+    temp.status = 404 ;
+    res.send(temp);
+  });
 });
 
 app.post('/login',(req, res) => {
   //function getuser(email) {
   //Call this to retrieve user password
-  console.log("here");
+  //console.log("here");
   const user_obj = req.body;
   const user_data = {
     user_email: user_obj.email,
@@ -88,19 +93,19 @@ app.post('/login',(req, res) => {
       console.log(doc.data());  
       user_temp=doc.data();
       var user_1 = {
-        "status" : 200,
+        "status" : 0,
         "userdata": {
           "email" : user_temp.user_email,
           "type"  : user_temp.user_type
         },
       };
       if(user_temp.user_password==user_data.user_password){
-        res.send(user_1);
+        user_1.status = 200 ;
       }
       else{
-        res.send("Wrong password");
+        user_1.status = 404 ;
       }
-      
+      res.send(user_1);
     })
     .catch((error) => {
       console.log(error);
@@ -127,25 +132,32 @@ app.post('/add_testimonial',(req, res) => {
     user_batchno:user_obj.batchno
   };
   console.log(user_data);
+  var temp = {
+    "status" : 0
+  }
   return db
     .collection("testimonial_data")
     .doc(user_data.user_name)
-    
     .set(user_data)
     .then(() => {
       console.log("new testimonial added");
-      res.send("200");
+      temp.status = 200 ;
+      res.send(temp);
+
       //res.send("Api is working");
     })
     .catch(()=>{
       console.log("Unable to add testimonial");
-      res.send("404");
-    });
-    
+      temp.status = 404;
+      res.send(temp);
+    });    
 });
 
 app.get('/display_testimonial',(req,res)=>{
   var user_temp=[];
+  var temp = {
+    "status" : 0
+  }
   return db
   .collection("testimonial_data")
   .get()
@@ -162,7 +174,8 @@ app.get('/display_testimonial',(req,res)=>{
   })
   .catch(()=>{
     console.log("Failed");
-    res.send("404");
+    temp.status = 404;
+    res.send(temp);
   });
 });
 
@@ -224,24 +237,32 @@ app.post('/add_event',(req, res) => {
     event_phno: event_obj.phno,
   };
   console.log(event_data);
+  var temp = {
+    "status" : 0
+  }
   return db
     .collection("event_data")
     .doc(event_data.event_name)
     .set(event_data)
     .then(() => {
       console.log("new event added");
-      res.send("200");
+      temp.status = 200;
+      res.send(temp);
     })
     .catch((e)=>{
       console.log(e);
       console.log("Unable to add event");
-      res.send("404");
+      temp.status = 404;
+      res.send(temp);
     }); 
 });
 
 
 app.get('/display_event',(req,res)=>{
   var user_temp=[];
+  var temp = {
+    "status" : 0
+  }
   return db
   .collection("event_data")
   .get()
@@ -258,7 +279,8 @@ app.get('/display_event',(req,res)=>{
   })
   .catch(()=>{
  console.log("Failed");
-    res.send("404");
+ temp.status = 404;
+    res.send(temp);
   });
 });
 

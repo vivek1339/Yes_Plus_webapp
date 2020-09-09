@@ -28,13 +28,12 @@ class SignUp extends Component {
 			.then(res=>{
 				if (res.data == 200){
 				   console.log("User added");
-				   alert(`${this.state.name}  Registered Successfully !!!!`);
-				   localStorage.setItem('name', this.state.email);
+				   alert(`${this.state.name} Registered Successfully! Please login again`);
 				   this.props.history.push('/')
 				}
 				else{
 				   console.log("User couldn't be added");
-				   alert(`${this.state.name}  Registeration Unsuccessful !!!!`);
+				   alert(`${this.state.name} Registeration Unsuccessful!`);
 				} 
 			})
 			.catch(error => {
@@ -46,7 +45,7 @@ class SignUp extends Component {
 		const { name,email,password,branch,phno,joinyear } = this.state
 		return (
         
-			<div className="form">
+			<div className="yp_form">
 					<h1 className="heading">Sign Up</h1>
 				<form onSubmit={this.submitHandler}>
 					<div>
@@ -57,16 +56,18 @@ class SignUp extends Component {
 							placeholder="Name"
 							value={name}
 							onChange={this.changeHandler}
+							required
 						/>
 					</div>
 					<div>
-						<label>email:</label>
+						<label>Email:</label>
 						<input
 							type="email"
 							name="email"
 							placeholder="Email"
 							value={email}
 							onChange={this.changeHandler}
+							required
 						/>
 					</div>
 					<div>
@@ -77,43 +78,47 @@ class SignUp extends Component {
 							placeholder="Password"
 							value={password}
 							onChange={this.changeHandler}
+							required
 						/>
 					</div>
 					<div>
-						<label>contact:</label>
+						<label>Contact:</label>
 						<input
 							type="tel"
 							name="phno"
 							placeholder="Phone number"
 							value={phno}
 							onChange={this.changeHandler}
+							required
 						/>
 					</div>
 					<div>
-					<label>branch:</label>
+					<label>Branch:</label>
 						<input
 							type="text"
 							name="branch"
 							placeholder="Branch"
 							value={branch}
 							onChange={this.changeHandler}
+							required
 						/>
 					</div>
 					<div>
-						<label>joinyear:</label>
+						<label>Joinyear:</label>
 						<input
 							type="date"
 							name="joinyear"
 							placeholder="Join"
 							value={joinyear}
 							onChange={this.changeHandler}
+							required
 						/>
 					</div>
 
 					<button class="submit-button" type="submit">Submit</button>
 				</form>
-				<div> to login
-				<NavLink to="/login" className="yp_navbar2">login</NavLink>
+				<div> To Login - 
+				<NavLink to="/login" className="yp_navbar2"> Login</NavLink>
 				</div>
 			</div>
 			

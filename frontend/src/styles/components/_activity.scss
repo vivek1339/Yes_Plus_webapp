@@ -1,28 +1,23 @@
- /**{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
-}*/
-
-.container{
+.yp_activity .yp_container{
     position: relative;
     width:85%;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin-left:12%;
+    margin-left: 9%;
     margin-bottom: 90px;
-} 
-.container .card{
+}
+
+.yp_activity .yp_container .yp_card{
     position: relative;
     height: 26em;
     background: #fff;
     display: flex;
     width: 40%;
-    margin: 2em 0em;
+    margin: 2em 0em 0em 0em;
 }
-.container .card .imgbx{
+
+.yp_activity .yp_container .yp_card .yp_imgbx{
     position: absolute;
     top: 0;
     left: 0;
@@ -35,9 +30,9 @@
     align-items: center;
     overflow: hidden;
     transition: 0.5s ease-in-out;
-
 }
-.container .card:hover .imgbx{
+
+.yp_activity .yp_container .yp_card:hover .yp_imgbx{
     width: 10em;
     height: 10em;
     left:-5em;
@@ -46,7 +41,8 @@
     background-color: #000080; /* For browsers that do not support gradients */
     background-image: linear-gradient(to top right, #b91372  12%, #000080);
 }
-.container .card .imgbx:before{
+
+.yp_activity .yp_container .yp_card .yp_imgbx:before{
     content: attr(data-text) ;
     position: absolute;
     bottom: 0;
@@ -58,20 +54,22 @@
     color: rgba(255, 255, 255,.05);
     font-weight: 700;
 }
-.container .card .imgbx img{
+
+.yp_activity .yp_container .yp_card .yp_imgbx img{
     max-width: 26em;
     height: 19em;
     transition: 0.5s ease-in-out;
 
 }
-.container .card:hover .imgbx img{
+
+.yp_activity .yp_container .yp_card:hover .yp_imgbx img{
     max-width: 8em;
     max-height: 8em;
 
 }
-.container .card .content{
+
+.yp_activity .yp_container .yp_card .yp_content{
     position: absolute;
-    
     right: 0;
     width: calc(100% - 75px);
     height: 100%;
@@ -80,21 +78,14 @@
     justify-content: center;
     align-items: center;
 }
-.container .card .content h3{
+
+.yp_activity .yp_container .yp_card .yp_content h3{
     display: flex;
     margin-bottom:0.5em;
     font-size: 2.4em;
 }
-/* .container .card .content a{
-    display: inline-block;
-    margin-top: 10px;
-    padding: 5px 10px;
-    background: #333;
-    text-decoration: none;
-    color: #fff;
-}*/
 
-.activity h1{
+.yp_activity h1{
     text-align:center;
     font-size:4vw;
     background: linear-gradient(330deg,  #642b73,#bd3f32,#642b73,#bd3f32);
@@ -105,36 +96,38 @@
 }
 
 @media(max-width:800px){
-    .container{
+    .yp_activity .yp_container{
         width:85%;
         flex-direction: column;
         align-items: center;
     }
-    .container .card{
+
+    .yp_activity .yp_container .yp_card{
         width:95%;
         padding-left:0;
         padding-right:0;
     }
-    .activity h1{
+
+    .yp_activity h1{
         text-align:center;
         font-size:8vw;
         background: linear-gradient(330deg,  #642b73,#bd3f32,#642b73,#bd3f32);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         font-family:sans-serif;
-        padding-top:5%;
-        
-     }
-    
+        padding-top:5%;    
+    }   
 }
+
 @media(max-width:990px){
-    .container{
+    .yp_activity .yp_container{
         width:80%;
         flex-direction: column;
         align-items: center;
         margin-left: 12%;
     }
-    .container .card{
+
+    .yp_activity .yp_container .yp_card{
         width:90%;
         padding-left:0;
         padding-right:0;
@@ -142,7 +135,7 @@
 }
 
 @media(min-width:992px) and (max-width:1199px){
-    .container{
+    .yp_activity .yp_container{
         width:85%;
         display: flex;
         justify-content: space-between;

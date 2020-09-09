@@ -143,14 +143,14 @@ app.post('/add_testimonial',(req, res) => {
       console.log("new testimonial added");
       temp.status = 200 ;
       res.send(temp);
+
       //res.send("Api is working");
     })
     .catch(()=>{
       console.log("Unable to add testimonial");
       temp.status = 404;
       res.send(temp);
-    });
-    
+    });    
 });
 
 app.get('/display_testimonial',(req,res)=>{

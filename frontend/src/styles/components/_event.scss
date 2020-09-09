@@ -5,15 +5,17 @@
 }
 .yp_event-button
 {
-    background-color:  rgb(9, 178, 230);
+    background-color: #000080; /* For browsers that do not support gradients */
+    background-image: linear-gradient(to top right, #b91372  12%, #000080);
     border: 1px solid black;
-    color: black;
-    padding: 10px 32px;
+    color: white;
+    padding: 1px 32px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 20px;
     margin: 4px 2px;
     cursor: pointer;
-    width:400px;
+    width:150px;
+    height:40px;
 }

@@ -1,8 +1,11 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import axios from 'axios';
-import AppRouter from './routers/AppRouter';
+
 import './styles/styles.scss';
 
+const App = () =>(
+    <div id="root">
 
-ReactDOM.render(<AppRouter />, document.getElementById('app'));
+    </div>
+)
+
+export default App

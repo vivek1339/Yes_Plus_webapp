@@ -7,8 +7,8 @@ import Logout from '../components/logout';
 import SignUp from '../components/login/SignUp';
 import Testimonials from '../components/Testimonials';
 import NotFoundPage from '../components/NotFound';
-import Header from '../components/Header';
-import Events from '../components/events';
+import Header from '../components/header';
+import Events from '../components/Events';
 import Testimonialform from '../components/Testimonials/testimonialform';
 import Eventform from '../components/Events/eventform';
 

@@ -29,3 +29,6 @@ Returns a JSON object { "status":number }
 2. /display_testimonial -   
 Displaying all the events from the database  
 Returns a JSON array [ { event object }, { next event object }, ... ]  
+
+
+Click here to see the website : https://bityesplus.web.app/

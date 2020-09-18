@@ -34,14 +34,30 @@ export default class Eventpage extends React.Component {
             if(el==undefined)
                 return
 
-            return <div key={index}>
-              <p>Event Name - { el.event_name }</p>
-              <p>Theme - { el.event_theme }</p>
-              <p>Start date - { el.event_startdate}</p>
-              <p>End date - { el.event_startdate}</p>
-              <p>Details Content - { el.event_phno}</p>
-            </div>
-        });
+         //  return <div key={index}>
+          //    <p>Event Name - { el.event_name }</p>
+          //    <p>Theme - { el.event_theme }</p>
+         //     <p>Start date - { el.event_startdate}</p>
+         //     <p>End date - { el.event_startdate}</p>
+         //     <p>Details Content - { el.event_phno}</p>
+         //   </div>
+        
+
+        return     <div className="helloo" key={index}>
+        <div className="blog-post">
+         <div className="blog-post_info">
+        
+          <div className="blod-post_date"><p>Start date - { el.event_startdate}</p></div>
+          <h1 class="blog-post_title"><p>Event Name - { el.event_name }</p></h1>
+           <p class="blog-post_text">  
+                 <p>Theme - { el.event_theme }</p>  
+                 <p>Details Content - { el.event_phno}</p>
+                 <p>End date - { el.event_startdate}</p>
+            </p>
+      </div>
+      </div>
+      </div>
+      });    
       
         return(
             <div>

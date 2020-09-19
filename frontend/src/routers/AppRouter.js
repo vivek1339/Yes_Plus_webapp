@@ -11,6 +11,7 @@ import Header from '../components/header';
 import Events from '../components/Events';
 import Testimonialform from '../components/Testimonials/testimonialform';
 import Eventform from '../components/Events/eventform';
+import Gallery from '../components/memories';
 
 
 const AppRouter = () =>(
@@ -24,6 +25,7 @@ const AppRouter = () =>(
                 <Route path="/logout" component={Logout} />
                 <Route path="/signup" component={SignUp} />
                 <Route path="/events" component={Events} />
+                <Route path="/memory" component={Gallery} />
                 <Route path="/testimonials" component={Testimonials} />
                 <Route path="/testimonialform" component={Testimonialform} />
                 <Route path="/eventform" component={Eventform} />

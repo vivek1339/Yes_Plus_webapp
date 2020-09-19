@@ -1,0 +1,24 @@
+.navbar{
+    padding: 0rem;
+}
+.yp_gallery{
+    margin-left: 75px;
+}
+.yp_gallery .carousel{
+    height: 500px;
+    background-color: black;
+}
+.yp_immgs{
+    width: 90%;
+    height: 500px;
+    padding-left: 10%;
+}
+
+@media (max-width:650px){
+    .yp_gallery .carousel{
+        height: 300px;
+    }
+    .yp_immgs{
+        height: 300px;
+    }
+}

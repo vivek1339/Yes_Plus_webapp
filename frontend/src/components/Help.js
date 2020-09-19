@@ -1,6 +1,5 @@
 import React from 'react';
 
-var username = JSON.parse(localStorage.getItem('userdata'));
 
 const HelpPage = () =>(
     <div>

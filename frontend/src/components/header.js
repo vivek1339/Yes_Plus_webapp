@@ -28,7 +28,7 @@ export default class Header extends React.Component{
                 {username == null && <NavLink to="/login" activeClassName="is-active" className="yp_navbar1">Login</NavLink> }
                 <NavLink to="/testimonials" activeClassName="is-active" className="yp_navbar1">Testimonials</NavLink>
                 <NavLink to="/events" activeClassName="is-active" className="yp_navbar1">Events</NavLink>
-                <NavLink to="/memory" activeClassName="is-active" className="yp_navbar1">Memories</NavLink>
+                <NavLink to="/memory" activeClassName="is-active" className="yp_navbar1">Images</NavLink>
                 {username == null && <NavLink to="/signup" activeClassName="is-active" className="yp_navbar1">Join Us</NavLink> }
                 <NavLink to="/about" activeClassName="is-active" className="yp_navbar1">About Us</NavLink>
             

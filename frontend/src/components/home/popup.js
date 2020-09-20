@@ -2,7 +2,7 @@ import React from 'react';
 const Popup = () =>{
         return (
         <div className="yp_popup">
-	        <div className="modal fade" id="pop-up" tabindex="-1" role="dialog">
+	        <div className="modal fade" id="pop-up" tabIndex="-1" role="dialog">
   	            <div className="modal-dialog" role="document">
     	            <div className="modal-content">
     	                <div className="modal-body">

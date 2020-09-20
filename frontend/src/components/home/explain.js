@@ -31,7 +31,7 @@ export default class Explain extends React.Component{
         return(
             <div>
                 <div className="yp_heading"><h1> Know us more </h1></div>
-                  <div classname="jumbotron jumbotron-fluid">
+                  <div className="jumbotron jumbotron-fluid">
                     <div className="yp_explain">
                       <div className="yp_fade1">
                         <div className="yp_slide-title"> Why Yes+? </div>

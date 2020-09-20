@@ -2,7 +2,7 @@ import React from 'react';
 
 const cordinate = () => {
 	return(
-        <div class="yp_co-ordinator">
+        <div className="yp_co-ordinator">
             <h1>Co-ordinator</h1>
             <div className="content">
                 <ul className="yp_ul">

@@ -1,12 +1,12 @@
 import React from 'react';
 const Gallery = () =>{
-    return (
-      <div>
-        <h1>OUR MEMORIES</h1>
+    return ( 
+      <div className="yp_memories">
+        <h1>Our Memories</h1>
         <nav id="navbar-example2" className="navbar sticky-top">
             <ul className="nav flex-column">
                 <li className="nav-item dropdown">
-                    <a className="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">2018</a>
+                    <a className="nav-link dropdown-toggle" id="yp_year" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">2018</a>
                     <div className="dropdown-menu">
                         <a className="dropdown-item" href="#club2018">Club Meetings</a>
                         <a className="dropdown-item" href="#ashram2018">Ashram Visits</a>
@@ -15,7 +15,7 @@ const Gallery = () =>{
                     </div>
                 </li>
                 <li className="nav-item dropdown">
-                    <a className="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">2019</a>
+                    <a className="nav-link dropdown-toggle" id="yp_year" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">2019</a>
                     <div className="dropdown-menu">
                         <a className="dropdown-item" href="#club2019">Club Meetings</a>
                         <a className="dropdown-item" href="#ashram2019">Ashram Visits</a>

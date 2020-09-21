@@ -2,7 +2,7 @@
     padding: 0rem;
 }
 .yp_gallery{
-    margin-left: 75px;
+    margin-left: 110px;  
 }
 .yp_gallery .carousel{
     height: 500px;
@@ -13,12 +13,86 @@
     height: 500px;
     padding-left: 10%;
 }
-
+.yp_memories h1{
+    text-align:center;
+    font-size:4vw;
+    background: linear-gradient(330deg,  #642b73,#bd3f32,#642b73,#bd3f32);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family:sans-serif;
+    padding-top:2%;
+  }
+.yp_gallery h4{
+      margin: 19px;
+      font-family:sans-serif;
+      font-size: 35px;
+  }
+#yp_year{
+      font-size: 25px;
+      font-family:sans-serif;
+      margin-top: 20px;
+      color: white;
+      background-color: black;
+  } 
+#yp_year:hover{
+    background-color: #000080; /* For browsers that do not support gradients */
+    background-image: linear-gradient(to top right, #b91372  12%, #000080);
+}
 @media (max-width:650px){
     .yp_gallery .carousel{
         height: 300px;
     }
     .yp_immgs{
         height: 300px;
+    }
+    .yp_gallery{
+        margin-left: 70px;  
+    }
+    .yp_memories h1{
+        text-align:center;
+        font-size: 8vw;
+        background: linear-gradient(330deg,  #642b73,#bd3f32,#642b73,#bd3f32);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-family:sans-serif;
+        padding-top:5%;
+        
+     }
+     .yp_gallery h4{
+        margin: 19px;
+        font-family:sans-serif;
+        font-size: 30px;
+    }
+    #yp_year{
+        font-size: 17px;
+        font-family:sans-serif;
+        margin-top: 30px;
+        color: white;
+        background-color: black;
+    } 
+    #yp_year:hover{
+      background-color: #000080; /* For browsers that do not support gradients */
+      background-image: linear-gradient(to top right, #b91372  12%, #000080);
+    }
+}
+
+@media(min-width:768px) and (max-width:991px){
+    .yp_memories h1{
+        text-align:center;
+        font-size: 4vw;
+        background: linear-gradient(330deg,  #642b73,#bd3f32,#642b73,#bd3f32);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-family:sans-serif;
+        padding-top:5%;
+        
+     }
+     .yp_gallery{
+        margin-left: 90px;  
+    }
+    .yp_gallery h4{
+        margin: 19px;
+        font-family:sans-serif;
+        font-size: 25px;
     }
 }

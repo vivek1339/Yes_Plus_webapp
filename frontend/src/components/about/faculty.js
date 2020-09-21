@@ -34,16 +34,16 @@ const Teacher = () =>{
                     </figure> 
 
                     <figure className="yp_snip red">
-                         <img src="/images/Hemanth.png" alt=""/>
+                      {/*  <img src="/images/hemanth.jpeg" alt=""/> */}
                             <figcaption>
                               <h3>Hemanth</h3>
-                                <p> </p>
+                                <p></p>
                             </figcaption>
                                 <a href=""></a>
                     </figure>
 
                      <figure className="yp_snip blue">
-                       <img src="/images/Priyanka.jpg" alt=""/>
+                       {/* <img src="/images/Priyanka.jpg" alt=""/> */}
                          <figcaption>
                             <h3>Dr. Priyanka Agarwal</h3>
                               <p> Senior Software Developer at CISCO </p>

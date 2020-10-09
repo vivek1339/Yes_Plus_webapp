@@ -8,9 +8,11 @@ class Testimonialform extends Component {
 	constructor(props) {
 		super(props)
 
-		this.state = {	
-			email:'',	
-            batchno:'',
+		this.state = {
+			name:'',	
+			branch:'',	
+			batchno:'',
+			joinyear:'',
             experience:'',
             faculty:'',
           //	img:'',
@@ -45,12 +47,34 @@ class Testimonialform extends Component {
 	}
 
 	render() {
-		const { name,email,branch,batchno,joinyear,experience,faculty } = this.state
-		this.state.email = username.email
+		const { name,branch,batchno,joinyear,experience,faculty } = this.state
+
 
 		return (
 			<div className="yp_form">
 				<form onSubmit={this.submitHandler}>
+				<div>
+						<label>Name:</label>
+						<input
+							type="text"
+							name="name"
+							placeholder="Name"
+							value={name}
+							onChange={this.changeHandler}
+							required
+						/>
+					</div>
+					<div>
+						<label>Branch:</label>
+						<input
+							type="text"
+							name="branch"
+							placeholder="Branch"
+							value={branch}
+							onChange={this.changeHandler}
+							required
+						/>
+					</div>
                     <div>
 						<label>Batch No:</label>
 						<input
@@ -58,6 +82,17 @@ class Testimonialform extends Component {
 							name="batchno"
 							placeholder="batchno"
 							value={batchno}
+							onChange={this.changeHandler}
+							required
+						/>
+					</div>
+					<div>
+						<label>Join Year:</label>
+						<input
+							type="date"
+							name="joinyear"
+							placeholder="Join Year"
+							value={joinyear}
 							onChange={this.changeHandler}
 							required
 						/>
@@ -107,6 +142,3 @@ class Testimonialform extends Component {
 
 
 export default Testimonialform
-
-
-

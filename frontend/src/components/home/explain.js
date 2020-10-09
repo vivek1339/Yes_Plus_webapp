@@ -31,7 +31,7 @@ export default class Explain extends React.Component{
         return(
             <div>
                 <div className="yp_heading"><h1> Know us more </h1></div>
-                  <div classname="jumbotron jumbotron-fluid">
+                  <div className="jumbotron jumbotron-fluid">
                     <div className="yp_explain">
                       <div className="yp_fade1">
                         <div className="yp_slide-title"> Why Yes+? </div>
@@ -49,7 +49,7 @@ export default class Explain extends React.Component{
                              </p> 
                            </div>
                        </div>
-                            <div className="yp_fade2"><img src="/images/e1.jpeg"/></div>
+                            <div className="yp_fade2"><img src="/images/e1.jpeg" alt="img" /></div>
                     </div>
 
                 <div className="yp_explain">
@@ -69,7 +69,7 @@ export default class Explain extends React.Component{
                                 </p>
                             </div>
                         </div>
-                    <div className="yp_fade2"><img src="/images/e2.jpeg"/></div>
+                    <div className="yp_fade2"><img src="/images/e2.jpeg" alt="img"/></div>
                 </div>
                 <div className="yp_explain">
                     <div className="yp_fade1"> <div className="yp_slide-title"> When???</div>
@@ -80,7 +80,7 @@ export default class Explain extends React.Component{
                              <ul>contact:</ul>
                           </div>
                         </div>
-                    <div className="yp_fade2"><img src="/images/e3.jpeg"/></div>
+                    <div className="yp_fade2"><img src="/images/e3.jpeg" alt="img"/></div>
                 </div>
             </div>
     </div>

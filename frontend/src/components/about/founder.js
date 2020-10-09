@@ -9,7 +9,7 @@ const Founder = () =>{
              <div className="yp_container2">
                 <div className="yp_card2">
                     <div className="yp_imgbx2">
-                        <img src="/images/ihit.jpeg" height="243.8" width="260"/>
+                        <img src="/images/ihit.jpeg" alt="img" height="243.8" width="260"/>
                     </div>
                     <div className="yp_content2">
                         <h2>Ihit Shukla<br /><span>Mechanical Engineer</span></h2>
@@ -18,7 +18,7 @@ const Founder = () =>{
                 </div>
                  <div className="yp_card2">
                     <div className="yp_imgbx2">         
-                        <img src="/images/vivek.jpeg" height="243.8" width="260"/>
+                        <img src="/images/vivek.jpeg" alt="img" height="243.8" width="260"/>
                     </div>
                     <div className="yp_content2">
                         <h2>Vivek<br /><span>Software Engineer</span></h2>
@@ -27,7 +27,7 @@ const Founder = () =>{
                 </div>
                  <div className="yp_card2">
                     <div className="yp_imgbx2">   
-                        <img src="/images/satish.jpeg" height="243.8" width="260"/>
+                        <img src="/images/satish.jpeg" alt="img" height="243.8" width="260"/>
                     </div>
                     <div className="yp_content2">
                         <h2>Satish<br /><span>Mechanical Engineer</span></h2>

@@ -31,7 +31,7 @@ export default class Eventpage extends React.Component {
 
     render(){
         const child = this.state.data.map((el, index) => {
-            if(el==undefined)
+            if(el === undefined)
                 return
 
          //  return <div key={index}>
@@ -64,7 +64,7 @@ export default class Eventpage extends React.Component {
                 <div className="yp_event">{ child }</div>
 
                 <div className="yp_event">
-                {username != null && username.type!=0 && <NavLink to="/eventform" className="yp_navbar4"><button className="yp_event-button"> Form</button> </NavLink>}
+                {username !== null && username.type !== 0 && <NavLink to="/eventform" className="yp_navbar4"><button className="yp_event-button"> Form</button> </NavLink>}
                 </div>
 
 

@@ -35,7 +35,7 @@ export default class Testimonialpage extends React.Component {
    
         
       const child = this.state.data.map((el, index) => {
-            if(el==undefined)
+            if(el === undefined)
                 return
 
            // return   <div className="helloo" key={index}>
@@ -69,7 +69,7 @@ export default class Testimonialpage extends React.Component {
             <div>
                 <div className="yp_event">{ child } </div>
                  <div class="yp_testimonial">
-                { username !=null && <NavLink to="/testimonialform" className="yp_navbar4"> <button class="yp_testimonial-button"> Testimonial Form</button> </NavLink> }
+                { username !== null && <NavLink to="/testimonialform" className="yp_navbar4"> <button class="yp_testimonial-button"> Testimonial Form</button> </NavLink> }
 		        </div>
           </div>
 

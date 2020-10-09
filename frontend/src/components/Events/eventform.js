@@ -1,15 +1,12 @@
 import React, { Component } from 'react'
 import axios from 'axios'
-import { NavLink } from 'react-router-dom';
-
-var username = JSON.parse(localStorage.getItem('userdata'));
 
 class Eventform extends Component {
 	constructor(props) {
 		super(props)
 
 		this.state = {
-			email:'',
+
 			//name:'',
 			eventtheme:'',
 			startdate:'',
@@ -38,8 +35,8 @@ class Eventform extends Component {
 	}
 
 	render() {
-		const { name,eventtheme,startdate,email,phno,enddate,contact,fees } = this.state
-		this.state.email = username.email
+		const { eventtheme,startdate,phno,enddate } = this.state
+
 		return (
           
 			<div className="yp_form">

@@ -1,7 +1,4 @@
-import React , {Component} from 'react';
-
-
-var username = JSON.parse(localStorage.getItem('userdata'));
+import React from 'react';
 
 
 export default class Log extends React.Component {

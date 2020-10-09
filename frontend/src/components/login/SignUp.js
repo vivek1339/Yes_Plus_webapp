@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import axios from 'axios';
+
 class SignUp extends Component {
 	constructor(props) {
 		super(props)
@@ -26,9 +27,8 @@ class SignUp extends Component {
 			.post('http://localhost:5000/add_user', this.state)
 			//.then(res=>res.text())
 			.then(res=>{
-				if (res.data == 200){
+				if (res.data.status === 200){
 				   console.log("User added");
-				   alert(`${this.state.name} Registered Successfully! Please login again`);
 				   this.props.history.push('/')
 				}
 				else{

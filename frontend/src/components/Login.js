@@ -1,11 +1,15 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import Login from './login/Login';
+import SignUp from './login/SignUp';
+import Social1 from './Login/social1';
 
-const Login = () =>(
+
+
+const Log = () =>(
     <div>
-        This is login page
-        <NavLink to="/signup">Sign Up</NavLink>
+     <Login />
+     <Social1 />
     </div>
 )
 
-export default Login;
+export default Log;

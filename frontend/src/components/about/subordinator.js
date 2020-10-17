@@ -1,22 +1,59 @@
 import React from 'react';
 
-const Subordinator = () => {
-    return(
-        <div><center>
-            <h1>Our Other Student Co-Ordinators</h1></center>
-            <div color="yp_sc">
-            <li><b>Rishabh</b>ECE</li>
-            <li><b>Shobhit</b>ECE</li>
-            <li><b>Gokul</b>ECE</li>
-            <li><b>Karunakar</b>ECE.</li>
-            <li><b>Kavya</b></li>
-            <li><b>Adarsh Kumar</b>ECE.</li>
-            <li><b>Madhav Bihari</b>ECE.</li>
-            <li><b>Monica</b></li>
-            <li><b>Navya</b></li>
-        </div>
+const cordinate = () => {
+	return(
+        <div className="yp_co-ordinator">
+            <h1>Co-ordinator</h1>
+            <div className="content">
+                <ul className="yp_ul">
+                    <li  className="yp_li">
+                        <span className="yp_number">1 </span>
+                        <span className="yp_name">Rishabh</span>
+                        <span className="yp_branch">ECE</span>
+                    </li>
+                    <li className="yp_li">
+                        <span className="yp_number">2 </span>
+                        <span className="yp_name">Shobith</span>
+                        <span className="yp_branch">ECE</span>
+                    </li>
+                    <li className="yp_li">
+                        <span className="yp_number">3 </span>
+                        <span className="yp_name">Gokul</span>
+                        <span className="yp_branch">ECE</span>
+                    </li>
+                    <li className="yp_li">
+                        <span className="yp_number">4 </span>
+                        <span className="yp_name">Karunakar</span>
+                        <span className="yp_branch">ECE</span>
+                    </li>
+                    <li className="yp_li">
+                        <span className="yp_number">5 </span>
+                        <span className="yp_name">Kavya</span>
+                        <span className="yp_branch">ECE</span>
+                    </li>
+                    <li className="yp_li">
+                        <span className="yp_number">6 </span>
+                        <span className="yp_name">Adarsh Kumar</span>
+                        <span className="yp_branch">ECE</span>
+                    </li>
+                    <li className="yp_li">
+                        <span className="yp_number">7 </span>
+                        <span className="yp_name">Madhav Bihari</span>
+                        <span className="yp_branch">ECE</span>
+                    </li>
+                    <li className="yp_li">
+                        <span className="yp_number">8 </span>
+                        <span className="yp_name">Monica</span>
+                        <span className="yp_branch">ECE</span>
+                    </li>
+                    <li class="yp_li" >
+                        <span className="yp_number">9 </span>
+                        <span className="yp_name">Navya</span>
+                        <span className="yp_branch">ECE</span>
+                    </li>
+                </ul>
+            </div>
         </div>
     );
 };
-
-export default Subordinator;
+export default cordinate;

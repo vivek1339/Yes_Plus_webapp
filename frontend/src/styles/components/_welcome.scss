@@ -1,54 +1,53 @@
-.yp_g
+.yp_welcome
 {
- height:450px;
+ height:600px;
  background-color: #000080; /* For browsers that do not support gradients */
  background-image: linear-gradient(to top right, #b91372  12%, #000080);
  line-height:0.05;
- padding-top:5%;
+ padding-top: 10%;
+ width: 100%;
 }
-.yp_first
+.yp_first 
 {
  font-size:40px;
  font-family:sans-serif;
- padding-right: 300px;
- line-height:0.01;
+ padding-right: 5em;
+ line-height:0.0;
  color:whitesmoke;
+}
+
+.yp_third
+{
+ font-size:2em;
+ font-family:sans-serif;
+ line-height: 1;
+ padding-top:3%;
+}
+
+.yp_fourth 
+{
+  font-size:2em;
+  padding-left:4em;
+  font-family: sans-serif;
+  line-height: 2;
+  color:whitesmoke;
 }
 .yp_second
 {
- font-size:90px;
- font-family:arial;
- 
-}
-.yp_third
-{
- font-size:30px;
- font-family:sans-serif;
- line-height:6;
-
-}
-
-.yp_fourth
-{
-  font-size:40px;
-  padding-left:150px;
-  font-family: sans-serif;
-  line-height:2;
-  color:whitesmoke;
-}
-
-h1 {
-  
   font-weight: 800;
   width: 5em;
-  line-height: 0.9em;
+  line-height: 0.8em;
   margin-left: auto;
   margin-right: auto;
   margin-top: 0.5em;
+  font-size:90px;
+  font-family:arial;
+  
 }
 
 /* Style the rainbow text element. */
- .yp_second {
+ .yp_second 
+ {
   /* Create a conic gradient. */
   /* Double percentages to avoid blur (#000 10%, #fff 10%, #fff 20%, ...). */
   background: #CA4246;
@@ -82,7 +81,8 @@ h1 {
 }
 
 /* Add animation on hover. */
-.yp_g .yp_second:hover {
+.yp_welcome .yp_second:hover 
+{
   animation: yp_second-animation 0.5s ease forwards;
 }
 
@@ -193,7 +193,7 @@ h1 {
 
 
 
-h3 {
+.yp_third h3 {
 font-family: "Archivo Black", sans-serif;
 font-weight: normal;
 font-size: 6em;
@@ -234,3 +234,42 @@ width: 605px;
     right: auto; 
     width: 100%; 
   }
+@media(min-width:768px) and (max-width:991px){
+  .yp_welcome{
+      padding-top: 17%;
+  }
+  .yp_first{
+    padding-left: 5em;
+    line-height: 0;
+  }
+  .yp_fourth{
+    padding-left: 1em;
+    line-height: 3.4;
+  }
+}
+@media(max-width:767px){
+  .yp_welcome{
+    padding-top: 31%;
+}
+  .yp_first{
+    line-height: 0;
+    padding-top: 50%;
+  }
+  .yp_fourth{
+    padding-left: 5em;
+    line-height: 2;
+  }
+  .yp_second{
+    font-weight: 800;
+    width: 5em;
+    line-height: 0.8em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0.5em;
+    font-size: 70px;
+  }
+  .yp_g{
+    padding-top: 10%;
+  }
+}
+

@@ -2,12 +2,17 @@ import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import Home from '../components/Home';
 import About from '../components/About';
-import Login from '../components/Login';
+import Login from '../components/login/Login';
+import Logout from '../components/logout';
 import SignUp from '../components/login/SignUp';
 import Testimonials from '../components/Testimonials';
 import NotFoundPage from '../components/NotFound';
-import Header from '../components/Header';
-import Social from '../components/social';
+import Header from '../components/header';
+import Events from '../components/Events';
+import Testimonialform from '../components/Testimonials/testimonialform';
+import Eventform from '../components/Events/eventform';
+import Gallery from '../components/memories';
+
 
 const AppRouter = () =>(
     <BrowserRouter>
@@ -17,11 +22,16 @@ const AppRouter = () =>(
                 <Route path="/" component={Home} exact={true} />
                 <Route path="/about" component={About} />
                 <Route path="/login" component={Login} />
+                <Route path="/logout" component={Logout} />
                 <Route path="/signup" component={SignUp} />
+                <Route path="/events" component={Events} />
+                <Route path="/memory" component={Gallery} />
                 <Route path="/testimonials" component={Testimonials} />
+                <Route path="/testimonialform" component={Testimonialform} />
+                <Route path="/eventform" component={Eventform} />
                 <Route component={NotFoundPage} />
             </Switch>
-            <Social />
+
         </div>
     </BrowserRouter>
 );

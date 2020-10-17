@@ -1,0 +1,20 @@
+
+
+.yp_popup .modal-dialog{
+    margin: 0;
+    top: 35%;
+} 
+.yp_popup .modal-body{
+    padding:2px;
+}
+.yp_popup .modal-backdrop.show{
+    opacity: 0.1;
+}
+.yp_popup .modal-body p{
+    text-align: left;
+    padding-left:8%;
+    padding-top:3%;
+}
+.yp_popup .modal-dialog .popup-img{
+    padding-left:40%;
+}

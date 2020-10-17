@@ -1,8 +1,13 @@
 import React from 'react';
+import Testimonial from './Testimonials/testimonial';
+import Social2 from './Testimonials/social2';
+
 
 const Testimonials = () =>(
     <div>
-        This is Testimonials page.
+        <Testimonial />
+        <Social2 />
+    
     </div>
 )
 

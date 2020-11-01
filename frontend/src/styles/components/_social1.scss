@@ -44,3 +44,15 @@
     padding-left: 35%;
   }
 }
+@media (max-width: 600px)
+{
+  .yp_social_media{
+    padding-left: 100%;
+  }
+}
+@media (max-width: 500px)
+{
+.yp_social_media{
+  padding-left:10%;
+}
+}

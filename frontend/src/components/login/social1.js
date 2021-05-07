@@ -7,11 +7,11 @@ const Social = () => {
       <div className="yp_social_media"> 
         <ul>
           <li className="yp_social_media_icon">
-            <a className="facebook" href="https://www.facebook.com">
+            <a className="facebook" href="https://www.facebook.com/Yes-Bangalore-Institute-Of-Technology-456852608160486/?ti=as">
             <i className="fa fa-facebook" aria-hidden="true"></i></a>
           </li>
           <li className="yp_social_media_icon">
-            <a className="instagram" href="https://www.instagram.com">
+            <a className="instagram" href="https://www.instagram.com/bityesplus/">
             <i className="fa fa-instagram" aria-hidden="true"></i></a>
           </li>
           <li className="yp_social_media_icon">

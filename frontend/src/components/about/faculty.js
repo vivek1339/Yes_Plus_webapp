@@ -33,23 +33,23 @@ const Teacher = () =>{
                               <a href=""></a>
                     </figure> 
 
-                    <figure className="yp_snip red">
+                    {/* <figure className="yp_snip red">
                       {/*  <img src="/images/hemanth.jpeg" alt=""/> */}
-                            <figcaption>
+                            {/* <figcaption>
                               <h3>Hemanth</h3>
                                 <p></p>
-                            </figcaption>
-                                <a href=""></a>
-                    </figure>
+                            </figcaption> */}
+                                {/* <a href=""></a>
+                    </figure> */} 
 
-                     <figure className="yp_snip blue">
+                     {/* <figure className="yp_snip blue">
                        {/* <img src="/images/Priyanka.jpg" alt=""/> */}
-                         <figcaption>
+                         {/* <figcaption>
                             <h3>Dr. Priyanka Agarwal</h3>
                               <p> Senior Software Developer at CISCO </p>
                          </figcaption>
                                <a href=""></a>
-                     </figure>
+                     </figure>  */}
 
                     <figure className="yp_snip red">
                         <img src="/images/Sahana.jpeg" alt=""/>

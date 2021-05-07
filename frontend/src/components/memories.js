@@ -151,7 +151,7 @@ const Gallery = () =>{
             <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel">
                 <div className="carousel-inner">
                   <div className="carousel-item active">
-                    <img src=".\images\g4.jpeg" className="d-block yp_immgs" alt="..."/>
+                    <img src=".\images\g22.jpeg" className="d-block yp_immgs" alt="..."/>
                   </div>
                   <div className="carousel-item">
                     <img src=".\images\g14.jpeg" className="d-block yp_immgs" alt="..."/>

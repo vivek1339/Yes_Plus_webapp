@@ -12,7 +12,7 @@ const Activity = () => {
             </div>
             <div className="yp_content">
               <div>
-                <h2>River rejuvination</h2>
+                <h2>River rejuvenation</h2>
                 <p>One day we all went thinking of doing something which we have never done before. 
                   We went there early, we spread manure all the plants there.We had few new people in 
                   our teem but the teamwork was at its peak. We made two lines and passed the manure 
@@ -27,7 +27,7 @@ const Activity = () => {
               <img src="./images/a1.jpeg" alt=""/>
             </div>
             <div className="yp_content">
-              <div>
+              <div> 
                 <h2>Swatch bit</h2>
                 <p>Many people love their surroundings to be clean but only a few would come up to do the cleaning. 
                  On that day they were more people who together as a team worked for a single cause which was to 

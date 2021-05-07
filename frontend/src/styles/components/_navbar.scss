@@ -2,7 +2,10 @@
     display: inline-bloack;
     max-width: 100%;
 }
-
+.yp_bit-logo{
+    max-width: 90%;
+    float: right; 
+}
 
 .yp_navbar img{
     width: 140px;
@@ -79,6 +82,11 @@
         display: block;
         text-align: left;
     }
+    .yp_bit-logo{
+        max-width: 90%;
+        margin-right: 90px;
+    }
+    
 }
 @media(min-width:768px) and (max-width:991px){
     .yp_navbar1{
@@ -89,5 +97,10 @@
         text-align: center;
         margin: 30px 16px;
         font-size: 19px;
-    }    
+    }
+    .yp_bit-logo{
+        max-width: 90%;
+        margin-right: 90px;
+    }
+        
 }

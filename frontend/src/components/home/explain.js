@@ -34,7 +34,7 @@ export default class Explain extends React.Component{
                   <div className="jumbotron jumbotron-fluid">
                     <div className="yp_explain">
                       <div className="yp_fade1">
-                        <div className="yp_slide-title"> Why Yes+? </div>
+                        <div className="yp_slide-title"> <i> Why Yes+? </i></div>
                            <div className="yp_slide-text"> 
                               <p>There is a quote “When you get out of comfort zone it expands and follows you!”, 
                                  the YES!+ workshop gives you a first-hand experience of this.This workshop is 
@@ -54,7 +54,7 @@ export default class Explain extends React.Component{
 
                 <div className="yp_explain">
                     <div className="yp_fade1">
-                      <div className="yp_slide-title">Discover New You! </div>
+                      <div className="yp_slide-title"> <i> Discover New You! </i> </div>
                            <div className="yp_slide-text"> 
                                <p>This workshop has a lot of elements which will assist you, to let go of your previous 
                                   self and enter a new dimension. The transition is going to be amazing. Trust us!This is 
@@ -71,7 +71,7 @@ export default class Explain extends React.Component{
                         </div>
                     <div className="yp_fade2"><img src="/images/e2.jpeg" alt="img"/></div>
                 </div>
-                <div className="yp_explain">
+                {/* <div className="yp_explain">
                     <div className="yp_fade1"> <div className="yp_slide-title"> When???</div>
                           <div>
                               <ul>date :</ul>
@@ -81,7 +81,7 @@ export default class Explain extends React.Component{
                           </div>
                         </div>
                     <div className="yp_fade2"><img src="/images/e3.jpeg" alt="img"/></div>
-                </div>
+                </div> */}
             </div>
     </div>
         );

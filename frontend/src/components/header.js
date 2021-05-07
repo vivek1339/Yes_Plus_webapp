@@ -24,14 +24,15 @@ export default class Header extends React.Component{
                     <div className="yp_bar3"></div>
                 </div>
                 <NavLink to="/" activeClassName="is-active" exact={true} className="yp_navbar"><img src="https://2.bp.blogspot.com/-beUrUOb3btQ/T1PFJcGPDWI/AAAAAAAAAEM/hBCu0lFtbC8/s400/YES%2521%252B.png" alt="img"/></NavLink>
+                <NavLink to="/" activeClassName="is-active" exact={true} className="yp_bit-logo"><img src="https://images.static-collegedunia.com/public/college_data/images/logos/1485945274c3.jpg" alt="img"/></NavLink>
                 {username != null && <NavLink to="/logout" activeClassName="is-active" className="yp_navbar1">Logout</NavLink> }
                 {username == null && <NavLink to="/login" activeClassName="is-active" className="yp_navbar1" >Login</NavLink> }
-                <NavLink to="/testimonials" activeClassName="is-active" className="yp_navbar1">Testimonials</NavLink>
-                <NavLink to="/events" activeClassName="is-active" className="yp_navbar1">Events</NavLink>
+                {/* <NavLink to="/testimonials" activeClassName="is-active" className="yp_navbar1">Testimonials</NavLink> */}
+                {/* <NavLink to="/events" activeClassName="is-active" className="yp_navbar1">Events</NavLink> */}
                 <NavLink to="/memory" activeClassName="is-active" className="yp_navbar1">Images</NavLink>
                 {username == null && <NavLink to="/signup" activeClassName="is-active" className="yp_navbar1">Join Us</NavLink> }
                 <NavLink to="/about" activeClassName="is-active" className="yp_navbar1">About Us</NavLink>
-            
+                
             </header>
         )
     }

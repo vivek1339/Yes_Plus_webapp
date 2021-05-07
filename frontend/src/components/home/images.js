@@ -1,6 +1,6 @@
 import React from 'react';
 
-<<<<<<< HEAD
+ HEAD
 const Images = () => {
     return(
         <div className="images">

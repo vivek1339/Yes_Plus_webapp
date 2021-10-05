@@ -5,7 +5,8 @@ import { useState } from "react";
 import { useHistory } from "react-router";
 
 function SignUp() {
-	const history=useHistory()
+  const history = useHistory();
+  const [pwdmmismssg, setpwdmmismssg] = useState("");
   // constructor(props) {
   // 	super(props)
 
@@ -22,33 +23,38 @@ function SignUp() {
     name: "",
     email: "",
     password: "",
+    confirmpwd: "",
     branch: "",
     phno: "",
     joinyear: "",
   });
 
   const changeHandler = (e) => {
-    setdetail({...detail, [e.target.name]: e.target.value });
+    setdetail({ ...detail, [e.target.name]: e.target.value });
   };
 
   const submitHandler = (e) => {
     e.preventDefault();
     // console.log(this.state);
-    axios
-      .post("http://localhost:5000/add_user", detail)
-    //   .then(res=>res.text())
-      .then((res) => {
-        if (res.data.status === 200) {
-          console.log("User added");
-          history.push("/");
-        } else {
-          console.log("User couldn't be added");
+    if (detail.password == detail.confirmpwd) {
+      axios
+        .post("http://localhost:5000/add_user", detail)
+        //   .then(res=>res.text())
+        .then((res) => {
+          if (res.data.status === 200) {
+            console.log("User added");
+            history.push("/");
+          } else {
+            console.log("User couldn't be added");
             alert(`Registeration Unsuccessful!`);
-        }
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+          }
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    } else {
+      setpwdmmismssg("password Mismatch !");
+    }
   };
 
   // render() {
@@ -96,6 +102,20 @@ function SignUp() {
             // value={password}
             onChange={(e) => {
               changeHandler(e);
+            }}
+            required
+          />
+        </div>
+        <div style={{ color: "red" }}> {pwdmmismssg}</div>
+        <div>
+          <label>Confirm Password:</label>
+          <input
+            type="text"
+            // name="password"
+            placeholder="Confirm Password"
+            // value={password}
+            onChange={(e) => {
+             setdetail({...detail,confirmpwd:e.target.value})
             }}
             required
           />
